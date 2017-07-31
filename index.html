@@ -45,7 +45,7 @@
         </div>
         <div class="w-70-l w-70-m pl5-m w-100 white pt5-l pa0-l pa3">
           <div class="khand tracked-tight headline lh-solid transition-all">Hi, My name is Corey.</div>
-            <p class="w-75-l white f4 lh-copy open-sans fw3 ">I am a visual designer living in Seattle, WA. See what I'm working on over at <a href="https://dribbble.com/coreymines" class="best-blue dim">Dribbble</a>, <a href="https://instagram.com/coreyminess" class="best-blue dim">Instagram</a> or email to see a collection of my work ✌️</h2>
+            <p class="w-75-l white f3 lh-copy open-sans fw3 ">I am a visual designer living in Seattle, WA. See what I'm working on over at <a href="https://dribbble.com/coreymines" class="best-blue dim">Dribbble</a>, <a href="https://instagram.com/coreyminess" class="best-blue dim">Instagram</a> or email to see a collection of my work ✌️</h2>
           </div>
           <div class="pt1 pt3-l pa0-l pl5-m pa3">
             <a class="no-underline white dim ba pa2 mr2 mb2 dib avenir nav-shadow-2 main-buttons-4" href="about.html">Case Studies →</a>
@@ -118,11 +118,13 @@
 
 
 
-    <section class="center w-100 dib pt4 ">
+    <section class="center w-100 dib pv4 pt2">
       <div class="w-80-l w-85-m w-95-ns center pa2 pa2-m pa3-l overflow-auto link-hover">
-        <div class="dribbble-shots">
+        <div class="dribbble-shots overflow-auto">
       </div>
-      <a class="fl f5 white avenir dim mh2 pointer main-buttons-4 grow nav-shadow-2" href="https://dribbble.com/coreymines">Work on Dribbble →</a>
+      <div class="fl-m fl-l center db-m db-l pv4 pt5 pt4-l tc">
+        <a class="f5 white avenir dim mh2 pointer main-buttons-4 grow nav-shadow-2" href="https://dribbble.com/coreymines">Work on Dribbble →</a>
+      </div>
     </section>
 
     <section class="w-100 center bg-custom-2 pa4 pa2-l overflow-auto">
@@ -163,7 +165,7 @@
         var html = [];
 
         shots.forEach(function(shot) {
-          html.push('<div class="fl w-100  w-third-l pa2-l pv3 ph2 mb2"><div class="br2 nav-shadow-2 flex grow">');
+          html.push('<div class="fl w-100 w-third-m w-third-l pa2-l pv3 ph2 mb2"><div class="br2 nav-shadow-2 flex grow">');
           html.push('<a href="' + shot.html_url + '" target="_blank">');
           html.push('<img class="db br2" src="' + shot.images.hidpi + '">');
           html.push('</a></div></div>');
