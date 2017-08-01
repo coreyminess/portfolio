@@ -2378,6 +2378,10 @@ p {
   .w-100-ns { width: 100%; }
   .w-50-ns { width: 48% !important; }
 
+  .w-48-m  { width: 48% }
+    @media (max-width: 1200px) and (max-width: 700px) {
+      .w-48-m { width: 100% !important}
+    }
 
   .image-text-container {
     word-wrap: break-word;
