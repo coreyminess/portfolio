@@ -12,8 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Khand:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <script src="https://use.fontawesome.com/fd3536a643.js"></script>
+    <!-- <script src="https://use.fontawesome.com/fd3536a643.js"></script> -->
     <link rel="icon" href="./img/favicon-32.png" sizes="32x32"></head>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/jribbble.min.js"></script>
+    <script type="text/javascript" src="./js/menu-shift.js"></script>
+    <script type="text/javascript" src="./js/dribbble.js"></script>
+
   <body>
 
     <header class="fixed w-100 z-999 center nav-links " id="nav-links">
@@ -66,7 +71,7 @@
       <div class="fl mt5-l w-50-l w-50-m w-100 relative ph1">
         <div class="fl pa1 pa4-m relative">
             <span class="f1 khand best-blue">Dog Dash</span>
-            <p class="f4 open-sans lh-copy dark-gray mb4">Dog Dash is an iOS app aimed to provide the means to connect aspiring pet owners and pet adoption shelters. Our goal in the ideation and execution of Dog Dash was to provide the means for young and old pet owners to adopt a furry friend perfectly suited for his or her lifestyle.</p>
+            <p class="f4 w-75-l w-100 open-sans lh-copy dark-gray mb4">Dog Dash is an iOS app aimed to provide the means to connect aspiring pet owners and pet adoption shelters. Our goal in the ideation and execution of Dog Dash was to provide the means for young and old pet owners to adopt a furry friend perfectly suited for his or her lifestyle.</p>
             <a class="fl f4 grow white dim main-buttons nav-shadow-2" href="./case-studies/case-study-01.html">View Case Study →</a>
             <div class="w-100 overflow-auto pt4">
               <div class="fl w-third overflow-auto">
@@ -89,7 +94,7 @@
       <div class="fl mt5-l w-50-l w-50-m w-100 pt3-l pl3-m pl3-l relative pa1 pt4-m" id="a">
         <div class="fl pa1 pa4-m relative">
             <span class="f1 khand best-blue">NASA Redesign</span>
-            <p class="f4 open-sans lh-copy dark-gray mb4">Lightswan is a digital transition company. It works with big firms such as banks to change their process. I had the opportunity to create their brand universe and their graphical identity.</p>
+            <p class="f4 w-75-l w-100 open-sans lh-copy dark-gray mb4">A personal project aimed to update the visual design of the Nasa website to embody the once iconic brand etched in American history.</p>
             <a class="fl f4 grow white dim main-buttons nav-shadow-2" href="./case-studies/case-study-02.html">View Case Study →</a>
             <div class="w-100 overflow-auto pt4">
               <div class="fl w-third overflow-auto">
@@ -157,41 +162,7 @@
   </nav>
 </footer>
 
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/jribbble.min.js"></script>
 
-<script>
-      $.jribbble.setToken('e72dc062815752310c764233ae531daf49039a478ecf331942957e755db16653');
-      $.jribbble.users('coreymines').shots({'per_page': 3}).then(function(shots) {
-        var html = [];
-
-        shots.forEach(function(shot) {
-          html.push('<div class="fl w-100 w-third-m w-third-l pa2-l pv3 ph2 mb2"><div class="br2 nav-shadow-2 flex grow">');
-          html.push('<a href="' + shot.html_url + '" target="_blank">');
-          html.push('<img class="db br2" src="' + shot.images.hidpi + '">');
-          html.push('</a></div></div>');
-        });
-
-        $('.dribbble-shots').html(html.join(''));
-      });
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-            var scroll_pos = 0;
-            $(document).scroll(function() {
-                scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 0) {
-                    $("#nav-links").css('background-color', 'white');
-                    $("#nav-links #gray-change").css('color', 'black');
-                }
-                else {
-                    $("#nav-links").css('background-color', 'white');
-                    $("#nav-links #gray-change").css('color', 'black');
-                }
-            });
-        });
-</script>
 
 
 </body>
