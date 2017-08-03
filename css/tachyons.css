@@ -2413,7 +2413,7 @@ p {
 }
 
 .open-sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; font-weight: 300; font-style: normal;
 }
 
 .turquoise {
