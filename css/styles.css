@@ -418,7 +418,7 @@ p {
 }
 
 .open-sans {
-  font-family: 'Open Sans', sans-serif; font-weight: 300; font-style: normal;
+  font-family: 'Open Sans', sans-serif; font-weight: 300,400,500,600,700; font-style: normal;
 }
 
 .turquoise {
