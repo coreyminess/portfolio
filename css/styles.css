@@ -248,7 +248,7 @@ p {
   }
 
   .bg-custom-4 {
-    background-image: url("../img/main-bg-2.jpg");
+    background-image: url('https://d1rnfttkuep1vk.cloudfront.net/bg/main-bg-2.jpg');
     background-size: cover;
   }
 
