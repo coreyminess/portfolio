@@ -29,6 +29,7 @@ a
 
 
 
+
 #menuToggle
 {
   display: block;
@@ -332,7 +333,7 @@ p {
   font-size: .7rem;
 }
 
-  @media screen and (max-width:600px){
+  @media screen and (max-width:960px){
       #parent{
         display:flex;
         justify-content: center;
@@ -343,7 +344,7 @@ p {
       #b{order:1; flex-flow: row nowrap; flex-grow: 1;}
     }
 
-  @media screen and (max-width:600px){
+  @media screen and (max-width:960px){
       #parent{
         display:flex;
         justify-content: center;
@@ -358,7 +359,7 @@ p {
 
   .headline {  font-size: 5rem;  }
     @media (max-width: 1200px) and (max-width: 700px) {
-        .headline { font-size: 2.6rem;  }
+        .headline { font-size: 2.7rem;  }
         }
       }
 
