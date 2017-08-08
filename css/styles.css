@@ -211,6 +211,17 @@ a
     transform:
   }
 
+  .nav-shadow-3 {
+    box-shadow: 0px 1px 5px 0 rgba(0,0,0, .1);
+  }
+
+  .nav-shadow-3:hover {
+    box-shadow: 0px 3px 20px 0 rgba(0,0,0, .2);
+    -webkit-transition-duration: .4s; /* Safari */
+    transition-duration: .4s;
+    transform:
+  }
+
   .w-half-l { width: calc( 100% / 2 ); }
 
 
