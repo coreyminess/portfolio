@@ -1,10 +1,9 @@
-// Set the Access Token
 var accessToken = 
 '43595dd2dbf04bd0ddfa7515e6c1fe6f4d0866660a00775c261c94f665f8a2e2';
 
 //Call Dribbble v2 API
 $.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?per_page=6&access_token='+accessToken,
+    url: 'https://api.dribbble.com/v2/user/shots?per_page=3&access_token=43595dd2dbf04bd0ddfa7515e6c1fe6f4d0866660a00775c261c94f665f8a2e2',
     dataType: 'json',
     type: 'GET',
     success: function(data) {
