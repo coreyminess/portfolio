@@ -10,7 +10,7 @@ $.ajax({
         if (data.length > 0) {
             $.each(data.reverse(), function(i, val) {
                 $('.dribbble-shots').prepend(
-                    '<div class="fl-l w-100 w-80-m w-third-l tc-m center-m pa2-l pv3 ph2 mb2"><div class="br2 nav-shadow-2 flex grow">' + '<a class="shot" target="_blank" rel="noopener" href="'+ val.html_url +'"title="'+ val.title + '"><div class="title">' + '</div><img class="db br2" src="' + val.images.hidpi + '"/></a>'
+                    '<div class="fl-l w-100 w-80-m w-third-l tc-m center-m pa2-l pv3 ph2 mb2 reveal2"><div class="br2 nav-shadow-2 flex grow reveal2">' + '<a class="shot" target="_blank" rel="noopener" href="'+ val.html_url +'"title="'+ val.title + '"><div class="title">' + '</div><img class="db br2" src="' + val.images.hidpi + '"/></a>'
                 )
             })
         }
