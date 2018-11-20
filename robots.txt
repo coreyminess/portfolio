@@ -6,4 +6,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: {{ coreymines.design }}/sitemap.xml
+Sitemap: https://coreymines.design/sitemap.xml
