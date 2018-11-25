@@ -1,48 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>AutoDesk / AutoCAD Case Study - Corey Mines</title>
+    <title>Corey Mines Portfolio</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="Corey Mines Visual Design / Illustration / Creative Direction Portfolio - Seattle, WA">
-    <meta name="keywords" content="Visual Design,Graphic,Design,Illustration,Creative,Direction,Seattle,WA,Washington,Marketing">
+    <meta name="description" content="Corey Mines Visual Design / UX UI / Creative Direction Portfolio - Seattle, WA">
+    <meta name="keywords" content="Visual Design,UX,UI,Graphic,Design,Illustration,Creative,Direction,Seattle,WA,Washington,Marketing">
     <meta name="author" content="Corey Mines">
+    <meta name="google-site-verification" content="Hh9mg74QsrqkysqDZm-iVs-O6Fs-yzyMwUWzA--mQRA" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css"/>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/hamburger.css">
     <link href="https://fonts.googleapis.com/css?family=Khand:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
     <!-- <script src="https://use.fontawesome.com/fd3536a643.js"></script> -->
-    <link rel="icon" href="../img/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="./img/favicon-32.png" sizes="32x32">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jribbble6.js"></script>
     <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script>
+    <script type="text/javascript" src="./js/scrollreveal.js"></script>
+    <script type="text/javascript" src="./js/pageanimations.js"></script>
+    <script type="text/javascript" src="./js/menushift.js"></script>
+
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-104112808-1', 'auto');
-      ga('send', 'pageview');
-
+        ga('create', 'UA-104112808-1', 'auto');
+        ga('send', 'pageview');
     </script>
-  </head>
+
+    <script type="text/javascript">
+        $('#burger').on('click', function(){
+            $("#nav-links").css('background','white');
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $("#burger").click( function() { 
+            $("#nav-links").css("background", "white");
+            $("body input + label span").css('background', 'black');
+        });
+        });
+    </script>
+        
+      <script type="text/javascript">
+      $(document).keydown(function(event) { 
+      if (event.keyCode == 27) { 
+        $('#nav-links').hide();
+        $("#nav-links").css("background", "white");
+        $("body input + label span").css('background', 'black');
+      }
+      });
+      </script>
+</head>
+
   <body>
-
-    <header class="fixed w-100 z-999 center nav-links " id="nav-links">
-      <nav class="h2 pa3 ph5-l w-100 center border-bottom" style="height:50px !important;">
+  <header id="nav-background">
+    <div class="nav-logo-1">
         <a class="dtc-l v-mid link dim w-100 w-25-l tc pl2-l tl-l mb2 mb0-l" href="https://coreymines.design" title="Home">
-          <img src="https://d1rnfttkuep1vk.cloudfront.net/brand/personal-icon-white.png" class="dt-l w2 h2 br-100  pt2" alt="corey mines portfolio homepage"></a>
-        <div class="main-nav open-sans pt2 fw7">
-          <a class="f5 fw3 link dim white dib mh2 mr3-m mr2 mr4-l" id="gray-change" href="https://coreymines.design/about.html" title="About">About</a>
-          <a class="f5 fw3 link dim white dib mh2 mr3-m mr2 mr4-l" id="gray-change" href="https://coreymines.design/portfolio.html" title="Case Studies">Case Studies</a>
-          <a class="f5 fw3 link dim white dib mh2 mr3-m mr2 mr4-l" id="gray-change" href="https://medium.com/@coreyminesdesign" target="_blank" title="Blog">Blog</a>
-        <div class="f6 fw5 pt3 link dim fc dib mr4-l"><a class="white br4 contact" href="mailto:hello@coreymines.design?subject=Greetings" title="Contact">Contact</a></div>
-        </div>
-      </nav>
-    </header>
-
-    <div class="w-100 center bg-custom-2 pa4 pa2-l overflow-auto">
+            <img src="https://d1rnfttkuep1vk.cloudfront.net/brand/personal-icon-white.png" class="dt-l w2 h2 br-100 " alt="corey mines portfolio homepage"></a>
+    </div> 
+    
+    <input id="burger" type="checkbox"/>
+        <label for="burger">
+            <span class="bar-change"></span>
+            <span class="bar-change"></span>
+            <span class="bar-change"></span>
+        </label>
+    
+    <nav id="nav-links">    
+        <ul>
+        <li><a class="dim" href="https://coreymines.design/about.html" title="About">About</a></li>
+        <li><a class="dim" href="https://coreymines.design/portfolio.html" title="Portfolio">Case Studies</a></li>
+        <li><a class="dim" href="https://medium.com/@coreyminesdesign" title="Blog">Blog</a></li>
+        <li><a class="dim white br4 contact" href="mailto:hello@coreymines.design?subject=Greetings" style="max-width: 220px; margin-right: auto; margin-left: auto;" title="Contact">Contact</a></li>
+        </ul>  
+    </nav>
+</header>
+      
+      <div class="w-100 center bg-custom-2 pa4 pa2-l overflow-auto">
       <div class="pt5-l pt1 mb5-l mb1-ns">
         <div class="center w-80-l w-100 w-100-m">
           <h2 class="f1-l f2 pt5 pt4-l center tc khand white sub-header-text w-60-l w-100 w-100-m">AutoDesk / AutoCAD Case Study</h2>
@@ -152,35 +193,34 @@
       </div>
     </section>
 
-    <section class="w-100 center bg-custom-2 pa2 pa2-l pv4 overflow-auto">
-      <div class="pt-l pt1 mb5-l mb1-ns">
+    
+<section class="w-100 center bg-custom-2 pa2 pa2-l pv4 overflow-auto">
+    <div class="pt-l pt1 mb5-l mb1-ns">
         <div class="center w-50-l w-100 w-100-m">
-          <h2 class="f2-l f2 ttu pt2 pt4-l center tc khand white sub-header-text w-60-l w-100 w-100-m">Let's Work Together</h2>
-          <p class="f5 w-80 center open-sans lh-copy tc white lh-copy pb4 pb4-l">Want to discuss your ideas for a project or just want to say hi? Awesome! Go ahead, I'd love to connect with you.</p>
-          <div class="tc mb3">
+        <h2 class="f2-l f2 ttu pt2 pt4-l center tc khand white sub-header-text w-60-l w-100 w-100-m">Let's Work Together</h2>
+        <p class="f5 w-80 center open-sans lh-copy tc white lh-copy pb4 pb4-l">Want to discuss your ideas for a project or just want to say hi? Awesome! Go ahead, I'd love to connect with you.</p>
+        <div class="tc mb3">
             <a class="main-buttons f6 dib pv1 white dim avenir pv3" href="mailto:hello@coreymines.design?subject=Greetings">Email Me →</a>
-          </div>
         </div>
-      </div>
-    </section>
+        </div>
+    </div>
+</section>
+    
 
-    <section class="w-100 center">
-      <nav class="tc pv3 footer-bg">
+  <section class="w-100 center">
+    <nav class="tc pv3 footer-bg">
         <a href="https://www.behance.net/coreyminesss/" class="center hover dim mw-50" target="_blank" rel="noopener" title="Behance"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/behance-icon.png" class="ph1" style="width:50px;" alt="corey mines behance profile"/></a>
         <a href="https://github.com/coreyminess/" class="center hover dim mw-50" target="_blank" rel="noopener" title="GitHub"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/github-icon.png" class="ph1" style="width:50px;" alt="corey mines github profile"/></a>
         <a href="https://www.linkedin.com/in/coreymines/" class="center hover dim mw-50" target="_blank" rel="noopener" title="LinkedIn"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/linkedin-icon.png" class="ph1" style="width:50px;" alt="corey mines linkedin page"/></a>
         <a href="https://dribbble.com/coreymines/" class="center hover dim mw-50" target="_blank" rel="noopener" title="Dribbble"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/dribble-icon.png" class="ph1" style="width:50px;" alt="corey mines dribbble profile - recent work"/></a>
         <a href="https://medium.com/@coreyminesdesign/" class="center hover dim mw-50" target="_blank" rel="noopener" title="Medium"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/medium-icon.png" class="ph1" style="width:50px;" alt="corey mines medium blog"/></a>
-      </nav>
-    </section>
-
-    <div class="w-100 center h1">
-      <nav class="tc pv1 black">
+    </nav>
+</section>
+    
+<div class="w-100 center">
+    <nav class="tc pv1 black">
         <p class="gray copyright-text">Designed and Developed by Corey Mines 👨🏻‍💻</p>
-      </nav>
-    </div>
-
-
-</body>
-
+    </nav>
+</div>
+  </body>
 </html>
