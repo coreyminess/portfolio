@@ -1,6 +1,1 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
-User-agent: *
-Disallow:
-Sitemap: https://coreymines.design/sitemap.xml
+# www.robotstxt.org/ # Allow crawling of all content User-agent: * Disallow: Sitemap: https://coreymines.design/sitemap.xml
