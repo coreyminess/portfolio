@@ -1,67 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://coreymines.design/</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://coreymines.design/blog/down-with-the-sickness222</loc>
+<lastmod>2018-11-20T03:18:00-07:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/about.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://coreymines.design/blog/down-with-the-sickness</loc>
+<lastmod>2018-11-20T03:18:00-07:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/portfolio.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://coreymines.design/blog/testing-this-out</loc>
+<lastmod>1912-07-24T02:18:00-08:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-01.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://coreymines.design/blog/out-to-sea</loc>
+<lastmod>1912-07-24T02:18:00-08:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-02.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://coreymines.design/blog/looking-glass-house</loc>
+<lastmod>1871-03-18T03:18:00-07:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-08.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/blog/down-the-rabbit-hole</loc>
+<lastmod>1865-11-26T03:18:00-07:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-07.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/blog/gettysburg-address</loc>
+<lastmod>1863-11-19T03:18:00-07:00</lastmod>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-03.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/about/</loc>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-04.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/portfolio/dogdash-case-study/</loc>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-06.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/portfolio/dogdash-case-study</loc>
 </url>
 <url>
-  <loc>https://coreymines.design/case-studies/case-study-05.html</loc>
-  <lastmod>2018-11-20T17:31:22+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://coreymines.design/portfolio/search-engine-case-study/</loc>
 </url>
-
-
+<url>
+<loc>https://coreymines.design/portfolio/five-pine-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/cloudacademy-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/atavius-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/ram-picker-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/nasa-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/nasa-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/lightboard-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/meet-mindful-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/booth-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/booth-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/first-union-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/first-union-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/_pages/case-study-07</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/fit-club-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/fitclub-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/five-and-pine-case-study</loc>
+</url>
+<url>
+<loc>https://coreymines.design/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/five-and-pine-old-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/lightboard-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/meet-mindful-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/autodesk-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/portfolio/five-and-pine-case-study/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/blog/</loc>
+</url>
+<url>
+<loc>https://coreymines.design/blog/page2/</loc>
+</url>
 </urlset>
