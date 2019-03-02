@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://coreymines.design/blog/down-with-the-sickness222</loc>
-<lastmod>2018-11-20T03:18:00-07:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/down-with-the-sickness</loc>
-<lastmod>2018-11-20T03:18:00-07:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/testing-this-out</loc>
-<lastmod>1912-07-24T02:18:00-08:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/out-to-sea</loc>
-<lastmod>1912-07-24T02:18:00-08:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/looking-glass-house</loc>
-<lastmod>1871-03-18T03:18:00-07:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/down-the-rabbit-hole</loc>
-<lastmod>1865-11-26T03:18:00-07:00</lastmod>
-</url>
-<url>
-<loc>https://coreymines.design/blog/gettysburg-address</loc>
-<lastmod>1863-11-19T03:18:00-07:00</lastmod>
+<loc>https://coreymines.design/blog/user-flows</loc>
+<lastmod>2018-02-01T03:18:00-07:00</lastmod>
 </url>
 <url>
 <loc>https://coreymines.design/about/</loc>
@@ -117,8 +93,5 @@
 </url>
 <url>
 <loc>https://coreymines.design/blog/</loc>
-</url>
-<url>
-<loc>https://coreymines.design/blog/page2/</loc>
 </url>
 </urlset>
