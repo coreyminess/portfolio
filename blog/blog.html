@@ -1,0 +1,65 @@
+---
+layout: default
+pagination: 
+  enabled: true
+title: Blog
+permalink: /blog/
+
+---
+
+<!-- Header Section: Case Study Specific -->
+<section class="w-100 vh-100 tc center overflow-auto">
+  <div class="pt6 pt6-m pt6-l ph3 tc pb6-l db bg-custom-5 bg-center-m bg-center-l bg-right headline bottom ">
+    <div class="tc w-100 white pt5-l pa3">
+      <div class="center tc khand f4 pb3 old-gold tracked revealopacity2">COREY MINES</div>
+      <div class="center tc khand font-weight-500 lh-title black-text headline lh-solid  reveal1">DESIGN AND DEVELOPMENT BLOG</div>
+        <p class="center tc w-60-l w-80 reveal1b">Intelligent and practical design content about user experience, user interface, development technologies and digital marketing.</p>
+    </div>
+  </div>
+</section>
+
+<div class="w-75-l w-75-m w-100 center pt1-l pt4" style="display: flex; flex-wrap: wrap;">
+  <!-- This is the post loop - each post will be output using this markup -->
+  {% for post in paginator.posts %}
+  <article class="post fl w-48-m pa3 pt1-l pt2-m pt2 link pb5-l pb5 revealopacity" style="display: flex; flex-wrap: wrap;">
+    <div class="fl w-100 v-top pl3 overflow-hidden">
+      <a href="{{site.url}}{{ site.baseurl | remove: '/'  }}{{ post.url}}">
+        <div role="img" class="aspect-ratio--4x3 overflow-hidden dim" style="background:url({{ post.thumbnail }}) no-repeat center center; background-size: cover;" class="aspect-ratio--4x3 overflow-hidden dim"></div>
+      </a>  
+    </div>  
+    <div class="fl w-100">
+        <h2 class="f2rem black-text khand fw4 pt4"><a href="{{site.url}}{{ site.baseurl | remove: '/'  }}{{ post.url}}">{{ post.title }}</a></h2>
+        <h4 class="f4 fw4 mt0 pt0 old-gold">{{ post.tag }}</h4>
+        <p class="newwave-grey pt0 pb4 letter-space lh-loose font-weight-400 pb3">{{ post.description | strip_html | truncatewords: 15 }}</p>
+        <a href="{{site.url}}{{ site.baseurl | remove: '/'  }}{{ post.url}}" class="no-underline ba db khand ttu main-buttons-5" style="width: 150px;">Read More →</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+
+
+<!-- Pagination links -->
+<div class="pagination fl w-100 db center tc pt4-l pt2 pb5">
+{% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous">
+    Previous
+  </a>
+{% else %}
+  <span class="previous">Previous</span>
+{% endif %}
+<span class="page_number ">
+  Page: {{ paginator.page }} of {{ paginator.total_pages }}
+</span>
+{% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+{% else %}
+  <span class="next ">Next</span>
+{% endif %}
+</div>
+</div>
+</article>
+
+
+
+{% include worktogether.html %}

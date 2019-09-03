@@ -1,0 +1,1 @@
+$(document).ready(function(){$(document).scroll(function(){$(this).scrollTop(),0?($("#nav-background").css("#nav-background","white"),$("#nav-links").css("background","none"),$("bar-change").css("background","white")):($("#nav-background").css("#nav-background","black"),$("#nav-links").css("background","white"),$("body input + label span").css("background","black"))})});
