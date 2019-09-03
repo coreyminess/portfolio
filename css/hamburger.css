@@ -42,7 +42,8 @@ right: 5%;
 #nav-links ul li a {
 font-size: 2.5rem;
 line-height: 3rem;
-font-family: 'Khand', sans-serif;
+font-family: 'Pathway Gothic One', sans-serif;
+text-transform: uppercase;
 }
 
 .nav-logo-1 {
