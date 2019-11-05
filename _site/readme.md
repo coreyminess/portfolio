@@ -1,7 +1,0 @@
-# COREY MINES - DESIGN PORTFOLIO
-
-
-
-## License
-
-MIT

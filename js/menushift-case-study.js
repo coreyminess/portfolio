@@ -1,0 +1,1 @@
+$(document).ready(function(){$(document).scroll(function(){$(this).scrollTop(),0?$("#nav-links").css("background","none"):($("#nav-links").css("background","white"),$("#nav-links > a").removeClass("white"),$("#nav-links > a").css("color",black))})});
