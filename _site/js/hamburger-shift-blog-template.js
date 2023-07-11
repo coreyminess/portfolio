@@ -1,0 +1,1 @@
+$(document).ready(function(){$(document).scroll(function(){$(this).scrollTop(),0?$("#bar-change-white").addClass(".fc-white"):$("#bar-change-white").addClass(".fc-black")})});
