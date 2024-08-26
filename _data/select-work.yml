@@ -1,0 +1,39 @@
+project-1:
+  name: CNN, Vossi Design System
+  dates: 22 - 23
+  description: Expanding CNN's design system to support cross-platform, and multi-brand representation, managed from a single Figma source.
+  tag-1: Design Systems
+  tag-2: Token Service
+  tag-3: Multi-platform
+  tag-4: Multi-brand
+  hero-img: 
+
+project-2:
+  name: CNN, CNN+
+  dates: 22
+  description: 
+  tag-1: Streaming
+  tag-2: Design Systems
+  tag-3: Interactivity
+  tag-4: Innovation
+  hero-img: 
+
+project-3:
+  name: CNN, Interview Club
+  dates: 21 - 22
+  description: 
+  tag-1: Interactive
+  tag-2: Community
+  tag-3: Educational
+  tag-4: Innovation
+  hero-img: 
+
+project-4:
+  name: CNN, Cast iOS App
+  dates:  20 - 21
+  description: 
+  tag-1: Short-Form Video
+  tag-2: iOS
+  tag-3: Curation
+  tag-4: Innovation
+  hero-img: 

@@ -1,0 +1,6 @@
+- name: Home
+  link: /
+- name: Select Work
+  link: /select-work.html
+- name: Writing
+  link: /writing.html
