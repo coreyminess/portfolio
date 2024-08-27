@@ -33,7 +33,13 @@ MIT
 ## Animation
 * ScrollReveal
 
-Select Work -- Section Structure
+## Structure
+Main pages include
+index.html (homepage)
+blog.html (writing page)
+select-work.html (case study gallery)
+
+### Select Work -- Section Structure
 > project-section
 	> project-header
 		>project-header-container
