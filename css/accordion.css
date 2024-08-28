@@ -1,0 +1,50 @@
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordion-container {
+  display:block;
+}
+
+.accordion {
+  background-color: #ffffff10;
+  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: 32px;
+  width: 100%;
+  transition: 0.4s;
+  border: none;
+  display: inline-block;
+  transition: 0.4s;
+
+}
+  
+.accordion:hover {
+  background-color: #ffffff20;
+}
+
+.active {
+  background-color: #ffffff30;
+  transition: 4s;
+
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.panel:after {
+  transition-duration: 3s, 5s, 3s, 5s;
+
+}
+
+.fa {
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa-plus:before {
+  color: #6b6b6b;
+  text-align: center;
+}

@@ -10,10 +10,10 @@ author: Corey Mines
 </section>
 
 <section class="body-container pv4 mv4 ph4">
-    <h2 class="pt4-l pt2">{{ page.title }}</h2>
+    <h3 class="pt4-l pt2">{{ page.title }}</h3>
     <p>{{ page.date | date_to_string: "ordinal", "US" }}</p>
     <p class="">{{ page.description }}</p>    
-    
+
     <div class="db w-100"></div>
         <div class="pt1 w-100">
             <img src="{{ page.image }}" class="dib mr2" style="border-radius: 16px;">
@@ -21,11 +21,11 @@ author: Corey Mines
     </div>
 </section>
 
-    <section class="body-container ph4">
-        {{ content }}
-    </section>
-    
+
+<section class="body-container ph4">
+    {{ content }}
 </section>
+    
   
 <section class="">
     {% include footer--text.html %} 

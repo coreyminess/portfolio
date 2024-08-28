@@ -1,17 +1,17 @@
 mypages:
 
-- title: —homepage
+- title: homepage
   id: homepage
   url: /
 
-- title: —about
+- title: about
   id: about
   url: /about.html
 
-- title: —recent work
+- title: recent work
   id: recent-work
   url: /recent-work.html
 
-- title: —writing
+- title: writing
   id: writing-samples
   url: /writing-samples.html

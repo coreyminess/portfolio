@@ -3,62 +3,27 @@
 
     {% for item in site.data.page-copy.pagecontent %}
       {% if item.pagetitle == "homepage" %}
-
         <div class="h-100 w-100-l w-100-m w-100"> 
-          <h2 class="revealopacity1 pb2 page-subheader">{{item.title-1}}</h2> 
+          <h3 class="revealopacity1 pb2 page-subheader">{{item.title-1}}</h3> 
           <h1 class="pb2">{{item.title-2}}</h1> 
-          <h1 class="pb2">{{item.title-4}}</h1> 
-          <h1 class="pb2">{{item.title-5}}</h1> 
-          
-<!-- Remote Location Callout -->
-      <section class="availability-container">
-        <div class="availability-parent-container">
-          <div class="availability-child-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-              <circle cx="4" cy="4" r="4" fill="#6CB775"/>
-            </svg>
-            <p class="location-text">Fully-remote based in Boise, Idaho</p>
-          </div>
-        </div>
-      </section>
-      
-          <!-- <p class="">{{item.body-1}}</p> 
-          <p class="">{{item.body-2}}</p> 
-          <p class="pt0">{{item.body-3}}</p> -->
-    
-      {% endif %}
-    {% endfor %}
+          <h3 class="pb2">{{item.title-4}}</h3> 
+          <h3 class="pb2">{{item.title-5}}</h3> 
 
-
-      
-      <section class="work-pills pv2 pb4">
-        <div class="pill-row">
-          <!-- Pill #1 (Availability) -->
-          <div class="pill">
-            <div class="pill-body">
+        <!-- Remote Location Callout -->
+        <section class="availability-container">
+          <div class="availability-parent-container">
+            <div class="availability-child-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <circle cx="4" cy="4" r="4" fill="#6CB775"/>
               </svg>
-              <p class="pill-text">Available for Work</p>
+              <p class="location-text">Fully-remote & based in Boise, Idaho</p>
             </div>
           </div>
-
-          <!-- Pill #2 (Preference A) -->
-          <div class="pill">
-            <div class="pill-body">
-              <p class="pill-text">Full-Time</p>
-            </div>
-          </div>   
-
-          <!-- Pill #3 (Preference B) -->
-          <div class="pill">
-            <div class="pill-body">
-              <p class="pill-text">Remote & Contract</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        </section> 
+      {% endif %}
+    {% endfor %}
+    
+    {% include section--experience.html %}
     </div>
   </div>
 </section>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+// -------------- COLOR VARIABLES --------------  // 
+$accent-primary: #FFE0C9;
+$accent-secondary: #FDF5DF;
+$accent-tertiary: #E1A58B;
+$accent-neutral: #F4F4F4;
+$type-primary: #F4F4F4;
+$type-secondary: #a8a8a8;
+$type-tertiary: #757575;
+$bg-primary--dark: #161615;
+$background-opacity--primary: #36363525;
+$border--light: #515150;
+$border--medium: #222222;
+
+
+// --------------  TYPOGRAPHY VARIABLES --------------  // 
+$primary-typeface: "Roboto Serif", system-ui;
+$secondary-typeface: "Sofia Sans", system-ui;
+
+$title--xl: 2.63rem;
+$title--large: 2.25rem;
+$title--medium: 1.75rem;
+$title--small: 1.38rem;
+$title--xs: 1.13rem;
+
+$body--large: 1.4rem;
+$body--medium: 1.3rem;
+$body--small: 1.1rem;
+$body--xs: .9rem;
+
+$type-light: 300;
+$type-regular: 400;
+$type-medium: 500;
+$type-heavy: 700;
+
+$type-style-normal: normal; 
+$type-style-italic: italic;
+$type-style-bold: bold;
+
+$line-height--190: 190%;
+$line-height--180: 180%;
+$line-height--170: 170%;
+$line-height--160: 160%;
+$line-height--150: 150%;
+$line-height--140: 140%;
+$line-height--130: 130%;
+$line-height--120: 120%;
+$line-height--110: 110%;
+$line-height--100: 100%;
+
+
+// -------------- DIMENSION VARIABLES -------------- //
+$dimension-0: 0;
+$dimension-8: 8;
+$dimension-16: 16;
+$dimension-24: 24;
+$dimension-32: 32;
+$dimension-40: 40;

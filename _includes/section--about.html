@@ -1,14 +1,20 @@
 <section>
+
+</section>
+
+<section>
     {% for item in site.data.page-copy.pagecontent %}
         {% if item.pagetitle == "homepage" %}
+        
+            <div class="h-100 w-100-l w-100-m w-100 pb4 pt2 container-border-bottom"> 
+                <h1 class="pb2">Systems Thinker</h1>
+                <h3>{{item.body-1}}</h3>
+                <p class="">{{item.body-2}}</p> 
+                <p class="pt0">{{item.body-3}}</p>
+                {% include component--pill-row.html %} 
 
-        <div class="h-100 w-100-l w-100-m w-100 pb4 container-border-bottom"> 
-            <h2>{{item.body-1}}</h2>
-            <p class="">{{item.body-1}}</p> 
-            <p class="">{{item.body-2}}</p> 
-            <p class="pt0">{{item.body-3}}</p>
-        </div>
-            
+            </div>
         {% endif %}
     {% endfor %}
 </section>
+

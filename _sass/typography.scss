@@ -1,0 +1,399 @@
+// --- Typography Classes --- //
+.lh-loose {line-height: 1.85em;}
+.lh-loose-2 {line-height: 2.5em;}
+.letter-space {letter-spacing: 1px;}
+.letter-space-2 {letter-spacing: 3px;}
+.letter-space-3 {letter-spacing: 4px;}
+.tc-right {text-align: right;}
+
+// --- HTML Typography Classes --- //
+h1 {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--large; 
+	font-weight: $type-regular;
+	font-style: $type-style-italic;
+	line-height: $line-height--140;
+	letter-spacing: 1px;
+	margin: 0;
+}
+
+h1 > a {
+	color: $accent-secondary;
+	font-family: $primary-typeface;
+	text-decoration: underline;
+	font-weight: $type-medium;
+}
+
+h1 > a:hover {
+	text-decoration: none;
+	transition: 0.2s ease;
+	cursor: pointer;
+}
+
+h2 {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--large;
+	font-weight: $type-medium;
+	font-style: italic;
+	line-height: $line-height--170;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	text-transform: none;
+	margin: 0;
+}
+
+h3 {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--medium; 
+	font-weight: $type-regular;
+	font-style: $type-style-italic;
+	line-height: $line-height--160;
+	letter-spacing: .25px;
+	text-transform: none;
+	text-decoration: none;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 0;
+}
+
+h3 a {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--medium; 
+	font-weight: $type-regular;
+	font-style: $type-style-italic;
+	line-height: $line-height--160;
+	text-transform: none;
+	text-decoration: none;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 0;
+}
+
+h3 a:hover {
+	text-decoration: underline;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+h4 {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--small;
+	font-weight: 500;
+	font-style: $type-style-italic;
+	line-height: $line-height--130;
+	letter-spacing: .5px;
+	text-transform: none;
+	text-decoration: none;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 0;
+}
+
+h4 a {
+	color: $type-primary;
+	font-weight: $type-medium;
+	text-decoration: none;
+}
+
+h4 a:hover {
+	color: $accent-secondary;
+	text-decoration: underline;
+	transition: 0.3s ease;
+}
+
+h5 {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--xs;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.25;
+	letter-spacing: .5px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	text-transform: none;
+	margin: 0;
+}
+
+p {
+	color: $type-secondary;
+	font-family: $primary-typeface;
+	font-weight: $type-regular;
+	font-size: $body--medium;
+	line-height: $line-height--160;
+	letter-spacing: .8px;
+	font-style: normal;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 0;
+}
+
+p a {
+	color: $accent-secondary;
+	font-weight: 700;
+	text-decoration: underline;
+	font-style: $type-style-italic;
+	transition: 0.3s ease;
+}
+
+p strong {
+	color: $type-primary;
+	font-weight: $type-heavy;
+	font-style: $type-style-italic;
+}
+
+a {
+	font-weight: 700;
+	color: $accent-tertiary;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	margin: 0;
+}
+
+a:hover {
+	font-weight: 700;
+	color: $accent-primary;
+	text-decoration: underline !important;
+	transition: color 0.3s ease;
+	margin: 0;
+}
+
+ul li {
+	list-style-type: circle;
+	display: list-item;
+	font-family: $secondary-typeface;
+	font-display: block;
+	color: #3c3c3c;
+	font-size: 1.1rem;
+	line-height: 1.75;
+	padding-bottom: 1rem;
+}
+
+ol li {
+	display: list-item;
+	font-family: $secondary-typeface;
+	font-display: block;
+	color: #3c3c3c;
+	font-size: 1.1rem;
+	line-height: 1.75;
+	padding-bottom: 1rem;
+}
+
+
+// -- CSS CLASSES FOR TYPOGRAPHY -- //
+.availability-container {
+	display: flex;
+	padding: 32px 0px 88px 0px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	align-self: stretch;
+}
+
+.availability-parent-container {
+	background: $background-opacity--primary;
+	border-radius: 12px;
+	display: flex;
+	padding: 16px 24px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	align-self: stretch;
+}
+
+.availability-child-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.description {
+	font-size: $body--small
+}
+
+.em-dash {
+	color: $type-tertiary;
+}
+
+.experience-title {
+	color: $type-primary;
+	font-size: $body--small;
+	font-style: italic;
+	font-weight: $type-regular;
+}
+
+.experience-description {
+	color: $type-secondary;
+	font-size: $body--small;
+	font-style: italic;
+	font-weight: $type-medium;
+}
+
+.experience-date {
+	color: $type-tertiary;
+	font-size: $body--xs;
+	font-style: italic;
+	font-weight: $type-regular;}
+
+.copyright-text {
+	font-size: 0.7rem;
+}
+
+.hero-section-type {
+	color: $accent-tertiary;
+	font-family: $primary-typeface;
+	font-size: $title--large; 
+	font-style: italic;
+	font-weight: $type-medium;
+	margin: 0;
+	opacity: 100;
+}
+
+.list-item {
+	font-size: 0.7rem;
+	font-weight: 600 !important;
+	display: inline;
+}
+
+.location-text {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+.nav-links > a {
+	color: $accent-neutral;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-weight: $type-heavy;
+	font-style: $type-style-italic;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+.nav-links > a:hover {
+	color: $accent-neutral;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-weight: $type-heavy;
+	font-style: $type-style-italic;
+	text-decoration: underline;
+	margin: 0;
+	height: auto;
+	cursor: pointer;
+}
+
+.page-subheader {
+	font-weight: $type-medium;
+	font-style: italic;
+}
+
+.subpage-header-description {
+	font-size: $body--small;
+}
+
+.project-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.project-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 48px;
+	align-self: stretch;
+}
+
+.project-header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	align-self: stretch;
+}
+
+.project-header-main {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.project-title {
+	flex: 1 0 0;
+	color: $accent-tertiary;
+	font-family: $primary-typeface;
+	font-size: $title--small;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%; /* 33.6px */
+	letter-spacing: 0.24px;
+}
+
+.project-date {
+	color: $type-secondary;
+	text-align: right;
+	font-family: $secondary-typeface;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 170%; /* 23.8px */
+	letter-spacing: 0.56px;
+}
+
+.project-description {
+	color: $type-secondary;
+	flex: 1 0 0;
+	/* Body 1 */
+	font-family: $primary-typeface;
+	font-size: $body--small;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 28.8px */
+	letter-spacing: 0.72px;
+}
+
+.project-date-published {
+	color: $type-tertiary;
+	flex: 1 0 0;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 28.8px */
+	letter-spacing: 0.72px;
+}
+
+.project-achievements {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: stretch;
+	padding-bottom: 2.5rem;
+}
+
+.achievement-id > p {
+	color: $type-primary;
+	font-size: $body--medium;
+	align-self: stretch;
+	font-weight: 700;
+	letter-spacing: 0.64px;
+	line-height: 132%;
+	padding-top: .225rem !important;
+	padding-bottom: .225rem !important;
+}

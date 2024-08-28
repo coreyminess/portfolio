@@ -13,62 +13,68 @@ title: writing-samples
     {% include header--subpage.html %} 
 </section>
 
-{% for post in site.posts %}
-  {% if post.name contains 'blog' %}
+
     <section class="body-container project-section center ph6">
-        <div class="project-header">
-            <div class="project-header-container">
-            
-                <div class="project-header-main border-bottom">
+       
+            <!-- <div class="project-header">
+
+                <div class="project-header-container">
+                
+                    <div class="project-header-main container-border-bottom">
+                        <div class="w-100">
+                            {% for post in site.posts %}
+                            {% if post.name contains 'blog' %} 
+                            <h3 class ="pt2 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h3>
+                            <p class="description pt1 pb0 mb0">{{ post.description | truncate: 124}}</p>
+                            <p class="work-title-start pb4 pt2 container-border-bottom">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+        {% for post in site.posts %}
+            {% if post.name contains 'blog' %}
+                <div class="project-header-main container-border-bottom pt2">
                     <div class="project-title w-100">
-                        <h3 class ="pt3 pb0 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h3>
-                        <p class="pb0 mb0" style="color: white !important;">{{ post.excerpt | truncate: 124}}</p>
-                        <p class="pb4 border" style="font-size: 1.25rem !important;">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+                        <div class="work-title-header">
+                            <h4 class ="work-title-primary pb0 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
+                            <p class="work-title-start">{{ post.dates }}</p>
+                        </div>
+
+                        <p class="description">{{ post.description}}</p>
+
+                        <div class="tag-container pt1 pb4">
+                            <div class="tag-body">
+                                <p class="tag-text">{{ post.tag-1 }}</p>
+                            </div>
+                            <div class="tag-body">
+                                <p class="tag-text">{{ post.tag-2 }}</p>
+                            </div>
+                            <div class="tag-body">
+                                <p class="tag-text">{{ post.tag-3 }}</p>
+                            </div>
+                            <div class="tag-body">
+                                <p class="tag-text">{{ post.tag-4 }}</p>
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="mv2 pb4" >
+                            <img src="{{ post.image  | replace: '..', site.url  }}" alt="{{ post.title }}" title="{{ post.title }}" style="border-radius: 24px;">
+                        </div> -->
+
                     </div>
                 </div>
+            {% endif %}
+        {% endfor %}	
 
-            </div>
-        </div>
     </section>  
-    {% endif %}
-{% endfor %}
 
-<!-- 
-<section class="body-container project-section center mb4 pb4">
-	<div class="project-header">
-		<div class="project-header-container">
-            
-            {% for post in site.posts %}
-			<div class="project-header-main border-bottom">
-				<div class="project-title w-100">
-                    <h3 class ="pt3 pb0 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h3>
-                    <p class="pb0 mb0" style="color: white !important;">Lead an initiative to modernize the Facebook mobile product from top to bottom.</p>
-                    <p class="pb4 border" style="font-size: 1.25rem !important;">{{ post.date | date_to_string: "ordinal", "US" }}</p>
-				</div>
-			</div>
-            {% endfor %}
 
-		</div>
-	</div>
-</section> -->
-
-<!-- {% for post in site.categories.blog %}
-<section class="body-container project-section center mb4 pb4">
-    <div class="project-header">
-        <div class="project-header-container">
-            
-            <div class="project-header-main border-bottom">
-                <div class="project-title w-100">
-                    <h3 class ="pt3 pb0 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h3>
-                    <p class="pb0 mb0" style="color: white !important;">Lead an initiative to modernize the Facebook mobile product from top to bottom.</p>
-                    <p class="pb4 border" style="font-size: 1.25rem !important;">{{ post.date | date_to_string: "ordinal", "US" }}</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>  
-{% endfor %} -->
 
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js"></script> 
 <script>var myLazyLoad=new LazyLoad({elements_selector:".lazy"});</script> 
