@@ -1,0 +1,17 @@
+<section class="w-100-l w-100-m w-95-ns center global-max-width bg--primary"> 
+	<div class="pt4 pt2-m pt4-l pb5-l container-border-bottom"> 
+		{% for item in site.data.page-copy.pagecontent %}
+			{% if item.pagetitle == page.title %}
+				<div class="h-100 w-100-l w-100-m w-100"> 
+					<h2 class="revealopacity1"><span class=em-dash>—</span>{{item.title-1}}</h2> 
+					<p class="subpage-header-description">{{item.body-1}}</strong></p> 
+				</div>
+			{% endif %}
+		{% endfor %}
+
+	</div>
+</section>
+
+
+
+

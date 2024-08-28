@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Writing
+title: writing-samples
 ---
 
 <section class="body-container">
     <!-- Liquid Template File: Navigation (Primary) -->
-    {% include header.html %} 
+    {% include navigation--primary.html %} 
 </section>
 
-<section class="body-container">
+<section class="body-container ph6">
     <!-- Liquid Template File: Navigation (Primary) -->
-    {% include writing-header.html %} 
+    {% include header--subpage.html %} 
 </section>
 
 {% for post in site.posts %}
   {% if post.name contains 'blog' %}
-    <section class="body-container project-section center">
+    <section class="body-container project-section center ph6">
         <div class="project-header">
             <div class="project-header-container">
             

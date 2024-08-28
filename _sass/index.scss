@@ -1,3 +1,6 @@
+// -------------- IMPORTS --------------  // 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
 // -------------- COLOR VARIABLES --------------  // 
 $accent-primary: #FFE0C9;
 $accent-secondary: #FDF5DF;
@@ -5,27 +8,27 @@ $accent-tertiary: #E1A58B;
 $accent-neutral: #F4F4F4;
 $type-primary: #F4F4F4;
 $type-secondary: #a8a8a8;
-$type-tertiary: #515150;
+$type-tertiary: #757575;
 $bg-primary--dark: #161615;
 $background-opacity--primary: #36363525;
 $border--light: #515150;
+$border--medium: #222222;
 
 
 // --------------  TYPOGRAPHY VARIABLES --------------  // 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 $primary-typeface: "Roboto Serif", system-ui;
 $secondary-typeface: "Sofia Sans", system-ui;
 
-
 $title--xl: 1.8rem;
-$title--large: 1.6rem;
-$title--medium: 1.45rem;
-$title--small: 1.3rem;
-$title--xs: 1.1rem;
+$title--large: 1.5rem;
+$title--medium: 1.25rem;
+$title--small: 1.1rem;
+$title--xs: .9rem;
 
 $body--large: 1.4rem;
 $body--medium: 1.3rem;
 $body--small: 1.1rem;
+$body--xs: .9rem;
 
 $type-light: 300;
 $type-regular: 400;
@@ -58,7 +61,6 @@ $dimension-40: 40;
 
 
 // -------------- HTML CLASSES -------------- //
-
 body {background-color: $bg-primary--dark;}
 
 html {
@@ -110,7 +112,7 @@ h1 > a:hover {
 h2 {
 	color: $type-primary;
 	font-family: $primary-typeface;
-	font-size: $title--medium;
+	font-size: $title--large;
 	font-weight: $type-medium;
 	font-style: italic;
 	line-height: 1.25;
@@ -126,7 +128,7 @@ h3 {
 	font-size: $title--large; 
 	font-weight: $type-regular;
 	font-style: $type-style-italic;
-	line-height: $line-height--140;
+	line-height: $line-height--160;
 	letter-spacing: .25px;
 	text-transform: none;
 	text-decoration: none;
@@ -183,12 +185,12 @@ h4 a:hover {
 
 
 h5 {
-	font-size: $title--xs;
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $title--small;
 	font-weight: 700;
-	font-family: $secondary-typeface;
 	line-height: 1.25;
 	letter-spacing: .5px;
-	color: $type-primary;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	text-transform: none;
@@ -202,6 +204,7 @@ p {
 	font-size: $body--medium;
 	line-height: $line-height--180;
 	letter-spacing: .64px;
+	font-style: $type-style-italic;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	margin: 0;
@@ -211,12 +214,14 @@ p a {
 	color: $accent-secondary;
 	font-weight: 700;
 	text-decoration: underline;
+	font-style: $type-style-italic;
 	transition: 0.3s ease;
 }
 
 p strong {
 	color: $type-primary;
 	font-weight: $type-heavy;
+	font-style: $type-style-italic;
 }
 
 .description {
@@ -341,7 +346,32 @@ ol li {
 
 
 // -------------- COMPONENT VARIABLES -------------- //
-.header__select-work {border-bottom: $border--light;}
+
+.container-border-bottom {
+	border-bottom: 1px solid #222222;
+}
+
+.experience-title {
+	color: $type-primary;
+	font-size: $body--small;
+	font-style: italic;
+	font-weight: $type-regular;
+}
+
+.experience-description {
+	color: $type-secondary;
+	font-size: $body--small;
+	font-style: italic;
+	font-weight: $type-medium;
+}
+
+.experience-date {
+	color: $type-tertiary;
+	font-size: $body--xs;
+	font-style: italic;
+	font-weight: $type-regular;}
+
+.header__select-work {border-bottom: $border--medium;}
 
 .copyright-text {
 	font-size: 0.7rem;
@@ -403,7 +433,7 @@ ol li {
 	background: $background-opacity--primary;
 	border-radius: 12px;
 	display: flex;
-	padding: 32px 44px;
+	padding: 16px 24px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -533,7 +563,48 @@ width: 48%;
 
 
 
-// -------------- COMPONENT CLASSES -- TEMPORARY -------------- //
+// -------------- COMPONENT CLASSES -------------- //
+
+.location-text {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+// -- PAGE HEADERS _ SUBPAGES -- //
+.subpage-header-description {
+	font-size: $body--small;
+}
+
+// --- NAVIGATION --- //
+.nav-links > a {
+	color: $accent-neutral;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-weight: $type-heavy;
+	font-style: $type-style-italic;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+.nav-links > a:hover {
+	color: $accent-neutral;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-weight: $type-heavy;
+	font-style: $type-style-italic;
+	text-decoration: underline;
+	margin: 0;
+	height: auto;
+	cursor: pointer;
+}
+
+
 .profile-photo {
 max-width: 50%;
 }
@@ -586,16 +657,6 @@ align-items: center;
 justify-content: center;
 }
 
-.xp-body-container > p {
-color: $type-secondary;
-font-family: $primary-typeface;
-font-size: $body--medium;
-font-style: normal;
-font-weight: 400;
-line-height: 170%; /* 23.8px */
-letter-spacing: 0.56px;
-}
-
 .xp-img-container {
 width: 110px;
 height: 96px;
@@ -603,28 +664,6 @@ align-items: center;
 justify-content: center;
 border-radius: 8px;
 background-color: $accent-neutral;
-}
-
-.nav-links {
-text-decoration: none;
-font-weight: 300;
-letter-spacing: .1px;
-color: $accent-neutral;
-font-family: $primary-typeface;
-font-size: $body--small;
-margin: 0;
-height: auto;
-}
-
-.nav-links > a {
-text-decoration: none !important;
-font-size: 1.1rem;
-letter-spacing: 0.1px;
-color: $type-primary;
-font-family: $primary-typeface;
-font-size: $body--small;
-margin: 0;
-height: auto;
 }
 
 .experience-section {
@@ -638,12 +677,12 @@ align-self: stretch;
 
 .experience-row {
 display: flex;
-padding: 16px 0px 32px 0px;
+padding: 8px 0px 8px 0px;
 flex-direction: column;
 align-items: flex-start;
 gap: 8px;
 align-self: stretch;
-border-bottom: 1px solid $border--light;
+border-bottom: 1px solid #222222;
 }
 
 .align-stretch {
@@ -679,15 +718,15 @@ gap: 8px;
 
 //---//
 .pill-text {
-color: $type-primary;
-font-family: $primary-typeface;
-font-size: $body--medium;
-font-style: normal;
-font-weight: 700;
-line-height: 180%; /* 32.4px */
-letter-spacing: 0.18px;
-margin: 0 !important;
-padding: 0 !important;
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: $body--xs;
+	font-style: normal;
+	font-weight: $type-heavy;
+	line-height: $line-height--180;
+	letter-spacing: 0.18px;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 .pill-active {
@@ -816,13 +855,13 @@ background: url(<path-to-image>), lightgray 50% / cover no-repeat, rgba(255, 255
 .tag-container {
 display: flex;
 align-items: flex-start;
-gap: 8px;
+gap: 16px;
 align-self: stretch;
 }
 
 .tag-body {
 display: flex;
-padding: 4px 16px;
+padding: 10px 18px;
 justify-content: center;
 align-items: center;
 gap: 10px;
@@ -833,10 +872,10 @@ background: rgba(131, 131, 131, 0.15);
 .tag-text {
 color: $type-primary;
 font-family: $secondary-typeface;
-font-size: $body--small;
+font-size: $body--xs;
 font-style: normal;
 font-weight: 700;
-line-height: 230%;
+line-height: 140%;
 letter-spacing: 0.18px;
 margin: 0 !important;
 padding: 0 !important;

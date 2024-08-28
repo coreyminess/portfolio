@@ -1,3 +1,15 @@
+project-0:
+  name: 
+  dates: 
+  description: 
+  tag-1: 
+  tag-2: 
+  tag-3: 
+  tag-4: 
+  hero-img: 
+  title: — Product & work samples
+  description: Included below are some examples of my recent work.
+
 project-1:
   name: CNN, Vossi Design System
   dates: 22 - 23
@@ -37,3 +49,4 @@ project-4:
   tag-3: Curation
   tag-4: Innovation
   hero-img: 
+

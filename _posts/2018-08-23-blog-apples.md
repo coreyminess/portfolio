@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Apples are the Best Fruits..."
+description: "Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada."
 ---
 
 **Lorem ipsum** dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada. Consectetur pulvinar id ultrices ullamcorper nibh. Tellus pharetra nulla feugiat aliquet vitae sem. 

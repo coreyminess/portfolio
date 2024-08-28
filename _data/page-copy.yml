@@ -1,4 +1,6 @@
-home-page:
+pagecontent:
+
+- pagetitle: homepage
   title-1: 👋 Hola! I’m Corey
   title-2: I am a Staff Product Designer at <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">CNN</a>, working to establish and scale our <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">Design System Language</a>.
   title-3: Delivery-focused Staff Product Designer with over 12 years of hands-on experience crafting engaging, immersive, digital product experiences across Web, Mobile App and Connected TV.
@@ -11,10 +13,15 @@ home-page:
   pill-2: Full-Time Opportunities
   pill-3: Remote 
 
-recent-experience:
-  title-1: Recent Experience
-  body-1: Ac proin sit vitae pulvinar <a href="https://dribbble.com/coreymines" target="_blank" rel="noopener" class="underline dim">resis velit</a> or download a resume <a href="https://dribbble.com/coreymines" target="_blank" rel="noopener" class="underline dim">resis velit.
+- pagetitle: recent-work
+  title-1: Product & work samples
+  body-1: Included are some examples of my recent work.
 
-contact-section:
-  title-1: —Let’s get in touch!
-  body-1: Hodus dolor sit amet consectetur <a href="mailto:hello@coreymines.design?subject=Greetings">absesus.</a> Mauris amet hac cum sociis massa Egestas sit volutpat.
+- pagetitle: writing-samples
+  title-1: Writing samples
+  body-1: Included are some thoughts, ramblings and ideas around design and technology
+
+- pagetitle: about
+  title-1: About me
+  body-1: Staff product designer with over 12 years experience in UX, UI, prototyping, research and data-driven design
+  

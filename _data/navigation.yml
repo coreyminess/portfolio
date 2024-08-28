@@ -1,6 +1,17 @@
-- name: Home
-  link: /
-- name: Select Work
-  link: /select-work.html
-- name: Writing
-  link: /writing.html
+mypages:
+
+- title: —homepage
+  id: homepage
+  url: /
+
+- title: —about
+  id: about
+  url: /about.html
+
+- title: —recent work
+  id: recent-work
+  url: /recent-work.html
+
+- title: —writing
+  id: writing-samples
+  url: /writing-samples.html

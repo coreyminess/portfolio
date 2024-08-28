@@ -1,20 +1,25 @@
 ---
 layout: default
-title: Writing
+title: recent-work
 author: Corey Mines
 ---
 <section class="body-container">
 	<!-- Liquid Template File: Navigation (Primary) -->
-	{% include header.html %} 
+	{% include navigation--primary.html %} 
 </section>
 
-<section class="body-container">
+<section class="body-container ph6">
 	<!-- Liquid Template File: Select Work (Header) -->
-	{% include work-header.html %}
+	{% include header--subpage.html %}
+</section>
+
+<section class="body-container ph6">
+	<!-- Liquid Template File: Select Work (Header) -->
+	{% include header--subpage.html %}
 </section>
 
 <!-- Liquid - Case Study Markdown Conversion (Posts tagged 'case-study')-->
-<section class="body-container project-section center mb4 pb4">
+<section class="body-container project-section center mb4 pb4 ph6">
 	<div class="project-header">
 		<div class="project-header-container">
             {% for post in site.posts %}
@@ -58,9 +63,9 @@ author: Corey Mines
 
 <section class="">
     <!-- Liquid Template File: Icon Row (Contact Social Icons) -->
-    {% include icon-footer.html %} 
+    {% include footer--icon.html %} 
     <!-- Liquid Template File: Copyright / Attribution) -->
-    {% include copyright-footer.html %} 
+    {% include footer--text.html %} 
 </section>
   
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js"></script> 
