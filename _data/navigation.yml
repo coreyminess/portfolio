@@ -4,9 +4,9 @@ mypages:
   id: homepage
   url: /
 
-- title: about
-  id: about
-  url: /about.html
+# - title: about
+#   id: about
+#   url: /about.html
 
 - title: recent work
   id: recent-work
