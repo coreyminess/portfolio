@@ -6,8 +6,9 @@ $accent-secondary: #FDF5DF;
 $accent-tertiary: #E1A58B;
 $accent-neutral: #F4F4F4;
 $type-primary: #F4F4F4;
-$type-secondary: #a8a8a8;
+$type-secondary: #d6d6d6;
 $type-tertiary: #757575;
+$type-quartenary: #b9b9b9;
 $bg-primary--dark: #161615;
 $background-opacity--primary: #36363525;
 $border--light: #515150;
@@ -16,13 +17,14 @@ $border--medium: #222222;
 
 // --------------  TYPOGRAPHY VARIABLES --------------  // 
 $primary-typeface: "Roboto Serif", system-ui;
-$secondary-typeface: "Sofia Sans", system-ui;
+$secondary-typeface: "Rubik", serif;
+$tertiary-typeface: "Sofia Sans", system-ui;
 
 $title--xl: 2.63rem;
 $title--large: 2.25rem;
-$title--medium: 1.75rem;
-$title--small: 1.38rem;
-$title--xs: 1.13rem;
+$title--medium: 1.9rem;
+$title--small: 1.6rem;
+$title--xs: 1.1rem;
 
 $body--large: 1.4rem;
 $body--medium: 1.3rem;

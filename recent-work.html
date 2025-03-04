@@ -3,62 +3,24 @@ layout: default
 title: recent-work
 author: Corey Mines
 ---
-<section class="body-container">
-	<!-- Liquid Template File: Navigation (Primary) -->
+
+<!-- Liquid Template File: Navigation (Primary) -->
+<section>
 	{% include navigation--primary.html %} 
 </section>
 
-
-<section class="body-container ph6">
-	<!-- Liquid Template File: Select Work (Header) -->
+<!-- Liquid Template File: Select Work (Header) -->
+<section>
 	{% include header--subpage.html %}
 </section>
 
 <!-- Liquid - Case Study Markdown Conversion (Posts tagged 'case-study')-->
-<section class="body-container project-section center mb4 pb4 ph6">
-	<div class="project-header">
-		<div class="project-header-container">
-            {% for post in site.posts %}
-                {% if post.name contains 'case-study' %}
-                    <div class="project-header-main container-border-bottom">
-                        <div class="project-title w-100">
-                            <div class="work-title-header">
-                                <h4 class ="work-title-primary pt3 pb0 mb0"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
-                                <p class="work-title-start">{{ post.dates }}</p>
-                            </div>
-
-                            <p class="description">{{ post.description}}</p>
-
-                            <div class="tag-container pt1 pb4">
-                                <div class="tag-body">
-                                    <p class="tag-text">{{ post.tag-1 }}</p>
-                                </div>
-                                <div class="tag-body">
-                                    <p class="tag-text">{{ post.tag-2 }}</p>
-                                </div>
-                                <div class="tag-body">
-                                    <p class="tag-text">{{ post.tag-3 }}</p>
-                                </div>
-                                <div class="tag-body">
-                                    <p class="tag-text">{{ post.tag-4 }}</p>
-                                </div>
-                            </div>
-
-
-                            <div class="mv2 pb4" >
-                                <img src="{{ post.image  | replace: '..', site.url  }}" alt="{{ post.title }}" title="{{ post.title }}" style="border-radius: 24px;">
-                            </div>
-
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}			
-		</div>
-	</div>
+<section>
+	{% include case-study--gallery.html %}
 </section>
 
+<!-- Liquid Template File: Page Footer -->
 <section class="">
-    <!-- Liquid Template File: Copyright / Attribution) -->
     {% include footer--text.html %} 
 </section>
   

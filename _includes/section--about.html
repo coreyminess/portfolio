@@ -1,15 +1,12 @@
-<section>
-
-</section>
-
-<section>
+<section class="w-70-l w-100 ph6-l ph2 pb2 mb3 mw-custom--default center border-bottom pt3 bg--primary" style="min-height:85vh; align-content:center;">
     {% for item in site.data.page-copy.pagecontent %}
         {% if item.pagetitle == "homepage" %}
         
-            <div class="h-100 w-100-l w-100-m w-100 pb4 ph6 pt4 container-border-bottom"> 
-                <p>{{item.body-1}}</p>
-                <p class="">{{item.body-2}}</p> 
-                <p class="pt0">{{item.body-3}}</p>
+            <div class="pt4"> 
+                <h1 class="pb2">Staff Product Designer with over 12 years experience in UX, UI, prototyping, research and design systems.</h1>
+                <p class="description--hero pb1">{{item.body-1}}</p>
+                <p class="description--hero pb1">{{item.body-2}}</p> 
+                <p class="description--hero pt0 pb1">{{item.body-3}}</p>
                 {% include component--pill-row.html %} 
 
             </div>

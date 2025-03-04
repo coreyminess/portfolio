@@ -2,7 +2,7 @@ pagecontent:
 
 - pagetitle: homepage
   title-1: 👋 Hola! I’m Corey
-  title-2: I am a Staff Product Designer at <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">CNN</a>, working to establish and scale our <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">Design System Language</a>.
+  title-2: I am a Staff Product Designer at <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">CNN</a>, working to establish and scale our <a href="https://www.designexecutivecouncil.com/insights/design-driven-culture-change-elevating-cnns-digital-experience" target="_blank" rel="noopener" class="underline dim">Design System Language</a>.
   title-3: Delivery-focused Staff Product Designer with over 12 years of hands-on experience crafting engaging, immersive, digital product experiences across Web, Mobile App and Connected TV.
   title-4: Currently laser-focused on launching an end-to-end Figma to code pipeline, empowering designers to publish and maintain accessible design systems at scale.
   title-5: Design hand-off demystified ✨ 
@@ -15,13 +15,13 @@ pagecontent:
 
 - pagetitle: recent-work
   title-1: Product & work samples
-  body-1: Included are some examples of my recent work.
+  body-1: Included are some examples of my recent work
 
 - pagetitle: writing-samples
   title-1: Writing samples
-  body-1: Included are some thoughts, ramblings and ideas around design and technology
+  body-1: Personal blog about design & technology
 
 - pagetitle: about
   title-1: About me
-  body-1: Staff Product Designer with over 12 years experience in UX, UI, prototyping, research and data-driven design
+  body-1: My design journey
   

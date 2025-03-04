@@ -1,0 +1,40 @@
+<section class="w-70-l w-100 ph6-l ph2 pb2 mw-custom--default border-bottom center project-section">
+    {% for post in site.posts %}
+        {% if post.name contains 'blog' %}
+            <div class="project-header-main container-border-bottom pt2">
+
+                <div class="project-title w-100">
+
+                    <div class="work-title-header">
+                        <h4 class ="work-title-primary"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
+                        <p class="work-title-start">{{ post.dates }}</p>
+                        <p class="description pb1">{{ post.description}}</p>
+                    </div>
+
+
+                    <div class="tag-container pt1 pb4">
+                        <div class="tag-body">
+                            <p class="tag-text">{{ post.tag-1 }}</p>
+                        </div>
+                        <div class="tag-body">
+                            <p class="tag-text">{{ post.tag-2 }}</p>
+                        </div>
+                        <div class="tag-body">
+                            <p class="tag-text">{{ post.tag-3 }}</p>
+                        </div>
+                        <div class="tag-body">
+                            <p class="tag-text">{{ post.tag-4 }}</p>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="mv2 pb4" >
+                        <img src="{{ post.image  | replace: '..', site.url  }}" alt="{{ post.title }}" title="{{ post.title }}" style="border-radius: 24px;">
+                    </div> -->
+
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}	
+
+</section>  

@@ -68,14 +68,18 @@
     </head> 
 
     <body class="center">
-        <section class="body-container">
-  <!-- Liquid Template File: Navigation (Primary) -->
-  <header id="nav-background" class="max-width-1440"> 
-    <div class="w-100 bg--primary v-mid center"> 
+        <!-- Liquid Template File: Navigation (Primary) -->
+<section>
+  <header id="nav-background" class="w-80-l w-100 mw8 ph2 center body-container max-width-1440"> 
+    <div class="bg--primary v-mid center"> 
     
 
       <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
         
+          
+        
+          
+              <a class="white dim ph3" href="/about.html">about</a>
           
         
           
@@ -88,8 +92,9 @@
         
       </div>
 
-      <div class="nav-links pv4 w-25" > 
-        <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">@corey</a> 
+      <div class="nav-links w-25" > 
+        <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+        <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
       </div>   
    
       <!-- <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
@@ -108,22 +113,20 @@
 </header> 
 </section>
 
-<section class="body-container ph6 pt4">
-  <section>
-
-</section>
-
+<!-- Liquid Template File: Hero Section (Primary) -->
 <section>
+  <section class="w-70-l w-100 ph6-l ph2 pb2 mb3 mw-custom--default center border-bottom pt3 bg--primary" style="min-height:85vh; align-content:center;">
     
         
         
-            <div class="h-100 w-100-l w-100-m w-100 pb4 ph6 pt4 container-border-bottom"> 
-                <p>These days, you can find me diving head-first into CNN’s design system language that establishes and informs immersive, rich story-telling experiences delivered to users across the globe.</p>
-                <p class="">I consider myself a mission-driven designer with lofty ambitions to enrich and empower the world, through impactful storytelling, to inform a better future. Prior to my current role, I lead product design initiatives for a range of products in video, community and a variety of funded 0:1 products. I thrive in ambiguity, and love sinking my teeth into a rich problem space that puts me out of my comfort zone.</p> 
-                <p class="pt0">This work taken me around the world and back, spanning a number of industries, verticals, and focus-areas across responsive web, mobile apps and connected TV. Life is a garden, so dig it... err... lemons, lemonade.</p>
-                <section class="work-pills pv2 pb4">
+            <div class="pt4"> 
+                <h1 class="pb2">Staff Product Designer with over 12 years experience in UX, UI, prototyping, research and design systems.</h1>
+                <p class="description--hero pb1">These days, you can find me diving head-first into CNN’s design system language that establishes and informs immersive, rich story-telling experiences delivered to users across the globe.</p>
+                <p class="description--hero pb1">I consider myself a mission-driven designer with lofty ambitions to enrich and empower the world, through impactful storytelling, to inform a better future. Prior to my current role, I lead product design initiatives for a range of products in video, community and a variety of funded 0:1 products. I thrive in ambiguity, and love sinking my teeth into a rich problem space that puts me out of my comfort zone.</p> 
+                <p class="description--hero pt0 pb1">This work taken me around the world and back, spanning a number of industries, verticals, and focus-areas across responsive web, mobile apps and connected TV. Life is a garden, so dig it... err... lemons, lemonade.</p>
+                <section class="tag-container pv2 pb4">
     <div class="pill-row">
-      <div class="pill">
+      <div class="tag-body">
         <div class="pill-body">
           <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
             <circle cx="4" cy="4" r="4" fill="#6CB775"/>
@@ -132,19 +135,20 @@
         </div>
       </div>
 
-      <div class="pill">
+      <div class="tag-body">
         <div class="pill-body">
-          <p class="tag-text">Product Design</p>
+          <p class="tag-text">Design Systems</p>
         </div>
       </div>   
 
-      <div class="pill">
+      <div class="tag-body">
         <div class="pill-body">
-          <p class="tag-text">Prototyping</p>
+          <p class="tag-text">0:1 Products</p>
         </div>
       </div>
     </div>
-  </section>   
+  </section>  
+ 
 
             </div>
         
@@ -157,24 +161,275 @@
     
 </section>
 
-
+ 
 </section>
 
+<!-- Liquid Template File: Recent Experience -->
+<section>
+  <script>
+  function myFunction(x) {
+    // Toggle the class
+    x.classList.toggle("fa-minus");
+    
+    // Find the nested paragraph
+    var paragraph = x.querySelector('p');
+    
+    // If there's no nested paragraph, search in a parent element
+    if (!paragraph) {
+      paragraph = x.closest('.container').querySelector('p');
+    }
+    
+    // Change the text if the paragraph is found
+    if (paragraph) {
+      if (x.classList.contains("fa-minus")) {
+        paragraph.textContent = "Show less experience";
+      } else {
+        paragraph.textContent = "Show more experience";
+      } 
+    }
+  }
+  
+  // Runs function when the page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all elements that should trigger the function
+    var triggers = document.querySelectorAll('.accordion'); // Replace with your actual class
+    
+    // Set initial state for each trigger
+    triggers.forEach(function(trigger) {
+      var paragraph = trigger.querySelector('p') || trigger.closest('.container').querySelector('p');
+      if (paragraph) {
+        paragraph.textContent = "Show more experience";
+      }
+      trigger.classList.remove("fa-minus");
+      trigger.classList.add("fa-plus");
+    });
+  });
+  </script>
 
 
-<section class="ph6">
-  <!-- Liquid Template File: Icon Row (Contact Social Icons) -->
-  <!-- <section class="w-100 center"> 
-    <nav class="tc pv3 footer-bg"> 
-      <a href="https://github.com/coreyminess/" class="center hover dim mw-50" target="_blank" rel="noopener" title="GitHub">
-      <img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/github-icon.png" class="ph1" style="width:50px;" alt="corey mines github profile"/></a> 
-      <a href="https://www.linkedin.com/in/coreymines/" class="center hover dim mw-50" target="_blank" rel="noopener" title="LinkedIn">
-      <img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/linkedin-icon.png" class="ph1" style="width:50px;" alt="corey mines linkedin page"/></a> <a href="https://dribbble.com/coreymines/" class="center hover dim mw-50" target="_blank" rel="noopener" title="Dribbble"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/dribble-icon.png" class="ph1" style="width:50px;" alt="corey mines dribbble profile - recent work"/></a> 
-      <a href="https://medium.com/@coreyminesdesign/" class="center hover dim mw-50" target="_blank" rel="noopener" title="Medium"><img src="https://d1rnfttkuep1vk.cloudfront.net/brand/social-icons/medium-icon.png" class="ph1" style="width:50px;" alt="corey mines medium blog"/></a> 
-    </nav> 
-</section>   -->
-  <!-- Liquid Template File: Copyright / Attribution) -->
-  <div class="footer-container center"> 
+  <!-- Experience Section Header -->
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, Design Systems</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Staff Product Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2022</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, Streaming Platforms</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Staff Product Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2021</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, 0:1 Products, Interactive Communities</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Sr. Product Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2020</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\bbcom-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Bodybuilding.com, E-Commerce, Community & Apps</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Sr. Product Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2019</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\ventive-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Ventive, Software Design & Development Agency</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Product Manager</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2018</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\atavus-logo-fixed.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Atavus, Tackle Football Safety Education & Analytics</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Brand & Visual Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2017</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\msft-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Microsoft, Bing Studios</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Graphic Designer II (UI)</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2017</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\lb-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Lightboard, Digital Design Agency</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Lead Designer</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2016</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="img\logos\sxs-logo.jpg" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">South by Sea, Custom Illustration & Apparel</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Creative Director</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2013</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  
+
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+</section>
+
+<!-- Liquid Template File: Page Footer -->
+<section>
+  <div class="center mt3"> 
     <nav class="tc pv1"> <p class="gray copyright-text">Designed & Developed by Corey Mines deep in the woods of Boise, ID.</p> </nav> 
 </div>   
 </section>

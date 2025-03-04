@@ -1,22 +1,22 @@
-<section class="w-100-l w-100-m w-95-ns center global-max-width pt4 bg--primary ph6"> 
-  <div class="pt4 pt2-m pb2-l container-border-bottom"> 
+<section class="w-70-l w-100 ph6-l ph2 pb6-l pb6 mw-custom--default center v-mid pt5-l bg--primary" style="min-height:85vh; align-content:center;"> 
+  <div class="pt4 pt2-m pb2-l"> 
 
     {% for item in site.data.page-copy.pagecontent %}
       {% if item.pagetitle == "homepage" %}
-        <div class="h-100 w-100-l w-100-m w-100"> 
+        <div class="h-100 w-100-l w-100-m w-100 pr4-l pr0"> 
           <h4 class="revealopacity1 pb2 page-subheader">{{item.title-1}}</h4> 
           <h1 class="pb2">{{item.title-2}}</h1> 
           <h3 class="pb2">{{item.title-4}}</h3> 
           <h3 class="pb2">{{item.title-5}}</h3> 
 
         <!-- Remote Location Callout -->
-        <section class="availability-container">
-          <div class="availability-parent-container">
+        <section class="availability-container pt4-l pt2">
+          <div class="availability-parent-container ">
             <div class="availability-child-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <circle cx="4" cy="4" r="4" fill="#6CB775"/>
               </svg>
-              <p class="location-text">Fully-remote & based in Boise, Idaho</p>
+              <p class="location-text">Fully-remote based in Boise, Idaho</p>
             </div>
           </div>
         </section> 
