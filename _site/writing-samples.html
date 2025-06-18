@@ -15,11 +15,12 @@
         <meta property="og:url" content="https://coreymines.design"/> 
         <meta property="og:site_name" content="Corey Mines Design Portfolio"/> 
         <meta name="google-site-verification" content="Hh9mg74QsrqkysqDZm-iVs-O6Fs-yzyMwUWzA--mQRA"/>
+
         <link rel="canonical" href="https://coreymines.design"/> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css"/> 
         <link rel="stylesheet" href="/css/output.css"> 
         <link rel="stylesheet" href="/css/accordion.css"> 
-        <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css">
+        <!-- <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,13 +42,50 @@
         <html lang="en"> <meta name="keywords" content="UX, UI, Product Design and Development - Boise, Idaho and Seattle, Washington">      
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script> 
-        <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script> 
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script>  -->
+        <!-- <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script>  -->
         <script type="text/javascript" src="https://coreymines.design/js/scrollreveal.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/menushift.js"></script> 
-        <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-104112808-1","auto"),ga("send","pageview");</script> <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","white")});</script> <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","white"),$("body input + label span").css("background","black")})});</script> 
-        <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","white"),$("body input + label span").css("background","black"))});</script> 
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script>  -->
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/menushift.js"></script>  -->
+        <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-104112808-1","auto"),ga("send","pageview");</script> 
+        <!-- <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","black")});</script>  -->
+        <!-- <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","#161615"),$("body input + label span").css("background","#none")})});</script>  -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              // Track the menu state
+              let menuOpen = false;
+              
+              // Get the burger button element
+              const burgerButton = document.getElementById("burger");
+              
+              // Add click event listener
+              burgerButton.addEventListener("click", function() {
+                  // Toggle menu state
+                  menuOpen = !menuOpen;
+                  
+                  if (menuOpen) {
+                      // When menu opens
+                      document.getElementById("nav-links").style.background = "#161615";
+                      
+                      // Change all spans inside the label that follows an input in the body
+                      const spans = document.querySelectorAll("body input + label span");
+                      spans.forEach(span => {
+                          span.style.background = "white";
+                      });
+                  } else {
+                      // When menu closes
+                      document.getElementById("nav-links").style.background = "none";
+                      
+                      // Reset all spans inside the label that follows an input in the body
+                      const spans = document.querySelectorAll("body input + label span");
+                      spans.forEach(span => {
+                          span.style.background = "white";
+                      });
+                  }
+              });
+          });
+      </script>
+        <!-- <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","black"),$("body input + label span").css("background","black"))});</script>  -->
         <script src="http://localhost:35729/livereload.js"></script>
         <script type="text/javascript" src="/js/accordion.js"></script> 
         <script type="application/ld+json">
@@ -97,16 +135,36 @@
         <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
       </div>   
    
-      <!-- <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
-      <span class="bar-change" style="margin-top:1px;"></span> </label> </input>  -->
+      <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
+      <span class="bar-change" style="margin-top:1px;"></span> </label> </input> 
         
-      <!-- <nav id="nav-links"> 
-        <ul class="khand" style="padding-top:7em;"> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design" title="Home">Home</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/about/" title="About">About</a></li> <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/case-studies/" title="Case Studies">Case Studies</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/blog/" title="Blog">Blog</a></li> <li style="list-style:none !important; padding-top: 30px; "></li> 
-        </ul> 
-      </nav>  -->
+      <nav id="nav-links" style="display:none"> 
+        
+          
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="/">home</a></li> 
+            </ul> 
+          
+        
+          
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="/about.html">about</a></li> 
+            </ul> 
+          
+        
+          
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="/recent-work.html">recent work</a></li> 
+            </ul> 
+          
+        
+          
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="/writing-samples.html">writing</a></li> 
+            </ul> 
+          
+        
+      </nav> 
 
     </div> 
 

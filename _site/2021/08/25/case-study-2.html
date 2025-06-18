@@ -15,11 +15,12 @@
         <meta property="og:url" content="https://coreymines.design"/> 
         <meta property="og:site_name" content="Corey Mines Design Portfolio"/> 
         <meta name="google-site-verification" content="Hh9mg74QsrqkysqDZm-iVs-O6Fs-yzyMwUWzA--mQRA"/>
+
         <link rel="canonical" href="https://coreymines.design"/> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css"/> 
         <link rel="stylesheet" href="/css/output.css"> 
         <link rel="stylesheet" href="/css/accordion.css"> 
-        <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css">
+        <!-- <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,13 +42,50 @@
         <html lang="en"> <meta name="keywords" content="UX, UI, Product Design and Development - Boise, Idaho and Seattle, Washington">      
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script> 
-        <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script> 
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script>  -->
+        <!-- <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script>  -->
         <script type="text/javascript" src="https://coreymines.design/js/scrollreveal.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script> 
-        <script type="text/javascript" src="https://coreymines.design/js/menushift.js"></script> 
-        <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-104112808-1","auto"),ga("send","pageview");</script> <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","white")});</script> <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","white"),$("body input + label span").css("background","black")})});</script> 
-        <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","white"),$("body input + label span").css("background","black"))});</script> 
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script>  -->
+        <!-- <script type="text/javascript" src="https://coreymines.design/js/menushift.js"></script>  -->
+        <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-104112808-1","auto"),ga("send","pageview");</script> 
+        <!-- <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","black")});</script>  -->
+        <!-- <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","#161615"),$("body input + label span").css("background","#none")})});</script>  -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              // Track the menu state
+              let menuOpen = false;
+              
+              // Get the burger button element
+              const burgerButton = document.getElementById("burger");
+              
+              // Add click event listener
+              burgerButton.addEventListener("click", function() {
+                  // Toggle menu state
+                  menuOpen = !menuOpen;
+                  
+                  if (menuOpen) {
+                      // When menu opens
+                      document.getElementById("nav-links").style.background = "#161615";
+                      
+                      // Change all spans inside the label that follows an input in the body
+                      const spans = document.querySelectorAll("body input + label span");
+                      spans.forEach(span => {
+                          span.style.background = "white";
+                      });
+                  } else {
+                      // When menu closes
+                      document.getElementById("nav-links").style.background = "none";
+                      
+                      // Reset all spans inside the label that follows an input in the body
+                      const spans = document.querySelectorAll("body input + label span");
+                      spans.forEach(span => {
+                          span.style.background = "white";
+                      });
+                  }
+              });
+          });
+      </script>
+        <!-- <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","black"),$("body input + label span").css("background","black"))});</script>  -->
         <script src="http://localhost:35729/livereload.js"></script>
         <script type="text/javascript" src="/js/accordion.js"></script> 
         <script type="application/ld+json">
@@ -77,6 +115,8 @@
       <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
         
           
+              <a class="white dim ph3" href="/">home</a>
+          
         
           
               <a class="white dim ph3" href="/about.html">about</a>
@@ -94,59 +134,68 @@
 
       <div class="nav-links w-25" > 
         <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
-        <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
+        <img src="\img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
       </div>   
    
-      <!-- <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
+      <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
       <span class="bar-change" style="margin-top:1px;"></span> </label> </input>  -->
         
-      <!-- <nav id="nav-links"> 
-        <ul class="khand" style="padding-top:7em;"> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design" title="Home">Home</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/about/" title="About">About</a></li> <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/case-studies/" title="Case Studies">Case Studies</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/blog/" title="Blog">Blog</a></li> <li style="list-style:none !important; padding-top: 30px; "></li> 
-        </ul> 
-      </nav>  -->
 
     </div> 
 
 </header> 
 </section>
+<section class="project-section w-70-l w-100 ph6-l mw-custom--default ph2 center db">
+    <h1 class="w-100 pt4-l pv3">Design Systems, CNN</h1>
+    <p class="w-100 pb1 fw4">2021 - 2025</p>
+    <p class="description--hero pb1">Business Art Service has been the market leader in renting art to companies for 35 years. For their art installers, I iteratively designed and prototyped an application to get the most important information they need during the exchange.</p>
 
-<section class="w-50-l w-100 center body-container pv4 mv4">
-    <h2 class="pt4-l pt2">Design Systems, CNN</h2>
-    <p style="font-size: 1.1rem !important; font-weight: 700 !important;">Aug 25th, 2021</p>
-    <p>Business Art Service has been the market leader in renting art to companies for 35 years. For their art installers, I iteratively designed and prototyped an application to get the most important information they need during the exchange.</p>
-    <h4></h4>
+		<div class="tag-container pt1 pb4 pb1-l">
+			<div class="tag-body">
+				<p class="tag-text">Design Systems</p>
+			</div>
+
+			<div class="tag-body">
+				<p class="tag-text">Token Service</p>
+			</div>
+
+			<div class="tag-body">
+				<p class="tag-text">Multi-platform</p>
+			</div>
+
+			<div class="tag-body">
+				<p class="tag-text">Multi-brand</p>
+			</div>
+		</div>
     
     <div class="db w-100">
-        <div class="dib w-50-l w-100 post-role-container pb4" style="vertical-align: top;">
-            <p class="db w-100" style="font-size: 1.1rem !important; font-weight: 700 !important;">Team</p>
-            <div class="db">
-                <img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
-                <img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
-                <img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
-                <img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
-                <img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
-            </div>
-        </div>
+			<div class="dib w-50-l w-100 post-role-container pb4" style="vertical-align: top;">
+					<p class="db w-100 pb1 fw4">Team</p>
+					<div class="db">
+							<img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
+							<img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
+							<img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
+							<img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
+							<img src="\img\logos\lb-logo.jpg" class="dib mr2" style="height: 50px; border-radius: 44px;">
+					</div>
+			</div>
 
-        <div class="dib w-50-l w-100 post-team-container pb4" style=" vertical-align: top;">
-            <p class="w-100" style="font-size: 1.1rem !important; font-weight: 700 !important;">Role</p>
-            <div class="pt1">
-                <h5 class="pa0 ma0">Staff Product Designer</h5>
-            </div>
-        </div>
+			<div class="dib w-50-l w-100 post-team-container pb4" style=" vertical-align: top;">
+					<p class="w-100 db pb1 fw4">Role</p>
+					<div class="pt1">
+							<p class="pa0 ma0">Staff Product Designer</p>
+					</div>
+			</div>
 
-        <div class="pt1 w-100">
-            <img src="\img\placeholder-img-test.jpg" class="dib mr2" style="border-radius: 16px;">
-        </div>
+			<div class="pt1 w-100">
+					<img src="\img\placeholder-img-test.jpg" class="dib mr2" style="border-radius: 16px;">
+			</div>
 
     </div>
 </section>
 
-    <section class="body-container">
-        <p>Lorem ipsum dolor sit amet consectetur. Natoque integer gravida pulvinar ultrices nulla ipsum.</p>
+<section class="project-section w-70-l w-100 ph6-l mw-custom--default ph2 center">
+	<p>Lorem ipsum dolor sit amet consectetur. Natoque integer gravida pulvinar ultrices nulla ipsum.</p>
 
 <p>Sed nibh in ligula dolor ac accumsan odio nisl lectus. Vitae turpis lobortis faucibus in a ac sodales. Pellentesque in praesent faucibus aliquam purus at. Egestas a nulla scelerisque sit leo. Ultricies mollis vulputate eget adipiscing tellus elementum mauris turpis amet.</p>
 
@@ -154,7 +203,6 @@
 
 <p><img src="https://pngimg.com/d/mario_PNG125.png" alt="alt text" /></p>
 
-    </section>
 </section>
   
 <section class="">

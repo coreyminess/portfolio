@@ -4,7 +4,7 @@
 
       <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
         {% for item in site.data.navigation.mypages %}
-          {% if item.id != "homepage" %}
+          {% if item.id != "home" %}
               <a class="white dim ph3" href="{{item.url}}">{{item.title}}</a>
           {% endif  %}
         {% endfor %}
@@ -15,16 +15,18 @@
         <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
       </div>   
    
-      <!-- <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
-      <span class="bar-change" style="margin-top:1px;"></span> </label> </input>  -->
+      <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
+      <span class="bar-change" style="margin-top:1px;"></span> </label> </input> 
         
-      <!-- <nav id="nav-links"> 
-        <ul class="khand" style="padding-top:7em;"> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design" title="Home">Home</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/about/" title="About">About</a></li> <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/case-studies/" title="Case Studies">Case Studies</a></li> 
-          <li style="list-style:none !important;"><a class="dim" href="https://coreymines.design/blog/" title="Blog">Blog</a></li> <li style="list-style:none !important; padding-top: 30px; "></li> 
-        </ul> 
-      </nav>  -->
+      <nav id="nav-links" style="display:none"> 
+        {% for item in site.data.navigation.mypages %}
+          {% if item.id  %}
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="{{item.url}}">{{item.title}}</a></li> 
+            </ul> 
+          {% endif  %}
+        {% endfor %}
+      </nav> 
 
     </div> 
 

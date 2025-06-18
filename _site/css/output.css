@@ -27,9 +27,9 @@
 h1 {
   color: #F4F4F4;
   font-family: "Roboto Serif", system-ui;
-  font-size: 2.25rem;
+  font-size: 2.65rem;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   line-height: 140%;
   letter-spacing: 1px;
   margin: 0;
@@ -51,7 +51,7 @@ h1 > a:hover {
 h2 {
   color: #F4F4F4;
   font-family: "Roboto Serif", system-ui;
-  font-size: 2.25rem;
+  font-size: 2.65rem;
   font-weight: 500;
   font-style: italic;
   line-height: 120%;
@@ -64,7 +64,7 @@ h3 {
   font-family: "Roboto Serif", system-ui;
   font-size: 1.6rem;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   line-height: 160%;
   letter-spacing: 0.25px;
   text-transform: none;
@@ -77,7 +77,7 @@ h3 a {
   font-family: "Roboto Serif", system-ui;
   font-size: 1.6rem;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   line-height: 160%;
   text-transform: none;
   text-decoration: none;
@@ -257,7 +257,7 @@ ol li {
 .hero-section-type {
   color: #E1A58B;
   font-family: "Roboto Serif", system-ui;
-  font-size: 2.25rem;
+  font-size: 2.65rem;
   font-style: italic;
   font-weight: 500;
   margin: 0;
@@ -306,7 +306,7 @@ ol li {
 
 .page-subheader {
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
 }
 
 .subpage-header-description {
@@ -635,6 +635,182 @@ ol li {
   background: cover no-repeat;
 }
 
+#burger-menu {
+  display: none !important;
+}
+
+@media (max-width: 120em) and (max-width: 50em) {
+  #burger-menu {
+    display: block !important;
+  }
+}
+#nav-links--desktop {
+  display: block !important;
+}
+
+@media (max-width: 120em) and (max-width: 50em) {
+  #nav-links--desktop {
+    display: none !important;
+  }
+}
+@media (max-width: 120em) and (max-width: 50em) {
+  #nav-links {
+    display: block !important;
+  }
+}
+input {
+  display: none;
+}
+
+.responsive-footer {
+  position: fixed;
+  bottom: 40px;
+}
+
+.contact {
+  font-size: 1.5em !important;
+}
+
+.sidebar-links {
+  position: fixed;
+  bottom: 50px;
+  text-align: center;
+  left: 5%;
+  right: 5%;
+}
+
+#nav-links ul li a {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-family: "Pathway Gothic One", sans-serif;
+  text-transform: none;
+}
+
+.nav-logo-1 {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 999;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+body h1 > span {
+  text-transform: none;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+body input + label {
+  position: fixed;
+  top: 35px;
+  right: 35px;
+  height: 21px;
+  width: 23px;
+  z-index: 5;
+}
+
+body input + label span {
+  position: absolute;
+  width: 100%;
+  top: 48%;
+  left: 0;
+  display: block;
+  background: white;
+  transition: 0.35s;
+}
+
+.bar-change {
+  padding-top: 2px;
+}
+
+body input + label span:first-child {
+  top: 3px;
+}
+
+body input + label span:last-child {
+  top: 16px;
+}
+
+body label:hover {
+  cursor: pointer;
+}
+
+body input:checked + label span {
+  opacity: 0;
+  top: 50%;
+}
+
+body input:checked + label span:first-child {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+body input:checked + label span:last-child {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+
+body input ~ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 3;
+  transition: 0.25s;
+  overflow: hidden;
+}
+
+body input ~ nav > ul {
+  text-align: center;
+  right: 20%;
+}
+
+body input ~ nav > ul > li {
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0;
+  padding-top: 0.5em;
+}
+
+body input ~ nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 0.5em;
+}
+
+body input:checked ~ nav {
+  height: 100%;
+  transition-delay: 0;
+}
+
+body input:checked ~ nav > ul > li {
+  opacity: 1;
+  transition-delay: 0;
+}
+
+nav > ul {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: #161615;
 }
@@ -901,10 +1077,6 @@ html {
 
 .img-entry {
   width: 125%;
-}
-
-.hero-description--lg {
-  color: #b9b9b9;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,7 +1,7 @@
 mypages:
 
-- title: homepage
-  id: homepage
+- title: home
+  id: home
   url: /
 
 - title: about

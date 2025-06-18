@@ -1,4 +1,5 @@
 // -------------- IMPORTS -------------- //
+@charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "variables";
 @import "typography";
@@ -6,8 +7,7 @@
 @import "spacing";
 @import "motion";
 @import "media";
-
-
+@import "hamburger-menu";
 
 // -------------- HTML CLASSES -------------- //
 
@@ -218,7 +218,6 @@ html {
 	letter-spacing: 0.56px;
 }
 
-
 .nav-colored {
 	background-color: #fff;
 	color: dark-gray !important;
@@ -275,8 +274,4 @@ html {
 
 .img-entry {
 	width: 125%;
-}
-
-.hero-description--lg {
-	color: $type-quartenary;
 }

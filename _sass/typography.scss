@@ -1,3 +1,6 @@
+@charset 'UTF-8';
+
+
 // --- Typography Classes --- //
 .lh-loose {line-height: 1.85em;}
 .lh-loose-2 {line-height: 2.5em;}
@@ -12,7 +15,7 @@ h1 {
 	font-family: $primary-typeface;
 	font-size: $title--large; 
 	font-weight: $type-regular;
-	font-style: $type-style-italic;
+	font-style: $type-style-normal;
 	line-height: $line-height--140;
 	letter-spacing: 1px;
 	margin: 0;
@@ -47,7 +50,7 @@ h3 {
 	font-family: $primary-typeface;
 	font-size: $title--small; 
 	font-weight: $type-regular;
-	font-style: $type-style-italic;
+	font-style: $type-style-normal;
 	line-height: $line-height--160;
 	letter-spacing: .25px;
 	text-transform: none;
@@ -60,7 +63,7 @@ h3 a {
 	font-family: $primary-typeface;
 	font-size: $title--small; 
 	font-weight: $type-regular;
-	font-style: $type-style-italic;
+	font-style: $type-style-normal;
 	line-height: $line-height--160;
 	text-transform: none;
 	text-decoration: none;
@@ -173,7 +176,7 @@ ol li {
 }
 
 
-// -- CSS CLASSES FOR TYPOGRAPHY -- //
+// -- CSS CLASSES FOR TYPOGRAPHY TEST -- //
 .availability-container {
 	display: flex;
 	flex-direction: column;
@@ -289,8 +292,8 @@ ol li {
 }
 
 .page-subheader {
-	font-weight: $type-medium;
-	font-style: italic;
+	font-weight: $type-regular;
+	font-style: normal;
 }
 
 .subpage-header-description {
