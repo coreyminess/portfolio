@@ -1,0 +1,43 @@
+.tag-container {
+	display: flex;
+	// flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.tag-body {
+	display: inline-flex;
+	padding: 16px 24px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 8px;
+	background: rgba(131, 131, 131, 0.15);
+}
+
+.tag-text {
+	color: $type-primary;
+	font-family: $quartenary-typeface;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%;
+	text-align: center;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: fit-content;
+}
+
+.scrollable-content {
+
+		touch-action: pan-x;
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap; 
+		mask-image: linear-gradient(to right, 
+																	black 75%,
+																	transparent 100%); 
+		-webkit-mask-image: linear-gradient(to right, 
+																				black 75%, 
+																				transparent 100%);
+    }

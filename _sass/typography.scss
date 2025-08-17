@@ -12,18 +12,20 @@
 // --- HTML Typography Classes --- //
 h1 {
 	color: $type-primary;
-	font-family: $primary-typeface;
-	font-size: $title--large; 
-	font-weight: $type-regular;
+	font-family: $quartenary-typeface;
+	font-size: $title--medium; 
+	font-weight: $type-heavy;
 	font-style: $type-style-normal;
-	line-height: $line-height--140;
+	line-height: $line-height--120;
 	letter-spacing: 1px;
 	margin: 0;
+	width: 100%;
+	text-wrap: balance;
 }
 
 h1 > a {
 	color: $accent-secondary;
-	font-family: $primary-typeface;
+	font-size: inherit; 
 	text-decoration: underline;
 	font-weight: $type-medium;
 }
@@ -34,36 +36,50 @@ h1 > a:hover {
 	cursor: pointer;
 }
 
+h1 .highlight {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	margin: inherit;
+	color: $accent-primary;
+}
+
 h2 {
 	color: $type-primary;
-	font-family: $primary-typeface;
+	font-family: $quartenary-typeface;
 	font-size: $title--large;
-	font-weight: $type-medium;
-	font-style: italic;
+	font-weight: $type-style-bold;
+	font-style: regular;
 	line-height: $line-height--120;
 	text-transform: none;
 	margin: 0;
+	width: 100%;
+
 }
 
 h3 {
 	color: $type-primary;
 	font-family: $primary-typeface;
-	font-size: $title--small; 
-	font-weight: $type-regular;
-	font-style: $type-style-normal;
+	font-size: $title--medium; 
+	font-weight: $type-medium;
+	font-style: $type-style-italic;
 	line-height: $line-height--160;
 	letter-spacing: .25px;
 	text-transform: none;
 	text-decoration: none;
 	margin: 0;
+	width: 100%;
 }
 
 h3 a {
 	color: $type-primary;
 	font-family: $primary-typeface;
-	font-size: $title--small; 
-	font-weight: $type-regular;
-	font-style: $type-style-normal;
+	font-size: inherit; 
+	font-weight: $type-heavy;
+	font-style: inherit;
 	line-height: $line-height--160;
 	text-transform: none;
 	text-decoration: none;
@@ -76,22 +92,27 @@ h3 a:hover {
 	cursor: pointer;
 }
 
+h4 .intro-subheader__hero {
+	color: gray;
+}
+
 h4 {
 	color: $type-primary;
-	font-family: $primary-typeface;
-	font-size: $title--medium;
-	font-weight: 500;
+	font-family: $quartenary-typeface;
+	font-size: $title--small;
+	font-weight: 700;
 	font-style: $type-style-normal;
-	line-height: $line-height--130;
+	line-height: $line-height--150;
 	letter-spacing: .5px;
 	text-transform: none;
 	text-decoration: none;
 	margin: 0;
+	width: 100%;
 }
 
 h4 a {
 	color: $type-primary;
-	font-weight: 500;
+	font-weight: 700;
 	text-decoration: none;
 }
 
@@ -104,38 +125,53 @@ h4 a:hover {
 h5 {
 	color: $type-primary;
 	font-family: $primary-typeface;
-	font-size: $title--xs;
+	font-size: $title--small;
 	font-style: italic;
 	font-weight: 500;
 	line-height: 1.25;
 	letter-spacing: .5px;
 	text-transform: none;
 	margin: 0;
+	width: 100%;
+}
+
+h6 {
+	color: $accent-secondary;
+	font-family: $primary-typeface;
+	font-size: $body--large;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: 1px;
+	text-transform: none;
+	margin: 0;
+	width: 100%;
 }
 
 p {
 	color: $type-secondary;
-	font-family: $secondary-typeface;
+	font-family: $quartenary-typeface;
 	font-weight: $type-light;
 	font-size: $body--medium;
-	line-height: $line-height--160;
-	letter-spacing: .2px;
+	line-height: $line-height--180;
+	letter-spacing: .4px;
 	font-style: normal;
 	margin: 0;
+	width: 100%;
 }
 
 p a {
 	color: $accent-secondary;
 	font-weight: 700;
 	text-decoration: underline;
-	font-style: $type-style-italic;
+	font-style: $type-style-normal;
 	transition: 0.3s ease;
 }
 
 p strong {
 	color: $type-primary;
 	font-weight: $type-heavy;
-	font-style: $type-style-italic;
+	font-style: regular;
 }
 
 a {
@@ -149,7 +185,7 @@ a {
 a:hover {
 	font-weight: 700;
 	color: $accent-primary;
-	text-decoration: underline !important;
+	text-decoration: underline;
 	transition: color 0.3s ease;
 	margin: 0;
 }
@@ -209,8 +245,9 @@ ol li {
 }
 
 .description {
-	color: $type-primary;
+	color: $type-secondary;
 	font-size: $body--small;
+	line-height: 160%;
 }
 
 .em-dash {
@@ -268,27 +305,99 @@ ol li {
 	height: auto;
 }
 
-.nav-links > a {
+.nav-links__favicon {
 	color: $accent-neutral;
-	font-family: $primary-typeface;
-	font-size: $body--xs;
+	font-family: $quartenary-typeface;
+	font-size: $body--large;
 	font-weight: $type-heavy;
-	font-style: $type-style-italic;
+	font-style: $type-style-normal;
 	text-decoration: none;
 	margin: 0;
 	height: auto;
 }
 
-.nav-links > a:hover {
+.nav-links__favicon > a {
 	color: $accent-neutral;
-	font-family: $primary-typeface;
-	font-size: $body--xs;
+	font-family: $quartenary-typeface;
+	font-size: $body--large;
 	font-weight: $type-heavy;
-	font-style: $type-style-italic;
-	text-decoration: underline;
+	font-style: $type-style-normal;
+	text-decoration: none;
 	margin: 0;
 	height: auto;
+}
+
+.nav-links > a {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-links > a:hover {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: rgba(255, 255, 255, 0.25);
+	height: auto;
 	cursor: pointer;
+}
+
+ .nav-links > a.active {
+	color: #161615;
+	font-family: $quartenary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	margin: 0;
+	height: auto;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: #FFF;
+}
+
+ .nav-links > a.active:hover {
+	color: #161615;
+	font-family: $quartenary-typeface;
+	font-size: $body--small;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: #ffffffcb;
 }
 
 .page-subheader {
@@ -394,4 +503,49 @@ ol li {
 	line-height: 132%;
 	padding-top: .225rem !important;
 	padding-bottom: .225rem !important;
+}
+
+.section-link__view-all a {
+	color: $type-secondary;
+	font-family: $quartenary-typeface;
+	font-weight: $type-style-bold;
+	font-size: $body--small;
+	line-height: $line-height--160;
+	text-decoration: underline;
+	letter-spacing: .2px;
+	font-style: normal;
+	margin: 0;
+
+}
+
+.section-link__view-all a:hover {
+	color: $accent-secondary;
+	text-decoration: underline;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+.project-header-main .tag-text {
+	color: $type-primary;
+}
+
+.work-title-body {
+	color: $type-tertiary;
+}
+
+
+.work-title-header .description {
+	color: $type-quartenary;
+	font-family: $quartenary-typeface;
+	font-weight: $type-regular;
+	font-size: 1.2rem;
+	line-height: $line-height--170;
+	letter-spacing: .4px;
+	font-style: normal;
+	margin: 0;
+	width: 100%;
+}
+
+.work-title-header__title > h4 {
+	font-size: 36px;
 }

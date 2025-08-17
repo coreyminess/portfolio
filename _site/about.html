@@ -17,9 +17,15 @@
         <meta name="google-site-verification" content="Hh9mg74QsrqkysqDZm-iVs-O6Fs-yzyMwUWzA--mQRA"/>
 
         <link rel="canonical" href="https://coreymines.design"/> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css"/> 
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         <link rel="stylesheet" href="/css/output.css"> 
         <link rel="stylesheet" href="/css/accordion.css"> 
+        <link rel="stylesheet" href="/css/dropdown-overrides.css"> 
+
         <!-- <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +33,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <link rel="apple-touch-icon" sizes="180x180" href="https://coreymines.design/img/head/apple-touch-icon.png"> 
         <link rel="icon" type="image/png" sizes="32x32" href="https://coreymines.design/img/head/favicon-32x32.png"> 
         <link rel="icon" type="image/png" sizes="16x16" href="https://coreymines.design/img/head/favicon-16x16.png"> 
@@ -40,9 +47,9 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml"> 
         <link type="application/atom+xml" rel="alternate" href="https://coreymines.design/feed.xml" title="Corey Mines Design Portfolio"/>
         <html lang="en"> <meta name="keywords" content="UX, UI, Product Design and Development - Boise, Idaho and Seattle, Washington">      
-    
+        <script src="/js/dropdown.js"></script>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-        <!-- <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script>  -->
         <!-- <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script>  -->
         <script type="text/javascript" src="https://coreymines.design/js/scrollreveal.js"></script> 
         <!-- <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script>  -->
@@ -51,39 +58,53 @@
         <!-- <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","black")});</script>  -->
         <!-- <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","#161615"),$("body input + label span").css("background","#none")})});</script>  -->
         <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              // Track the menu state
-              let menuOpen = false;
-              
-              // Get the burger button element
-              const burgerButton = document.getElementById("burger");
-              
-              // Add click event listener
-              burgerButton.addEventListener("click", function() {
-                  // Toggle menu state
-                  menuOpen = !menuOpen;
-                  
-                  if (menuOpen) {
-                      // When menu opens
-                      document.getElementById("nav-links").style.background = "#161615";
-                      
-                      // Change all spans inside the label that follows an input in the body
-                      const spans = document.querySelectorAll("body input + label span");
-                      spans.forEach(span => {
-                          span.style.background = "white";
-                      });
-                  } else {
-                      // When menu closes
-                      document.getElementById("nav-links").style.background = "none";
-                      
-                      // Reset all spans inside the label that follows an input in the body
-                      const spans = document.querySelectorAll("body input + label span");
-                      spans.forEach(span => {
-                          span.style.background = "white";
-                      });
-                  }
-              });
-          });
+document.addEventListener("DOMContentLoaded", function () {
+    // Track the menu state
+    let menuOpen = false;
+
+    // Get the burger button element
+    const burgerButton = document.getElementById("burger");
+
+    // Add click event listener
+    burgerButton.addEventListener("click", function () {
+        // Toggle menu state
+        menuOpen = !menuOpen;
+
+        // Get nav-links__avatar elements
+        const avatars = document.querySelectorAll(".nav-links__avatar");
+
+        if (menuOpen) {
+            // When menu opens
+            document.getElementById("nav-links").style.background = "#161615";
+
+            // Show avatars
+            avatars.forEach(avatar => {
+                avatar.style.display = "block";
+            });
+
+            // Change all spans inside the label that follows an input in the body
+            const spans = document.querySelectorAll("body input + label span");
+            spans.forEach(span => {
+                span.style.background = "white";
+            });
+        } else {
+            // When menu closes
+            document.getElementById("nav-links").style.background = "none";
+
+            // Hide avatars
+            avatars.forEach(avatar => {
+                avatar.style.display = "none";
+            });
+
+            // Reset all spans inside the label that follows an input in the body
+            const spans = document.querySelectorAll("body input + label span");
+            spans.forEach(span => {
+                span.style.background = "white";
+            });
+        }
+    });
+});
+
       </script>
         <!-- <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","black"),$("body input + label span").css("background","black"))});</script>  -->
         <script src="http://localhost:35729/livereload.js"></script>
@@ -109,64 +130,70 @@
         <!-- Liquid Template File: Navigation (Primary) -->
 <section>
   <header id="nav-background" class="w-80-l w-100 mw8 ph2 center body-container max-width-1440"> 
-    <div class="bg--primary v-mid center"> 
+  
+  <div class="bg--primary v-mid center"> 
+      
+  <div id="nav-links--desktop" class="nav-links dib mr3 mr1-l v-mid tr fr w-75 pv4">
     
+        <a class="white ph3" href="/">about</a>
+    
+        <a class="white ph3" href="/case-studies.html">case studies</a>
+    
+        <a class="white ph3" href="/writing-samples.html">blog</a>
+    
+  </div>
 
-      <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
-        
-          
-        
-          
-              <a class="white dim ph3" href="/about.html">about</a>
-          
-        
-          
-              <a class="white dim ph3" href="/recent-work.html">recent work</a>
-          
-        
-          
-              <a class="white dim ph3" href="/writing-samples.html">writing</a>
-          
-        
-      </div>
+  <div class="nav-links__favicon w-25 pv1" > 
+    <!-- <a class="link dim tl-l mb2 mb0-l z-5" href="http://127.0.0.1:4000\index.html" title="Home">corey mines</a>  -->
+    <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+    <img src="/img/cmd-icon.png" class="ma0 pa0 v-mid navigation-logo__avatar"></a> 
+  </div>   
+    
+  <input id="burger" type="checkbox" style="display:none;"> 
+    <label for="burger" id="burger-menu"> 
+      <span class="bar-change" style="margin-top:1px;"></span> 
+      <span class="bar-change" style="margin-top:1px;"></span>   
+      <span class="bar-change" style="margin-top:1px;"></span> 
+    </label> 
+  </input> 
 
-      <div class="nav-links w-25" > 
-        <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
-        <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
-      </div>   
-   
-      <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
-      <span class="bar-change" style="margin-top:1px;"></span> </label> </input> 
-        
-      <nav id="nav-links" style="display:none"> 
-        
+  <div class="mobile-logo__alt">
+      <a class="link dim tl-l mb2 mb0-l" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+        <img src="/img/cmd-icon.png" class="" style="z-index: 100; margin-bottom:0px; width: 60px; position: absolute; top: 16px; right: 16px;">
+      </a>
+    </div>
           
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/">home</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/about.html">about</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/recent-work.html">recent work</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/writing-samples.html">writing</a></li> 
-            </ul> 
-          
-        
-      </nav> 
+  <nav id="nav-links" style="display:none"> 
+    <div class="">
+      <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+        <img src="/img/cmd-icon.png" class="nav-links__avatar v-mid" style="width: 100px; display:none; position: absolute; bottom: 35px; left: 24px;">
+      </a> 
+    </div>
 
-    </div> 
+    <ul class="pl4" style="margin-top:5em;"> 
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/">about</a>
+            </li> 
+        
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/case-studies.html">case studies</a>
+            </li> 
+        
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/writing-samples.html">blog</a>
+            </li> 
+        
+      
+    </ul> 
+  </nav> 
+
+  </div> 
 
 </header> 
 </section>
@@ -180,14 +207,13 @@
             <div class="pt4"> 
                 <h1 class="pb2">Staff Product Designer with over 12 years experience in UX, UI, prototyping, research and design systems.</h1>
                 <p class="description--hero pb1">These days, you can find me diving head-first into CNN’s design system language that establishes and informs immersive, rich story-telling experiences delivered to users across the globe.</p>
-                <p class="description--hero pb1">I consider myself a mission-driven designer with lofty ambitions to enrich and empower the world, through impactful storytelling, to inform a better future. Prior to my current role, I lead product design initiatives for a range of products in video, community and a variety of funded 0:1 products. I thrive in ambiguity, and love sinking my teeth into a rich problem space that puts me out of my comfort zone.</p> 
+                <p class="description--hero pb1">Prior to design systems, I led product design initiatives for a range of products in video, community, e-commerce and a variety of funded 0:1 products. I thrive in ambiguity, and love sinking my teeth into a rich problem space that puts me out of my comfort zone.</p> 
                 <p class="description--hero pt0 pb1">This work taken me around the world and back, spanning a number of industries, verticals, and focus-areas across responsive web, mobile apps and connected TV. Life is a garden, so dig it... err... lemons, lemonade.</p>
-                <section class="tag-container pv2 pb4">
-    <div class="pill-row">
-      <div class="tag-body">
+                <section class="tag-container scrollable-content pv2 pb4">
+      <!-- <div class="tag-body">
         <div class="pill-body">
           <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-            <circle cx="4" cy="4" r="4" fill="#6CB775"/>
+            <circle cx="4" cy="4" r="4" fill="#5EDB4D"/>
           </svg>
           <p class="tag-text">Available for Work</p>
         </div>
@@ -203,12 +229,58 @@
         <div class="pill-body">
           <p class="tag-text">0:1 Products</p>
         </div>
-      </div>
-    </div>
+      </div> -->
+
+  
+    
+      
+      
+        
+        <div class="tag-body">
+          <div class="pill-body">
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <circle cx="4" cy="4" r="4" fill="#5EDB4D"/>
+              </svg>
+            
+            <p class="tag-text">Available for Work</p>
+          </div>
+        </div>
+      
+        
+        <div class="tag-body">
+          <div class="pill-body">
+            
+            <p class="tag-text">Design Systems</p>
+          </div>
+        </div>
+      
+        
+        <div class="tag-body">
+          <div class="pill-body">
+            
+            <p class="tag-text">0:1 Products</p>
+          </div>
+        </div>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
   </section>  
+
  
 
             </div>
+        
+    
         
     
         
@@ -224,271 +296,258 @@
 
 <!-- Liquid Template File: Recent Experience -->
 <section>
-  <script>
-  function myFunction(x) {
-    // Toggle the class
-    x.classList.toggle("fa-minus");
+  
+
+<!-- <div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="section-header pt4 pt2-ns pb4 pb4-ns">
+    <h4 class="revealopacity1" style="flex: 1 0 0;">Achievements</h4>
+    <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+  </div>
+  <div class="timeline-container">
     
-    // Find the nested paragraph
-    var paragraph = x.querySelector('p');
+      
+        <div class="timeline-year-header pv3">
+          <h4 class="f3 fw6">2025</h4>
+        </div>
+        <div class="timeline">
+          
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">CNN experience redesign design system support</h4>
+                <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">Created Figma → Code pipeline at CNN</h4>
+                <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">Launched refactored design system 3.0 at CNN</h4>
+                <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">Created Design System audit & reporting workflows</h4>
+                <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+              </div>
+            </div>
+          
+        </div>
+      
     
-    // If there's no nested paragraph, search in a parent element
-    if (!paragraph) {
-      paragraph = x.closest('.container').querySelector('p');
-    }
+      
     
-    // Change the text if the paragraph is found
-    if (paragraph) {
-      if (x.classList.contains("fa-minus")) {
-        paragraph.textContent = "Show less experience";
-      } else {
-        paragraph.textContent = "Show more experience";
-      } 
-    }
-  }
-  
-  // Runs function when the page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    // Find all elements that should trigger the function
-    var triggers = document.querySelectorAll('.accordion'); // Replace with your actual class
-    
-    // Set initial state for each trigger
-    triggers.forEach(function(trigger) {
-      var paragraph = trigger.querySelector('p') || trigger.closest('.container').querySelector('p');
-      if (paragraph) {
-        paragraph.textContent = "Show more experience";
-      }
-      trigger.classList.remove("fa-minus");
-      trigger.classList.add("fa-plus");
-    });
-  });
-  </script>
+  </div>
+</div> -->
 
 
-  <!-- Experience Section Header -->
-  
 
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, Design Systems</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Staff Product Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2022</p>
-        </div>
-
+<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="container">
+    <div class="section-header pt4 pt2-ns pb4 pb3-ns">
+      <h2 class="revealopacity1" style="flex: 1 0 0;">Achievements</h2>
+      <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+    </div>
+    <div class="dropdown" id="bulmaYearDropdown">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span id="dropdown-selected">2025</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
       </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item" data-year="2025">2025</a>
+          <a href="#" class="dropdown-item" data-year="2024">2024</a>
+          <a href="#" class="dropdown-item" data-year="2023">2023</a>
         </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, Streaming Platforms</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Staff Product Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2021</p>
-        </div>
-
       </div>
-    </section>
-  </section>
-  
+    </div>
 
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
+    <div id="yearContent" class="year-content">
+      <!-- Dynamic content will go here -->
+    </div>
 
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\cnn-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">CNN, 0:1 Products, Interactive Communities</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Sr. Product Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2020</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\bbcom-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Bodybuilding.com, E-Commerce, Community & Apps</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Sr. Product Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2019</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\ventive-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Ventive, Software Design & Development Agency</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Product Manager</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2018</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\atavus-logo-fixed.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Atavus, Tackle Football Safety Education & Analytics</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Brand & Visual Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2017</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\msft-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Microsoft, Bing Studios</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Graphic Designer II (UI)</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2017</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\lb-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">Lightboard, Digital Design Agency</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Lead Designer</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2016</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="img\logos\sxs-logo.jpg" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">South by Sea, Custom Illustration & Apparel</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">Creative Director</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">2013</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  
-
+  </div>
+</div>
 
 <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        
+          
+            <div class="timeline">
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">CNN experience redesign design system support</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Created Figma → Code pipeline at CNN</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Launched refactored design system 3.0 at CNN</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Created Design System audit & reporting workflows</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+            </div>
+          
+        
+          
+        
+      </div>
+    `,
+    2024: `
+      <div class="timeline-container">
+        
+          
+        
+          
+            <div class="timeline-year-header pv3">
+              <h4 class="f3 fw6">2024</h4>
+            </div>
+            <div class="timeline">
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Hola, I'm Corey</h4>
+                    <p class="pb3">I am a Staff Product Designer</p>
+                  </div>
+                </div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Prototyping</h4>
+                    <p class="pb3">Hii</p>
+                  </div>
+                </div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">Title 3 sample</h4>
+                    <p class="pb3">Description 3 sample</p>
+                  </div>
+                </div>
+              
+            </div>
+          
+        
+      </div>
+    `,
+    2023: `
+      <h2 class="title is-4">2023 Timeline</h2>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p>Created a token-based system architecture.</p>
+        </div>
+      </div>
+    `
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById("bulmaYearDropdown");
+  const trigger = dropdown.querySelector(".dropdown-trigger button");
+  const selectedSpan = document.getElementById("dropdown-selected");
+  const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+  const yearContent = document.getElementById("yearContent");
+  const dropdownIcon = trigger.querySelector("i"); // Get the icon
+
+  function loadYearContent(year) {
+    yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
   }
-  </script>
+
+  // Open/close dropdown on trigger click
+  trigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("is-active");
+
+    // Toggle icon class
+    if (dropdown.classList.contains("is-active")) {
+      dropdownIcon.classList.remove("fa-angle-down");
+      dropdownIcon.classList.add("fa-angle-up");
+    } else {
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // Click outside to close
+  document.addEventListener("click", function () {
+    if (dropdown.classList.contains("is-active")) {
+      dropdown.classList.remove("is-active");
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // When a dropdown item is clicked
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const year = this.getAttribute("data-year");
+      selectedSpan.textContent = year;
+      dropdown.classList.remove("is-active");
+
+      // Reset icon when closing dropdown
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+
+      loadYearContent(year);
+    });
+  });
+
+  // Load default content
+  loadYearContent(selectedSpan.textContent);
+});
+</script>
+
+
+
+
 </section>
 
 <!-- Liquid Template File: Page Footer -->
 <section>
   <div class="center mt3"> 
-    <nav class="tc pv1"> <p class="gray copyright-text">Designed & Developed by Corey Mines deep in the woods of Boise, ID.</p> </nav> 
+    <nav class="tc pv4 mb2"> <p class="gray copyright-text">Designed & Developed by Corey Mines deep in the woods of Boise, ID.</p> </nav> 
 </div>   
 </section>
     </body>

@@ -1,0 +1,22 @@
+#dropdown-selected {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 24px;
+  background-color: transparent;
+}
+.dropdown-item {
+  font-size: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#bulmaYearDropdown  .button {
+	background: transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#bulmaYearDropdown  .button:hover {
+	background: rgba(159, 159, 159, 0.15);
+}

@@ -2,22 +2,30 @@
     <div class="bg--primary v-mid center"> 
     
 
-      <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
-        {% for item in site.data.navigation.mypages %}
-          {% if item.id != "homepage" %}
-              <a class="white dim ph3" href="{{item.url}}">{{item.title}}</a>
-          {% endif  %}
-        {% endfor %}
-      </div>
+<div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4">
+  {% for item in site.data.navigation.mypages %}
+      <a class="white ph3{% if item.url == page.url %} active{% endif %}" href="{{item.url}}">{{item.title}}</a>
+  {% endfor %}
+</div>
 
-      <div class="nav-links w-25" > 
+      <div class="nav-links__favicon w-25 pv1" > 
+        <!-- <a class="link dim tl-l mb2 mb0-l z-5" href="http://127.0.0.1:4000\index.html" title="Home">corey mines</a>  -->
         <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
-        <img src="\img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
+        <img src="/img/cmd-icon.png" style="width: 120px; height: auto;" class="ma0 pa0 v-mid"></a> 
       </div>   
    
       <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
-      <span class="bar-change" style="margin-top:1px;"></span> </label> </input>  -->
+      <span class="bar-change" style="margin-top:1px;"></span> </label> </input> 
         
+      <nav id="nav-links" style="display:none"> 
+        {% for item in site.data.navigation.mypages %}
+          {% if item.id %}
+            <ul class="" style="padding-top:1em;"> 
+              <li style="list-style:none !important;"><a class=" dim ph3" href="{{item.url}}">{{item.title}}</a></li> 
+            </ul> 
+          {% endif  %}
+        {% endfor %}
+      </nav> 
 
     </div> 
 

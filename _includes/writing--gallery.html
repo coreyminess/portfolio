@@ -1,18 +1,18 @@
-<section class="w-70-l w-100 ph6-l ph2 pb2 mw-custom--default border-bottom center project-section">
+<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt3-l mt5 mt0m mt0-l bg--primary mw-960">
     {% for post in site.posts %}
         {% if post.name contains 'blog' %}
-            <div class="project-header-main container-border-bottom pt2">
+            <div class="project-header-main container-border-bottom pv3-l">
 
                 <div class="project-title w-100">
 
                     <div class="work-title-header">
-                        <h4 class ="work-title-primary"><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
+                        <h4 class =""><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
                         <p class="work-title-start">{{ post.dates }}</p>
-                        <p class="description pb1">{{ post.description}}</p>
+                        <p class="pb1 pb4-ns pb3 work-title-body description">{{ post.description}}</p>
                     </div>
 
 
-                    <div class="tag-container pt1 pb4">
+                    <div class="tag-container pt1 pb2 pb5-l pb1-l">
                         <div class="tag-body">
                             <p class="tag-text">{{ post.tag-1 }}</p>
                         </div>

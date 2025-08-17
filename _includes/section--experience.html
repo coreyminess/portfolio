@@ -1,83 +1,175 @@
+
+
+<!-- <div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="section-header pt4 pt2-ns pb4 pb4-ns">
+    <h4 class="revealopacity1" style="flex: 1 0 0;">Achievements</h4>
+    <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+  </div>
+  <div class="timeline-container">
+    {% for item in site.data.timeline.pagecontent %}
+      {% if item.year == 2025 %}
+        <div class="timeline-year-header pv3">
+          <h4 class="f3 fw6">{{ item.year }}</h4>
+        </div>
+        <div class="timeline">
+          {% for entry in item.entries %}
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">{{ entry.title }}</h4>
+                <p class="pb3">{{ entry.description }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div> -->
+
+
+
+<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="container">
+    <div class="section-header pt4 pt2-ns pb4 pb3-ns">
+      <h2 class="revealopacity1" style="flex: 1 0 0;">Achievements</h2>
+      <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+    </div>
+    <div class="dropdown" id="bulmaYearDropdown">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span id="dropdown-selected">2025</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item" data-year="2025">2025</a>
+          <a href="#" class="dropdown-item" data-year="2024">2024</a>
+          <a href="#" class="dropdown-item" data-year="2023">2023</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="yearContent" class="year-content">
+      <!-- Dynamic content will go here -->
+    </div>
+
+  </div>
+</div>
+
 <script>
-  function myFunction(x) {
-    // Toggle the class
-    x.classList.toggle("fa-minus");
-    
-    // Find the nested paragraph
-    var paragraph = x.querySelector('p');
-    
-    // If there's no nested paragraph, search in a parent element
-    if (!paragraph) {
-      paragraph = x.closest('.container').querySelector('p');
-    }
-    
-    // Change the text if the paragraph is found
-    if (paragraph) {
-      if (x.classList.contains("fa-minus")) {
-        paragraph.textContent = "Show less experience";
-      } else {
-        paragraph.textContent = "Show more experience";
-      } 
-    }
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2025 %}
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2024: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2024 %}
+            <div class="timeline-year-header pv3">
+              <h4 class="f3 fw6">{{ item.year }}</h4>
+            </div>
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2023: `
+      <h2 class="title is-4">2023 Timeline</h2>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p>Created a token-based system architecture.</p>
+        </div>
+      </div>
+    `
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById("bulmaYearDropdown");
+  const trigger = dropdown.querySelector(".dropdown-trigger button");
+  const selectedSpan = document.getElementById("dropdown-selected");
+  const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+  const yearContent = document.getElementById("yearContent");
+  const dropdownIcon = trigger.querySelector("i"); // Get the icon
+
+  function loadYearContent(year) {
+    yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
   }
-  
-  // Runs function when the page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    // Find all elements that should trigger the function
-    var triggers = document.querySelectorAll('.accordion'); // Replace with your actual class
-    
-    // Set initial state for each trigger
-    triggers.forEach(function(trigger) {
-      var paragraph = trigger.querySelector('p') || trigger.closest('.container').querySelector('p');
-      if (paragraph) {
-        paragraph.textContent = "Show more experience";
-      }
-      trigger.classList.remove("fa-minus");
-      trigger.classList.add("fa-plus");
+
+  // Open/close dropdown on trigger click
+  trigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("is-active");
+
+    // Toggle icon class
+    if (dropdown.classList.contains("is-active")) {
+      dropdownIcon.classList.remove("fa-angle-down");
+      dropdownIcon.classList.add("fa-angle-up");
+    } else {
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // Click outside to close
+  document.addEventListener("click", function () {
+    if (dropdown.classList.contains("is-active")) {
+      dropdown.classList.remove("is-active");
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // When a dropdown item is clicked
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const year = this.getAttribute("data-year");
+      selectedSpan.textContent = year;
+      dropdown.classList.remove("is-active");
+
+      // Reset icon when closing dropdown
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+
+      loadYearContent(year);
     });
   });
-  </script>
+
+  // Load default content
+  loadYearContent(selectedSpan.textContent);
+});
+</script>
 
 
-  <!-- Experience Section Header -->
-  {% for item in site.data.experience.work-experience %}
 
-  <section class="w-60-l w-100 ph6-l ph2 pt4-ns pb2 mw-custom--default border-bottom center pv4 experience-section">
-    <section class="experience-row">
-      <div class="flex w-100 pv1 xp-border-bot">
-
-        <div class="flex xp-img-container" style="background-color: #161615;">
-          <img src="{{item.brand-logo}}" class="xp-logo" alt="">   
-        </div>
-
-        <div class="w-100 pl1 db xp-body-container">
-          <h5 class="experience-title" style="padding-bottom: 0rem !important;">{{item.name}}, {{item.team}}</h5>
-          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">{{item.position}}</p>
-        </div>
-
-        <div class="db xp-body-container" style="width: 124px">
-          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">{{item.date-start}}</p>
-        </div>
-
-      </div>
-    </section>
-  </section>
-  {% endfor %}
-
-
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-  </script>

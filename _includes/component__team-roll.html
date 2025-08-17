@@ -1,0 +1,21 @@
+
+  <div class="w-100 avatar-row">
+    {% for team_img in page.team %}
+      <img src="{{ team_img | relative_url }}" class="post-metadata__avatar avatar dib mr2">
+    {% endfor %}
+  </div>
+
+
+
+<!-- 
+  
+		<div class="dib w-50-l w-100 post-role-container pb4" style="vertical-align: top;">
+				<p class="db w-100 pb1 work-title-start">Team</p>
+				<div class="db">
+						<img src="{{ page.team-1 }}" class="dib mr2" style="height: 50px; border-radius: 44px;">
+						<img src="{{ page.team-2 }}" class="dib mr2" style="height: 50px; border-radius: 44px;">
+						<img src="{{ page.team-3 }}" class="dib mr2" style="height: 50px; border-radius: 44px;">
+						<img src="{{ page.team-4 }}" class="dib mr2" style="height: 50px; border-radius: 44px;">
+						<img src="{{ page.team-5 }}" class="dib mr2" style="height: 50px; border-radius: 44px;">
+				</div>
+		</div> -->

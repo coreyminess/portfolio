@@ -1,0 +1,302 @@
+
+
+<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="section-header pt4 pt2-ns pb4 pb4-ns">
+    <h4 class="revealopacity1" style="flex: 1 0 0;">Achievements</h4>
+    <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+  </div>
+  <div class="timeline-container">
+    {% for item in site.data.timeline.pagecontent %}
+      {% if item.year == 2025 %}
+        <div class="timeline-year-header pv3">
+          <h4 class="f3 fw6">{{ item.year }}</h4>
+        </div>
+        <div class="timeline">
+          {% for entry in item.entries %}
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 class="pb1">{{ entry.title }}</h4>
+                <p class="pb3">{{ entry.description }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- <div class="dropdown ">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>2025</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      {% for year in (2015..2025) reversed %}
+        <a href="#" class="dropdown-item">{{ year }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- <div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+  <div class="section-header pt4 pt2-ns ">
+    <h4 class="revealopacity1" style="flex: 1 0 0;">Achievements</h4>
+    <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
+  </div>
+  <div class="dropdown-wrapper w-100  mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
+    <select id="yearSelect" class="year-dropdown">
+      {% for year in (2015..2025) reversed %}
+        <option value="{{ year }}">{{ year }}</option>
+      {% endfor %}
+    </select>
+
+    <div id="yearContent" class="year-content">
+    </div>
+  </div>
+</div> -->
+
+<!-- <script>
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2025 %}
+            <div class="timeline-year-header pv3">
+              <h4 class="f3 fw6">{{ item.year }}</h4>
+            </div>
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2024: `
+      <h2 class="timeline-year">2024</h2>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-marker active"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Introduced automated accessibility tools</h3>
+            <p class="timeline-meta">Design Systems – Shipped July 12, 2024</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Simplified component documentation in Figma</h3>
+            <p class="timeline-meta">Design Systems – Shipped May 30, 2024</p>
+          </div>
+        </div>
+      </div>
+    `,
+    2023: `
+      <h2 class="timeline-year">2023</h2>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-marker active"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Established token service architecture</h3>
+            <p class="timeline-meta">Design Systems – Shipped March 14, 2023</p>
+          </div>
+        </div>
+      </div>
+    `
+  };
+
+  const yearSelect = document.getElementById("yearSelect");
+  const yearContent = document.getElementById("yearContent");
+
+  function loadYearContent(year) {
+    yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
+  }
+
+  // Load default content on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    if (yearSelect && yearContent) {
+      loadYearContent(yearSelect.value);
+
+      yearSelect.addEventListener("change", function () {
+        loadYearContent(this.value);
+      });
+    }
+  });
+</script> -->
+
+<!-- Experience Section Header -->
+  <!-- {% for item in site.data.experience.work-experience %}
+  <section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
+    <section class="experience-row">
+      <div class="flex w-100 pv1 xp-border-bot">
+
+        <div class="flex xp-img-container" style="background-color: #161615;">
+          <img src="{{item.brand-logo}}" class="xp-logo" alt="">   
+        </div>
+
+        <div class="w-100 pl1 db xp-body-container">
+          <h5 class="experience-title" style="padding-bottom: 0rem !important;">{{item.name}}, {{item.team}}</h5>
+          <p class="experience-description" style="padding-top: .5rem !important; padding-bottom: .5rem !important;">{{item.position}}</p>
+        </div>
+
+        <div class="db xp-body-container" style="width: 124px">
+          <p class="db work-title-start" style="text-align: right; padding-top: 1.5rem; padding-bottom: 0rem; line-height: 1;">{{item.date-start}}</p>
+        </div>
+
+      </div>
+    </section>
+  </section>
+{% endfor %} -->
+
+<div class="section">
+  <div class="container">
+
+    <!-- Dropdown -->
+    <div class="dropdown" id="bulmaYearDropdown">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span id="dropdown-selected">2025</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item" data-year="2025">2025</a>
+          <a href="#" class="dropdown-item" data-year="2024">2024</a>
+          <a href="#" class="dropdown-item" data-year="2023">2023</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div id="yearContent" class="year-content">
+      <!-- Dynamic content will go here -->
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2025 %}
+            <div class="timeline-year-header pv3">
+              <h4 class="f3 fw6">{{ item.year }}</h4>
+            </div>
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2024: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2024 %}
+            <div class="timeline-year-header pv3">
+              <h4 class="f3 fw6">{{ item.year }}</h4>
+            </div>
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2023: `
+      <h2 class="title is-4">2023 Timeline</h2>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p>Created a token-based system architecture.</p>
+        </div>
+      </div>
+    `
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById("bulmaYearDropdown");
+    const trigger = dropdown.querySelector(".dropdown-trigger button");
+    const selectedSpan = document.getElementById("dropdown-selected");
+    const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+    const yearContent = document.getElementById("yearContent");
+
+    function loadYearContent(year) {
+      yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
+    }
+
+    // Open/close dropdown on trigger click
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      dropdown.classList.toggle("is-active");
+    });
+
+    // Click outside to close
+    document.addEventListener("click", function () {
+      dropdown.classList.remove("is-active");
+    });
+
+    // When a dropdown item is clicked
+    dropdownItems.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const year = this.getAttribute("data-year");
+        selectedSpan.textContent = year;
+        dropdown.classList.remove("is-active");
+        loadYearContent(year);
+      });
+    });
+
+    // Load default content
+    loadYearContent(selectedSpan.textContent);
+  });
+</script>
+<!-- 
+<script>
+let dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('click', function(event) {
+    event.stopPropagation();
+    dropdown.classList.toggle('is-active');
+});
+</script> -->
+
+
+

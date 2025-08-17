@@ -1,17 +1,17 @@
 mypages:
 
-- title: home
-  id: home
-  url: /
-
 - title: about
   id: about
-  url: /about.html
+  url: /
 
-- title: recent work
-  id: recent-work
-  url: /recent-work.html
+# - title: about
+#   id: about
+#   url: /about.html
 
-- title: writing
+- title: case studies
+  id: case-studies
+  url: /case-studies.html
+
+- title: blog
   id: writing-samples
   url: /writing-samples.html

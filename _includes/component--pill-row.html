@@ -1,9 +1,8 @@
-<section class="tag-container pv2 pb4">
-    <div class="pill-row">
-      <div class="tag-body">
+<section class="tag-container scrollable-content pv2 pb4">
+      <!-- <div class="tag-body">
         <div class="pill-body">
           <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-            <circle cx="4" cy="4" r="4" fill="#6CB775"/>
+            <circle cx="4" cy="4" r="4" fill="#5EDB4D"/>
           </svg>
           <p class="tag-text">Available for Work</p>
         </div>
@@ -19,6 +18,26 @@
         <div class="pill-body">
           <p class="tag-text">0:1 Products</p>
         </div>
-      </div>
-    </div>
+      </div> -->
+
+  {% for item in site.data.page-copy.pagecontent %}
+    {% if item.pagetitle == "homepage" %}
+      {% assign count = 0 %}
+      {% for pill in item.pills %}
+        {% assign count = count | plus: 1 %}
+        <div class="tag-body">
+          <div class="pill-body">
+            {% if count == 1 %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <circle cx="4" cy="4" r="4" fill="#5EDB4D"/>
+              </svg>
+            {% endif %}
+            <p class="tag-text">{{ pill }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
   </section>  
+

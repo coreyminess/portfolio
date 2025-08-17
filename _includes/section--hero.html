@@ -1,32 +1,104 @@
-<section class="w-70-l w-100 ph6-l ph2 pb6-l pb6 mw-custom--default center v-mid pt5-l bg--primary" style="min-height:85vh; align-content:center;"> 
-  <div class="pt2  pb2-l"> 
-
+<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt4-l mt1 mt0-m mt0-l bg--primary mw-960" style="min-height:85vh; align-content:center;"> 
+  <div class="pb2-l"> 
     {% for item in site.data.page-copy.pagecontent %}
       {% if item.pagetitle == "homepage" %}
-        <div class="h-100 w-100-l w-100-m w-100 pr4-l pr0"> 
-          <h3 class="revealopacity1 pb2"> <span class="gray">—</span> Hi, I'm Corey</h3> 
-          <h1 class="pb2">{{item.title-2__alt}}</h1> 
-          <h3 class="pb2">{{item.title-3__alt}} {{item.title-4}}</h3> 
-          <!-- <h3 class="pb2">{{item.title-5}}</h3>  -->
-          <!-- <p class="pb2">{{item.body-1}}</p> -->
-          <p class="pb2">{{item.body-2}}</p>
-
-
-
-        <!-- Remote Location Callout -->
-        <section class="availability-container pt4-l pt2">
-          <div class="availability-parent-container ">
-            <div class="availability-child-container">
-              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                <circle cx="4" cy="4" r="4" fill="#6CB775"/>
-              </svg>
-              <p class="location-text">Fully-remote based in Boise, Idaho</p>
-            </div>
+        <div class="h-100 w-100-l w-100-m w-100 mt4 mt5-m mt2-ns center "> 
+          <div class="intro-header pb3 pb3-ns">
+              <img src="assets\avatar-cm.png" alt="corey avatar photo" class="intro-header__avatar">
+              <h4 class="intro-subheader__hero revealopacity1">{{item.title-1}}</h4> 
           </div>
-        </section> 
+          <h1 class="pb4-l pb3-m pb2">{{item.title-2__alt}}</h1> 
+
+          <h4 class="pb2 pb3-l pt2 pt0-ns">{{item.title-3__alt}} {{item.title-4}}</h4> 
+            <!-- <h3 class="pb5 pt3">{{item.title-5}}</h3>  -->
+          <!-- <p class="pb2">{{item.body-1}}</p> -->
+          <p class="pt1 pt2-m pt2-ns grey pb3 pb4-ns ">{{item.body-2}}</p>
       {% endif %}
     {% endfor %}
     
+    {% include component--pill-row.html %} 
+
     </div>
   </div>
+</section>
+
+{% include section--experience.html %}
+
+<section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
+  
+  <div class="section-header pt4 pt2-ns pb4 pb4-ns">
+    <h4 class="revealopacity1" style="flex: 1 0 0;">Recent Work</h4>
+    <div class="section-link__view-all"><a class="white" href="case-studies.html">View all</a></div>
+  </div>
+
+  <div class="">        
+    <div class="gallery-grid">
+      <!-- Row 1: 66% / 33% -->
+      <div class="gallery-row row-1">
+          <a href="/case-study-1" class="image-container">
+              <img src="https://pngimg.com/uploads/iphone_13/iphone_13_PNG2.png" alt="Modern Web Design">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">Modern Web Design</h3>
+                      <p class="overlay-description">A comprehensive redesign of a SaaS platform focusing on user experience and conversion optimization.</p>
+                  </div>
+              </div>
+          </a>
+          <a href="/case-study-2" class="image-container">
+              <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=400&h=400&fit=crop" alt="Mobile App Design">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">Mobile App</h3>
+                      <p class="overlay-description">iOS and Android app design for a fitness tracking platform.</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+
+      <!-- Row 2: 50% / 50% -->
+      <div class="gallery-row row-2">
+          <a href="/case-study-3" class="image-container">
+              <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Brand Identity">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">Brand Identity</h3>
+                      <p class="overlay-description">Complete brand identity design for a sustainable fashion startup.</p>
+                  </div>
+              </div>
+          </a>
+          <a href="/case-study-4" class="image-container">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Data Visualization">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">Data Visualization</h3>
+                      <p class="overlay-description">Interactive dashboard design for financial analytics platform.</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+
+      <!-- Row 3: 33% / 66% -->
+      <div class="gallery-row row-3">
+          <a href="/case-study-5" class="image-container">
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=400&fit=crop" alt="E-commerce Design">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">E-commerce</h3>
+                      <p class="overlay-description">Online store redesign with focus on conversion rate optimization.</p>
+                  </div>
+              </div>
+          </a>
+          <a href="/case-study-6" class="image-container">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop" alt="UX Research">
+              <div class="image-overlay">
+                  <div class="overlay-content">
+                      <h3 class="overlay-title">UX Research Project</h3>
+                      <p class="overlay-description">Comprehensive user research and usability testing for a healthcare application.</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+    </div>
+  </div>
+
 </section>

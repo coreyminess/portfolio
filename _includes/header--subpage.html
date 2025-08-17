@@ -1,10 +1,10 @@
-<section class="w-70-l w-100 ph6-l ph2 mb3 pb4 mw-custom--default border-bottom center bg--primary"> 
+<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb4-l pb4 center v-mid pt4-l mt1 mt4-m mt0-l bg--primary mw-960 border-bottom "> 
 	<div class="pt4 pt2-m pt4-l"> 
 		{% for item in site.data.page-copy.pagecontent %}
 			{% if item.pagetitle == page.title %}
 				<div class="w-100-l w-100-m w-100"> 
-					<h2 class="revealopacity1 pb1 ma0"><span class=em-dash>—</span>{{item.title-1}}</h2> 
-					<p class="subpage-header-description ma0">{{item.body-1}}</strong></p> 
+					<h1 class="revealopacity1 ma0 gray"><span class=em-dash></span>{{item.title-1}}</h1> 
+					<!-- <p class="subpage-header-description ma0">{{item.body-1}}</strong></p>  -->
 				</div>
 			{% endif %}
 		{% endfor %}

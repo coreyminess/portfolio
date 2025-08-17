@@ -1,0 +1,35 @@
+.avatar {
+  margin-bottom: 0px;
+  height: 56px; 
+  border-radius: 50%;
+  border: 4px solid $bg-primary--dark;
+  margin-left: -20px; // negative margin for overlap
+  position: relative;
+  z-index: 1;
+}
+
+.avatar-row {
+  display: flex;
+  align-items: center;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-row {
+  // Ensure each avatar is on top of the previous one
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      z-index: $i;
+    }
+  }
+}
+
+@media screen and (min-width: 5em) and (max-width: 30em) {
+    .post-metadata__avatar {
+    margin-bottom: 0px;
+    height: 48px; 
+    border-radius: 44px;
+    }
+}

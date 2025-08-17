@@ -17,9 +17,15 @@
         <meta name="google-site-verification" content="Hh9mg74QsrqkysqDZm-iVs-O6Fs-yzyMwUWzA--mQRA"/>
 
         <link rel="canonical" href="https://coreymines.design"/> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css"/> 
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         <link rel="stylesheet" href="/css/output.css"> 
         <link rel="stylesheet" href="/css/accordion.css"> 
+        <link rel="stylesheet" href="/css/dropdown-overrides.css"> 
+
         <!-- <link rel="stylesheet" href="https://coreymines.design/css/hamburger.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +33,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <link rel="apple-touch-icon" sizes="180x180" href="https://coreymines.design/img/head/apple-touch-icon.png"> 
         <link rel="icon" type="image/png" sizes="32x32" href="https://coreymines.design/img/head/favicon-32x32.png"> 
         <link rel="icon" type="image/png" sizes="16x16" href="https://coreymines.design/img/head/favicon-16x16.png"> 
@@ -40,9 +47,9 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml"> 
         <link type="application/atom+xml" rel="alternate" href="https://coreymines.design/feed.xml" title="Corey Mines Design Portfolio"/>
         <html lang="en"> <meta name="keywords" content="UX, UI, Product Design and Development - Boise, Idaho and Seattle, Washington">      
-    
+        <script src="/js/dropdown.js"></script>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-        <!-- <script type="text/javascript" src="https://coreymines.design/js/jribbble6.js"></script>  -->
         <!-- <script type="text/javascript" src="https://d1rnfttkuep1vk.cloudfront.net/js/menu-shift.js"></script>  -->
         <script type="text/javascript" src="https://coreymines.design/js/scrollreveal.js"></script> 
         <!-- <script type="text/javascript" src="https://coreymines.design/js/pageanimations.js"></script>  -->
@@ -51,39 +58,53 @@
         <!-- <script type="text/javascript">$("#burger").on("click",function(){$("#nav-links").css("background","black")});</script>  -->
         <!-- <script type="text/javascript">$(document).ready(function(){$("#burger").click(function(){$("#nav-links").css("background","#161615"),$("body input + label span").css("background","#none")})});</script>  -->
         <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              // Track the menu state
-              let menuOpen = false;
-              
-              // Get the burger button element
-              const burgerButton = document.getElementById("burger");
-              
-              // Add click event listener
-              burgerButton.addEventListener("click", function() {
-                  // Toggle menu state
-                  menuOpen = !menuOpen;
-                  
-                  if (menuOpen) {
-                      // When menu opens
-                      document.getElementById("nav-links").style.background = "#161615";
-                      
-                      // Change all spans inside the label that follows an input in the body
-                      const spans = document.querySelectorAll("body input + label span");
-                      spans.forEach(span => {
-                          span.style.background = "white";
-                      });
-                  } else {
-                      // When menu closes
-                      document.getElementById("nav-links").style.background = "none";
-                      
-                      // Reset all spans inside the label that follows an input in the body
-                      const spans = document.querySelectorAll("body input + label span");
-                      spans.forEach(span => {
-                          span.style.background = "white";
-                      });
-                  }
-              });
-          });
+document.addEventListener("DOMContentLoaded", function () {
+    // Track the menu state
+    let menuOpen = false;
+
+    // Get the burger button element
+    const burgerButton = document.getElementById("burger");
+
+    // Add click event listener
+    burgerButton.addEventListener("click", function () {
+        // Toggle menu state
+        menuOpen = !menuOpen;
+
+        // Get nav-links__avatar elements
+        const avatars = document.querySelectorAll(".nav-links__avatar");
+
+        if (menuOpen) {
+            // When menu opens
+            document.getElementById("nav-links").style.background = "#161615";
+
+            // Show avatars
+            avatars.forEach(avatar => {
+                avatar.style.display = "block";
+            });
+
+            // Change all spans inside the label that follows an input in the body
+            const spans = document.querySelectorAll("body input + label span");
+            spans.forEach(span => {
+                span.style.background = "white";
+            });
+        } else {
+            // When menu closes
+            document.getElementById("nav-links").style.background = "none";
+
+            // Hide avatars
+            avatars.forEach(avatar => {
+                avatar.style.display = "none";
+            });
+
+            // Reset all spans inside the label that follows an input in the body
+            const spans = document.querySelectorAll("body input + label span");
+            spans.forEach(span => {
+                span.style.background = "white";
+            });
+        }
+    });
+});
+
       </script>
         <!-- <script type="text/javascript">$(document).keydown(function(n){27==n.keyCode&&($("#nav-links").hide(),$("#nav-links").css("background","black"),$("body input + label span").css("background","black"))});</script>  -->
         <script src="http://localhost:35729/livereload.js"></script>
@@ -109,71 +130,77 @@
         <!-- Liquid Template File: Navigation (Primary) -->
 <section>
 	<header id="nav-background" class="w-80-l w-100 mw8 ph2 center body-container max-width-1440"> 
-    <div class="bg--primary v-mid center"> 
+  
+  <div class="bg--primary v-mid center"> 
+      
+  <div id="nav-links--desktop" class="nav-links dib mr3 mr1-l v-mid tr fr w-75 pv4">
     
+        <a class="white ph3" href="/">about</a>
+    
+        <a class="white ph3" href="/case-studies.html">case studies</a>
+    
+        <a class="white ph3 active" href="/writing-samples.html">blog</a>
+    
+  </div>
 
-      <div id="nav-links--desktop" class="nav-links dib v-mid tr fr w-75 pv4"> 
-        
-          
-        
-          
-              <a class="white dim ph3" href="/about.html">about</a>
-          
-        
-          
-              <a class="white dim ph3" href="/recent-work.html">recent work</a>
-          
-        
-          
-              <a class="white dim ph3" href="/writing-samples.html">writing</a>
-          
-        
-      </div>
+  <div class="nav-links__favicon w-25 pv1" > 
+    <!-- <a class="link dim tl-l mb2 mb0-l z-5" href="http://127.0.0.1:4000\index.html" title="Home">corey mines</a>  -->
+    <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+    <img src="/img/cmd-icon.png" class="ma0 pa0 v-mid navigation-logo__avatar"></a> 
+  </div>   
+    
+  <input id="burger" type="checkbox" style="display:none;"> 
+    <label for="burger" id="burger-menu"> 
+      <span class="bar-change" style="margin-top:1px;"></span> 
+      <span class="bar-change" style="margin-top:1px;"></span>   
+      <span class="bar-change" style="margin-top:1px;"></span> 
+    </label> 
+  </input> 
 
-      <div class="nav-links w-25" > 
-        <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
-        <img src="img\cmd-icon.png" style="width: 88px; height: auto;" class="ma0 pa0 v-mid"></a> 
-      </div>   
-   
-      <input id="burger" type="checkbox" style="display:none;"> <label for="burger" id="burger-menu"> <span class="bar-change" style="margin-top:1px;"></span> <span class="bar-change" style="margin-top:1px;"></span>   
-      <span class="bar-change" style="margin-top:1px;"></span> </label> </input> 
-        
-      <nav id="nav-links" style="display:none"> 
-        
+  <div class="mobile-logo__alt">
+      <a class="link dim tl-l mb2 mb0-l" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+        <img src="/img/cmd-icon.png" class="" style="z-index: 100; margin-bottom:0px; width: 60px; position: absolute; top: 16px; right: 16px;">
+      </a>
+    </div>
           
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/">home</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/about.html">about</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/recent-work.html">recent work</a></li> 
-            </ul> 
-          
-        
-          
-            <ul class="" style="padding-top:1em;"> 
-              <li style="list-style:none !important;"><a class=" dim ph3" href="/writing-samples.html">writing</a></li> 
-            </ul> 
-          
-        
-      </nav> 
+  <nav id="nav-links" style="display:none"> 
+    <div class="">
+      <a class="link dim tl-l mb2 mb0-l z-5" style="font-size:1.1rem;" href="http://127.0.0.1:4000\index.html" title="Home">
+        <img src="/img/cmd-icon.png" class="nav-links__avatar v-mid" style="width: 100px; display:none; position: absolute; bottom: 35px; left: 24px;">
+      </a> 
+    </div>
 
-    </div> 
+    <ul class="pl4" style="margin-top:5em;"> 
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/">about</a>
+            </li> 
+        
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/case-studies.html">case studies</a>
+            </li> 
+        
+      
+        
+            <li style="list-style:none !important;">
+              <a class="dim pl4" href="/writing-samples.html">blog</a>
+            </li> 
+        
+      
+    </ul> 
+  </nav> 
+
+  </div> 
 
 </header> 
 </section>
 
-<!-- Liquid Template File: Navigation (Primary) -->
+<!-- Liquid Template File: Page Header -->
 <section>
-	<section class="w-70-l w-100 ph6-l ph2 mb3 pb4 mw-custom--default border-bottom center bg--primary"> 
+	<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb4-l pb4 center v-mid pt4-l mt1 mt4-m mt0-l bg--primary mw-960 border-bottom "> 
 	<div class="pt4 pt2-m pt4-l"> 
 		
 			
@@ -182,9 +209,11 @@
 		
 			
 				<div class="w-100-l w-100-m w-100"> 
-					<h2 class="revealopacity1 pb1 ma0"><span class=em-dash>—</span>Writing samples</h2> 
-					<p class="subpage-header-description ma0">Personal blog about design & technology</strong></p> 
+					<h1 class="revealopacity1 ma0 gray"><span class=em-dash></span>Blog</h1> 
+					<!-- <p class="subpage-header-description ma0">Personal blog about design & technology</strong></p>  -->
 				</div>
+			
+		
 			
 		
 			
@@ -200,25 +229,25 @@
 
 <!-- Liquid Template File: Writing Gallery -->
 <section>
-	<section class="w-70-l w-100 ph6-l ph2 pb2 mw-custom--default border-bottom center project-section">
+	<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt3-l mt5 mt0m mt0-l bg--primary mw-960">
     
         
     
         
     
         
-            <div class="project-header-main container-border-bottom pt2">
+            <div class="project-header-main container-border-bottom pv3-l">
 
                 <div class="project-title w-100">
 
                     <div class="work-title-header">
-                        <h4 class ="work-title-primary"><a href="/2018/08/23/blog-apples.html" class="dim">Apples are the Best Fruits...</a></h4>
+                        <h4 class =""><a href="/2018/08/23/blog-apples.html" class="dim">Apples are the Best Fruits...</a></h4>
                         <p class="work-title-start">Jan' 2024</p>
-                        <p class="description pb1">Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada.</p>
+                        <p class="pb1 pb4-ns pb3 work-title-body description">Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada.</p>
                     </div>
 
 
-                    <div class="tag-container pt1 pb4">
+                    <div class="tag-container pt1 pb2 pb5-l pb1-l">
                         <div class="tag-body">
                             <p class="tag-text">Cool</p>
                         </div>
@@ -243,18 +272,18 @@
         
     
         
-            <div class="project-header-main container-border-bottom pt2">
+            <div class="project-header-main container-border-bottom pv3-l">
 
                 <div class="project-title w-100">
 
                     <div class="work-title-header">
-                        <h4 class ="work-title-primary"><a href="/2018/08/20/blog-bananas.html" class="dim">Modernizing the Modern Man Post-Modern</a></h4>
+                        <h4 class =""><a href="/2018/08/20/blog-bananas.html" class="dim">Modernizing the Modern Man Post-Modern</a></h4>
                         <p class="work-title-start">Jan' 2024</p>
-                        <p class="description pb1">Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada.</p>
+                        <p class="pb1 pb4-ns pb3 work-title-body description">Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada.</p>
                     </div>
 
 
-                    <div class="tag-container pt1 pb4">
+                    <div class="tag-container pt1 pb2 pb5-l pb1-l">
                         <div class="tag-body">
                             <p class="tag-text">Cool</p>
                         </div>
@@ -285,7 +314,7 @@
 <!-- Liquid Template File: Page Footer -->
 <section>
 	<div class="center mt3"> 
-    <nav class="tc pv1"> <p class="gray copyright-text">Designed & Developed by Corey Mines deep in the woods of Boise, ID.</p> </nav> 
+    <nav class="tc pv4 mb2"> <p class="gray copyright-text">Designed & Developed by Corey Mines deep in the woods of Boise, ID.</p> </nav> 
 </div>   
 </section>
 

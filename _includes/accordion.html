@@ -1,0 +1,56 @@
+<script>
+  function myFunction(x) {
+    // Toggle the class
+    x.classList.toggle("fa-minus");
+    
+    // Find the nested paragraph
+    var paragraph = x.querySelector('p');
+    
+    // If there's no nested paragraph, search in a parent element
+    if (!paragraph) {
+      paragraph = x.closest('.container').querySelector('p');
+    }
+    
+    // Change the text if the paragraph is found
+    if (paragraph) {
+      if (x.classList.contains("fa-minus")) {
+        paragraph.textContent = "Show less experience";
+      } else {
+        paragraph.textContent = "Show more experience";
+      } 
+    }
+  }
+  
+  // Runs function when the page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all elements that should trigger the function
+    var triggers = document.querySelectorAll('.accordion'); // Replace with your actual class
+    
+    // Set initial state for each trigger
+    triggers.forEach(function(trigger) {
+      var paragraph = trigger.querySelector('p') || trigger.closest('.container').querySelector('p');
+      if (paragraph) {
+        paragraph.textContent = "Show more experience";
+      }
+      trigger.classList.remove("fa-minus");
+      trigger.classList.add("fa-plus");
+    });
+  });
+  </script>
+  
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
