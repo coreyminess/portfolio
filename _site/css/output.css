@@ -724,6 +724,111 @@ ol li {
   border-radius: 50%;
 }
 
+.case-study-card {
+  background: linear-gradient(160deg, #1D1D1D 0%, #272626 100%);
+  display: flex;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1223px;
+  font-family: "Instrument Sans", "CNN Sans Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.case-study-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding: 44px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.case-study-card__date {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.26;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.case-study-card__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.26;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.case-study-card__description {
+  height: 100%;
+}
+
+.case-study-card__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.26;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.case-study-card__image-container {
+  position: relative;
+  align-items: flex-start;
+  width: 50%;
+  height: 523px;
+  margin: 0 auto;
+}
+
+.case-study-card__image-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(191, 191, 191, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.case-study-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .case-study-card {
+    padding: 24px;
+  }
+  .case-study-card__title {
+    font-size: 28px;
+  }
+  .case-study-card__subtitle {
+    font-size: 16px;
+  }
+  .case-study-card__image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 710/523;
+  }
+}
+@media (max-width: 480px) {
+  .case-study-card {
+    padding: 16px;
+  }
+  .case-study-card__date {
+    font-size: 16px;
+  }
+  .case-study-card__title {
+    font-size: 24px;
+  }
+  .case-study-card__subtitle {
+    font-size: 14px;
+  }
+}
 .global-max-width {
   max-width: 100em;
 }
