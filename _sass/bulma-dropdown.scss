@@ -1,0 +1,15 @@
+// ===============================
+// Bulma Dropdown-only SCSS for Jekyll
+// Compiled with Dart Sass only
+// ===============================
+
+// 1️⃣ Enable only dropdown component
+$components: (
+  "dropdown": true
+);
+
+// 2️⃣ Import Bulma main entry point
+// This loads all necessary utilities, functions, and built-in modules
+@use "../node_modules/bulma/bulma.scss" as *;
+
+// 3️⃣ Optional: Add custom overrides below

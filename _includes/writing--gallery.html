@@ -1,40 +1,39 @@
-<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt3-l mt5 mt0m mt0-l bg--primary mw-960">
+<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt4-l mt2 mt4-m mt0-l bg--primary mw-960">
+	<div class="project-header">
+		<div class="project-header-container">
     {% for post in site.posts %}
         {% if post.name contains 'blog' %}
-            <div class="project-header-main container-border-bottom pv3-l">
-
-                <div class="project-title w-100">
-
-                    <div class="work-title-header">
-                        <h4 class =""><a href="{{ post.url }}" class="dim">{{ post.title }}</a></h4>
-                        <p class="work-title-start">{{ post.dates }}</p>
-                        <p class="pb1 pb4-ns pb3 work-title-body description">{{ post.description}}</p>
-                    </div>
-
-
-                    <div class="tag-container pt1 pb2 pb5-l pb1-l">
-                        <div class="tag-body">
-                            <p class="tag-text">{{ post.tag-1 }}</p>
-                        </div>
-                        <div class="tag-body">
-                            <p class="tag-text">{{ post.tag-2 }}</p>
-                        </div>
-                        <div class="tag-body">
-                            <p class="tag-text">{{ post.tag-3 }}</p>
-                        </div>
-                        <div class="tag-body">
-                            <p class="tag-text">{{ post.tag-4 }}</p>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="mv2 pb4" >
-                        <img src="{{ post.image  | replace: '..', site.url  }}" alt="{{ post.title }}" title="{{ post.title }}" style="border-radius: 24px;">
-                    </div> -->
-
-                </div>
-            </div>
+						<div class="project-header-main mt3 mt0-ns mb3 container-border-bottom">
+							<div class="project-title">
+								<div class="work-title-header">
+										<div class="pt2 flex work-title-header__title">
+											<h4 class ="" style="padding-right:12px;">
+												<a href="{{ post.url }}" class="">{{ post.title }}</a>
+											</h4>
+											<div class="case-study__link-icon" style="margin-top:4px;">
+												<a href="{{ post.url }}" class="dim">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
+														<g opacity="0.5"><path d="M4 12.5L20 12.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+															<path d="M12 4.5L20 12.5L12 20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+														</g>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<p class="work-title-start">{{ post.dates }}</p>
+										<p class="pb1 pb4-ns pb3 work-title-body description">{{ post.description}}</p>
+										<div class="tag-container scrollable-content pt1 pb2 mb4 mb0-l mb2-m pb5-l pb1-l">
+											{% for tags in post.tags %}
+												<div class="tag-body">
+													<p class="tag-text">{{ tags }}</p>
+												</div>
+											{% endfor %}
+										</div>		
+								</div>
+							</div>
+						</div>
         {% endif %}
     {% endfor %}	
-
+		</div>
+	</div>
 </section>  

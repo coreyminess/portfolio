@@ -705,10 +705,6 @@ ol li {
   color: #676767;
 }
 
-.timeline-content > h4 {
-  font-size: 24px;
-}
-
 .timeline-item {
   position: relative;
 }
@@ -730,7 +726,6 @@ ol li {
   border-radius: 8px;
   width: 100%;
   max-width: 1223px;
-  font-family: "Instrument Sans", "CNN Sans Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .case-study-card__header {
@@ -754,7 +749,7 @@ ol li {
 
 .case-study-card__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
@@ -771,7 +766,6 @@ ol li {
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
-  opacity: 0.5;
 }
 
 .case-study-card__image-container {
@@ -796,6 +790,7 @@ ol li {
   height: 100%;
   object-fit: cover;
   display: block;
+  margin-bottom: 0px;
 }
 
 /* Responsive design */
@@ -815,9 +810,21 @@ ol li {
     aspect-ratio: 710/523;
   }
 }
-@media (max-width: 480px) {
+/* Responsive: Mobile */
+@media screen and (min-width: 5em) and (max-width: 30em) {
   .case-study-card {
-    padding: 16px;
+    padding: 0px;
+    flex-flow: column-reverse;
+  }
+  .case-study-card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 24px;
+    gap: 16px;
+    margin-bottom: 16px;
+    margin-top: 12px;
   }
   .case-study-card__date {
     font-size: 16px;
@@ -864,6 +871,10 @@ ol li {
     font-size: 36px;
     line-height: 115%;
   }
+  h2 {
+    font-size: 32px;
+    line-height: 120%;
+  }
   h4 {
     font-size: 20px;
   }
@@ -899,6 +910,11 @@ ol li {
   .col-50__metadata {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 @media screen and (min-width: 30em) and (max-width: 60em) {
@@ -940,6 +956,15 @@ ol li {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .section-header__title {
+    flex: 1;
+  }
+  .section-link__view-all {
+    flex: 0 0 auto;
+  }
+  .section-link__view-all > a {
+    flex: 0 0 auto;
+  }
 }
 @media screen and (min-width: 60em) {
   h1 {
@@ -964,6 +989,19 @@ ol li {
   }
   .col-50__metadata {
     flex: 1 1 calc(50% - 0.5rem);
+  }
+  .section-header {
+    display: flex;
+    gap: 16px;
+  }
+  .section-header__title {
+    flex: 1;
+  }
+  .section-link__view-all {
+    flex: 0 0 auto;
+  }
+  .section-link__view-all > a {
+    flex: 0 0 auto;
   }
 }
 @media (max-width: 60em) and (max-width: 30em) {
@@ -1554,10 +1592,8 @@ html {
 
 .section-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: baseline;
   gap: 16px;
-  align-self: stretch;
 }
 
 .recent-work__grid {

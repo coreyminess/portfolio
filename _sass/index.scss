@@ -13,6 +13,7 @@
 @import "media";
 @import "hamburger-menu";
 
+
 // -------------- HTML CLASSES -------------- //
 
 body {background-color: $bg-primary--dark;}
@@ -281,14 +282,8 @@ html {
 
 .section-header {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	align-items: baseline;
 	gap: 16px;
-	align-self: stretch;
-}
-
-.section-header p>a {
-
 }
 
 .recent-work__grid {

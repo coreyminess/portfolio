@@ -28,6 +28,11 @@
         font-size: 36px;
         line-height: 115%;
     }
+
+    h2 {
+        font-size: 32px;
+        line-height: 120%;
+    }
     
     h4 {
         font-size: 20px;
@@ -73,6 +78,13 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
 
 }
 
@@ -123,6 +135,18 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    .section-header__title {
+	    flex: 1;
+    }
+
+    .section-link__view-all {
+        flex: 0 0 auto;
+    }
+
+    .section-link__view-all > a {
+        flex: 0 0 auto;
+    }
 }
 
 @media screen and (min-width: 60em) {
@@ -154,6 +178,23 @@
 
     .col-50__metadata {
         flex: 1 1 calc(50% - 0.5rem);
+    }
+
+    .section-header {
+        display: flex;
+        gap: 16px;
+    }
+
+    .section-header__title {
+	    flex: 1;
+    }
+
+    .section-link__view-all {
+        flex: 0 0 auto;
+    }
+
+    .section-link__view-all > a {
+        flex: 0 0 auto;
     }
 }
 

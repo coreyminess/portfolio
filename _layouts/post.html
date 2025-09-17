@@ -4,25 +4,28 @@ title: blogpost
 author: Corey Mines
 ---
 
-<section class="body-container ph4">
+<section class="body-container">
 	<!-- Liquid Template File: Navigation (Primary) -->
 	{% include navigation--primary.html %} 
 </section>
 
-<section class="body-container pv4 mv4 ph4">
-    <h3 class="pt4-l pt2">{{ page.title }}</h3>
-    <p>{{ page.date | date_to_string: "ordinal", "US" }}</p>
-    <p class="">{{ page.description }}</p>    
+<!-- Liquid Template File: Hero -->
 
-    <div class="db w-100"></div>
-        <div class="pt1 w-100">
-            <img src="{{ page.image }}" class="dib mr2" style="border-radius: 16px;">
-        </div>
-    </div>
+
+<section class="project-section ph4-m w-70-l w-100 pt4-l mb5-ns pt2 mw-custom--default ph3 center db">
+	<h1 class="w-100 pb1 pt1">{{ page.title }}</h1>
+	<p class="work-title-start w-100">{{ page.dates}}</p>
+	<p class="description pb3-ns pb1">{{ page.description }}</p>
+	{% include component__tags.html %}
 </section>
 
+<section class="project-section ph4-m w-70-l w-100 pt4-l mb5-ns pt2 mw-custom--default ph3 center db">
+	<div class="pt1 w-100 center">
+		<img src="{{ page.hero-image }}" class="">
+	</div>
+</section>
 
-<section class="body-container ph4">
+<section class="project-section w-70-l w-100 mw-custom--default ph2 center">
     {{ content }}
 </section>
     

@@ -4,7 +4,6 @@
   border-radius: 8px;
   width: 100%;
   max-width: 1223px;
-  font-family: 'Instrument Sans', 'CNN Sans Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .case-study-card__header {
@@ -28,7 +27,7 @@
 
 .case-study-card__title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
@@ -45,7 +44,6 @@
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
-  opacity: 0.5;
 }
 
 .case-study-card__image-container {
@@ -70,6 +68,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  margin-bottom: 0px;
 }
 
 /* Responsive design */
@@ -93,20 +92,34 @@
   }
 }
 
-@media (max-width: 480px) {
-  .case-study-card {
-    padding: 16px;
+/* Responsive: Mobile */
+@media screen and (min-width: 5em) and (max-width: 30em) {
+    .case-study-card {
+      padding: 0px;
+      flex-flow: column-reverse;
+    }
+
+    .case-study-card__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      padding: 24px;
+      gap: 16px;
+      margin-bottom: 16px;
+      margin-top: 12px;
+    }
+    
+    .case-study-card__date {
+      font-size: 16px;
+    }
+    
+    .case-study-card__title {
+      font-size: 24px;
+    }
+    
+    .case-study-card__subtitle {
+      font-size: 14px;
+    }
   }
-  
-  .case-study-card__date {
-    font-size: 16px;
-  }
-  
-  .case-study-card__title {
-    font-size: 24px;
-  }
-  
-  .case-study-card__subtitle {
-    font-size: 14px;
-  }
-}
+
