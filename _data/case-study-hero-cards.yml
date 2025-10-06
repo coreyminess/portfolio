@@ -1,0 +1,14 @@
+content:
+  - post_id: project-1
+    date: 2021 - 2025
+    title: Design Systems
+    description: Staff Product Designer
+    preview-img: img/logos/cnn-logo.jpg
+    link: /case-studies/design-systems/
+
+  - post_id: project-2
+    date: 2022 - 2024
+    title: Brand Evolution
+    description: Product Design Lead
+    preview-img: img/logos/brand-logo.jpg
+    link: /case-studies/brand-evolution/

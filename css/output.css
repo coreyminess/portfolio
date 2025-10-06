@@ -726,6 +726,7 @@ ol li {
   border-radius: 8px;
   width: 100%;
   max-width: 1223px;
+  margin-bottom: 44px;
 }
 
 .case-study-card__header {
@@ -745,6 +746,7 @@ ol li {
   letter-spacing: 0.02em;
   color: #FFFFFF;
   opacity: 0.5;
+  margin-bottom: 16px;
 }
 
 .case-study-card__title {

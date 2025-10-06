@@ -4,6 +4,7 @@
   border-radius: 8px;
   width: 100%;
   max-width: 1223px;
+  margin-bottom: 44px;
 }
 
 .case-study-card__header {
@@ -23,11 +24,12 @@
   letter-spacing: 0.02em;
   color: #FFFFFF;
   opacity: 0.5;
+  margin-bottom: 16px;
 }
 
 .case-study-card__title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
@@ -71,32 +73,57 @@
   margin-bottom: 0px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .case-study-card {
-    padding: 24px;
-  }
+// /* Responsive design */
+// @media (max-width: 768px) {
+//   .case-study-card {
+//     padding: 24px;
+//   }
   
-  .case-study-card__title {
-    font-size: 28px;
-  }
+//   .case-study-card__title {
+//     font-size: 28px;
+//   }
   
-  .case-study-card__subtitle {
-    font-size: 16px;
+//   .case-study-card__subtitle {
+//     font-size: 16px;
+//   }
+  
+//   .case-study-card__image-container {
+//     width: 100%;
+//     height: auto;
+//     aspect-ratio: 710 / 523;
+//   }
+// }
+
+/* Responsive: Tablet */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .case-study-card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 44px;
+    gap: 16px;
+    margin-bottom: 16px;
   }
   
   .case-study-card__image-container {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 710 / 523;
+    width: 50%;
   }
 }
 
 /* Responsive: Mobile */
-@media screen and (min-width: 5em) and (max-width: 30em) {
+@media screen and (min-width: 5em) and (max-width: 40em) {
     .case-study-card {
       padding: 0px;
       flex-flow: column-reverse;
+    }
+
+    .case-study-card__date {
+      margin-bottom: 0px;
+    }
+
+    .case-study-card__description {
+      margin-bottom: 12px;
     }
 
     .case-study-card__header {
@@ -121,5 +148,11 @@
     .case-study-card__subtitle {
       font-size: 14px;
     }
+
+    .case-study-card__image-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 710 / 523;
+  }
   }
 

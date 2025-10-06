@@ -16,4 +16,13 @@ pagecontent:
       - title: Prototyping
         description: Hii
       - title: Title 3 sample
-        description: Description 3 sample
+  - year: 2023
+    entries:
+      - title: CNN experience redesign design system support
+        description: Design Systems • Shipped February 9, 2025
+      - title: Created Figma → Code pipeline at CNN
+        description: Design Systems • Shipped February 9, 2025
+      - title: Launched refactored design system 3.0 at CNN
+        description: Design Systems • Shipped February 9, 2025
+      - title: Created Design System audit & reporting workflows
+        description: Design Systems • Shipped February 9, 2025

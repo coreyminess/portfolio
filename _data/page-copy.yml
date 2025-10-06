@@ -25,8 +25,12 @@ pagecontent:
   body-1: Personal blog about design & technology
 
 - pagetitle: about
-  title-1: About me
-  body-1: My design journey
+  title-1: Introduction
+  title-2: Multidisciplinary, full-stack product design veteran, with heavy experience in design systems and feature development across responsive web, mobile apps and CTV.
+  title-3: As a technical, collaborative, and innovation-focused strategist, I’ve become a trusted problem-solver who can confidently lead and execute the complex intersection of UX, product management, and engineering to provide solutions for business, user and customer needs. 
+  body-1: I'm currently at CNN, enhancing our multi-platform Design System Language. Closely partnering with product and feature teams to enable better accessibility, enhance consistency, and accelerate speed to market. Currently laser-focused on creating a Figma to code pipeline and plugin that allows our team to publish, maintain and grow our design system from Figma, and integrate those decisions directly into our organizations codebase.
+  body-2: Prior to design systems, I worked on a number of net-new product initiatives at CNN+ across streaming, interactive community, and mobile apps. Before CNN, I worked at Bodybuilding.com that maintained a number of products in the health and wellness space, including an online retail store, educational materials, personal training mobile apps and health-related content.
+  body-3: I've also spent time at a number of startups and digital product agencies, on both the technical and marketing side, and even owned my own small-time agency at one point. My work has taken me far and back within design, and I look forward to what my next chapter brings me.
 
 - pagetitle: case studies
   title-1: Recent Work

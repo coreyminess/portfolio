@@ -1,55 +1,29 @@
-<!-- <div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
-  <div class="section-header pt4 pt2-ns pb4 pb4-ns">
-    <h4 class="revealopacity1" style="flex: 1 0 0;">Achievements</h4>
-    <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
-  </div>
-  <div class="timeline-container">
-    {% for item in site.data.timeline.pagecontent %}
-      {% if item.year == 2025 %}
-        <div class="timeline-year-header pv3">
-          <h4 class="f3 fw6">{{ item.year }}</h4>
-        </div>
-        <div class="timeline">
-          {% for entry in item.entries %}
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 class="pb1">{{ entry.title }}</h4>
-                <p class="pb3">{{ entry.description }}</p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div> -->
-
-
-
-<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt3-l bg--primary mw-960">
+<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb5-l pb3-nl center pt3-l bg--primary mw-960 border-bottom">
   <div class="container">
-    <div class="section-header pt4 pt2-ns pb4 pb3-ns">
-      <h2 class="revealopacity1 w-100" style="flex: 1 0 0;">Achievements</h2>
+    <div class="section-header mb2-l mb0-m mb0-s pt4 pt2-ns pb4 pb3-ns">
+      <div class="flex w-100" style="gap: 24px;">
+        <h2 class="revealopacity1" style="width: auto; margin-top: 14px;">Achievements</h2>
+        <div class="dropdown" id="bulmaYearDropdown">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span id="dropdown-selected">2025</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item" data-year="2025">2025</a>
+              <a href="#" class="dropdown-item" data-year="2024">2024</a>
+              <a href="#" class="dropdown-item" data-year="2023">2023</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="section-link__view-all"><a class="white" href="case-studies.html">View resume</a></div>
     </div>
-    <div class="dropdown" id="bulmaYearDropdown">
-      <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-          <span id="dropdown-selected">2025</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item" data-year="2025">2025</a>
-          <a href="#" class="dropdown-item" data-year="2024">2024</a>
-          <a href="#" class="dropdown-item" data-year="2023">2023</a>
-        </div>
-      </div>
-    </div>
+
 
     <div id="yearContent" class="year-content">
       <!-- Dynamic content will go here -->
@@ -66,10 +40,10 @@
           {% if item.year == 2025 %}
             <div class="timeline">
               {% for entry in item.entries %}
-                <div class="timeline-item">
+                <div class="pb2 timeline-item">
                   <div class="timeline-marker"></div>
                   <div class="timeline-content">
-                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <h4 class="timeline-title pb1">{{ entry.title }}</h4>
                     <p class="pb3">{{ entry.description }}</p>
                   </div>
                 </div>
@@ -83,15 +57,12 @@
       <div class="timeline-container">
         {% for item in site.data.timeline.pagecontent %}
           {% if item.year == 2024 %}
-            <div class="timeline-year-header pv3">
-              <h4 class="f3 fw6">{{ item.year }}</h4>
-            </div>
             <div class="timeline">
               {% for entry in item.entries %}
-                <div class="timeline-item">
+                <div class="pb2 timeline-item">
                   <div class="timeline-marker"></div>
                   <div class="timeline-content">
-                    <h4 class="pb1">{{ entry.title }}</h4>
+                    <h4 class="timeline-title pb1">{{ entry.title }}</h4>
                     <p class="pb3">{{ entry.description }}</p>
                   </div>
                 </div>
@@ -102,14 +73,24 @@
       </div>
     `,
     2023: `
-      <h2 class="title is-4">2023 Timeline</h2>
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <p>Created a token-based system architecture.</p>
-        </div>
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2023 %}
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-title pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    `
+    `,
   };
 
   document.addEventListener("DOMContentLoaded", function () {

@@ -29,7 +29,7 @@
 h1 {
   color: #F4F4F4;
   font-family: "Instrument Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   font-style: normal;
   line-height: 120%;
@@ -66,10 +66,10 @@ h1 .highlight {
 h2 {
   color: #F4F4F4;
   font-family: "Instrument Sans", sans-serif;
-  font-size: 2.65rem;
+  font-size: 2rem;
   font-weight: bold;
   font-style: regular;
-  line-height: 120%;
+  line-height: 140%;
   text-transform: none;
   margin: 0;
   width: 100%;
@@ -562,6 +562,11 @@ ol li {
   font-size: 36px;
 }
 
+.timeline-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
 .tag-container {
   display: flex;
   align-items: flex-start;
@@ -726,6 +731,7 @@ ol li {
   border-radius: 8px;
   width: 100%;
   max-width: 1223px;
+  margin-bottom: 44px;
 }
 
 .case-study-card__header {
@@ -745,11 +751,12 @@ ol li {
   letter-spacing: 0.02em;
   color: #FFFFFF;
   opacity: 0.5;
+  margin-bottom: 16px;
 }
 
 .case-study-card__title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.26;
   letter-spacing: 0.02em;
   color: #FFFFFF;
@@ -793,28 +800,32 @@ ol li {
   margin-bottom: 0px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .case-study-card {
-    padding: 24px;
-  }
-  .case-study-card__title {
-    font-size: 28px;
-  }
-  .case-study-card__subtitle {
-    font-size: 16px;
+/* Responsive: Tablet */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .case-study-card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 44px;
+    gap: 16px;
+    margin-bottom: 16px;
   }
   .case-study-card__image-container {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 710/523;
+    width: 50%;
   }
 }
 /* Responsive: Mobile */
-@media screen and (min-width: 5em) and (max-width: 30em) {
+@media screen and (min-width: 5em) and (max-width: 40em) {
   .case-study-card {
     padding: 0px;
     flex-flow: column-reverse;
+  }
+  .case-study-card__date {
+    margin-bottom: 0px;
+  }
+  .case-study-card__description {
+    margin-bottom: 12px;
   }
   .case-study-card__header {
     display: flex;
@@ -835,6 +846,11 @@ ol li {
   .case-study-card__subtitle {
     font-size: 14px;
   }
+  .case-study-card__image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 710/523;
+  }
 }
 .global-max-width {
   max-width: 100em;
@@ -852,7 +868,10 @@ ol li {
   width: 50%;
 }
 
-@media screen and (min-width: 5em) and (max-width: 30em) {
+@media screen and (min-width: 5em) and (max-width: 40em) {
+  .experience-text-container {
+    flex-direction: column;
+  }
   .intro-header__avatar {
     width: 32px;
     height: 32px;
@@ -929,6 +948,10 @@ ol li {
   h1 {
     font-size: 2.65rem;
   }
+  h2 {
+    font-size: 36px;
+    line-height: 120%;
+  }
   h3 {
     font-size: 32px;
     line-height: 44px;
@@ -968,7 +991,7 @@ ol li {
 }
 @media screen and (min-width: 60em) {
   h1 {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
   .intro-header__avatar {
     width: 56px;
@@ -1143,7 +1166,7 @@ ol li {
   display: none !important;
 }
 
-@media screen and (min-width: 5em) and (max-width: 30em) {
+@media screen and (min-width: 5em) and (max-width: 40em) {
   #burger-menu {
     display: block !important;
     cursor: pointer;
@@ -1158,7 +1181,7 @@ ol li {
     display: block !important;
   }
 }
-@media screen and (min-width: 5em) and (max-width: 30em) {
+@media screen and (min-width: 5em) and (max-width: 40em) {
   #nav-links--desktop {
     display: none !important;
   }
@@ -1391,8 +1414,6 @@ html {
 .xp-img-container {
   width: 110px;
   height: auto;
-  align-items: center;
-  justify-content: center;
   border-radius: 8px;
   background-color: #F4F4F4;
 }

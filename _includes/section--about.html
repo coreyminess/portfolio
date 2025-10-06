@@ -1,16 +1,28 @@
-<section class="w-70-l w-100 ph6-l ph2 pb2 mb3 mw-custom--default center border-bottom pt3 bg--primary" style="min-height:85vh; align-content:center;">
-    {% for item in site.data.page-copy.pagecontent %}
-        {% if item.pagetitle == "homepage" %}
-        
-            <div class="pt4"> 
-                <h1 class="pb2">Staff Product Designer with over 12 years experience in UX, UI, prototyping, research and design systems.</h1>
-                <p class="description--hero pb1">{{item.body-1}}</p>
-                <p class="description--hero pb1">{{item.body-2}}</p> 
-                <p class="description--hero pt0 pb1">{{item.body-3}}</p>
-                {% include component--pill-row.html %} 
+<section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center pt4-l bg--primary mw-960 border-bottom">
+	{% for item in site.data.page-copy.pagecontent %}
+		{% if item.pagetitle == "about" %}
+		<div class="intro-header pb3 pb3-ns">
+				<h4 class="fw5 intro-subheader__hero revealopacity1">👋 Hola, I'm Corey</h4> 
+		</div>
+		<div class="flex mt3">
+			<div class="flex flex-column"> 
+				<h2 class="fw7 pb3-l pb3-m pb2">{{item.title-2}}</h2>
+				<h4 class="fw4 pb4-l pb3-m pb2">{{item.title-3}}</h4>
+			</div>
+			<!-- <div class="w-40">
+				<img src="https://coreymines.design/img/self.jpg" class="">
+			</div> -->
+		</div>
 
-            </div>
-        {% endif %}
-    {% endfor %}
+		<div class="flex">
+			<div class="flex-column"> 
+				<p class="pb4-l pb3-m pb2">{{item.body-1}}</p>
+				<p class="pb4-l pb3-m pb2 ">{{item.body-2}}</p> 
+				<p class="pb4-l pb3-m pb2">{{item.body-3}}</p>
+			</div>
+		</div>
+
+		{% endif %}
+	{% endfor %}
 </section>
 

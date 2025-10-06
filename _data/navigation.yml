@@ -1,12 +1,12 @@
 mypages:
 
-- title: about
-  id: about
+- title: home
+  id: home
   url: /
 
-# - title: about
-#   id: about
-#   url: /about.html
+- title: about
+  id: about
+  url: /about.html
 
 - title: case studies
   id: case-studies
