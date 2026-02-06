@@ -29,6 +29,14 @@
 	width: fit-content;
 }
 
+
+.pill-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
 .scrollable-content {
 
 		touch-action: pan-x;

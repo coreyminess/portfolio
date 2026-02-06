@@ -1,6 +1,5 @@
 @charset 'UTF-8';
 
-
 // --- Typography Classes --- //
 .lh-loose {line-height: 1.85em;}
 .lh-loose-2 {line-height: 2.5em;}
@@ -9,7 +8,40 @@
 .letter-space-3 {letter-spacing: 4px;}
 .tc-right {text-align: right;}
 
-// --- HTML Typography Classes --- //
+
+// --- Typography Colors --- //
+
+.type-high {
+	color: #ffffff;
+}
+
+.type-med {
+	color: #bcbcbc
+}
+
+.type-low {
+	color: #7E7E7E;
+}
+
+// --- Typography Sizes --- //
+
+.type-body__sm {
+	font-size: 14px;
+}
+
+.type-body__md {
+	font-size: 16px;
+}
+
+.type-body__lg {
+	font-size: 18px;
+}
+
+.type-body__xl {
+	font-size: 20px;
+}
+
+// --- Header Classes --- //
 h1 {
 	color: $type-primary;
 	font-family: $quartenary-typeface;
@@ -50,22 +82,30 @@ h1 .highlight {
 h2 {
 	color: $type-primary;
 	font-family: $quartenary-typeface;
-	font-size: $title--medium;
+	font-size: 34px;
 	font-weight: $type-style-bold;
-	font-style: regular;
 	line-height: $line-height--140;
 	text-transform: none;
 	margin: 0;
 	width: 100%;
+}
 
+h2 a {
+	color: $type-primary;
+	font-family: $quartenary-typeface;
+	font-size: inherit; 
+	font-weight: $type-heavy;
+	line-height: $line-height--160;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0;
 }
 
 h3 {
 	color: $type-primary;
-	font-family: $primary-typeface;
-	font-size: $title--medium; 
-	font-weight: $type-medium;
-	font-style: $type-style-italic;
+	font-family: $quartenary-typeface;
+	font-size: 28px; 
+	font-weight: $type-heavy;
 	line-height: $line-height--160;
 	letter-spacing: .25px;
 	text-transform: none;
@@ -76,11 +116,10 @@ h3 {
 
 h3 a {
 	color: $type-primary;
-	font-family: $primary-typeface;
+	font-family: $quartenary-typeface;
 	font-size: inherit; 
 	font-weight: $type-heavy;
-	font-style: inherit;
-	line-height: $line-height--160;
+	line-height: inherit;
 	text-transform: none;
 	text-decoration: none;
 	margin: 0;
@@ -99,7 +138,7 @@ h4 .intro-subheader__hero {
 h4 {
 	color: $type-primary;
 	font-family: $quartenary-typeface;
-	font-size: $title--small;
+	font-size: 1.4rem;
 	font-weight: 700;
 	font-style: $type-style-normal;
 	line-height: $line-height--150;
@@ -148,6 +187,8 @@ h6 {
 	width: 100%;
 }
 
+// --- Body Classes --- //
+
 p {
 	color: $type-secondary;
 	font-family: $quartenary-typeface;
@@ -174,6 +215,14 @@ p strong {
 	font-style: regular;
 }
 
+.description {
+	color: $type-tertiary;
+	font-size: $body--small;
+	line-height: 160%;
+}
+
+// --- Hyperlink Classes --- //
+
 a {
 	font-weight: 700;
 	color: $accent-tertiary;
@@ -184,11 +233,52 @@ a {
 
 a:hover {
 	font-weight: 700;
-	color: $accent-primary;
+	color: $accent-secondary;
 	text-decoration: underline;
 	transition: color 0.3s ease;
 	margin: 0;
 }
+
+.hyperlink__lg a {
+	color: $type-primary;
+	font-family: $quartenary-typeface;
+	font-weight: $type-style-bold;
+	font-size: 1.2rem;
+	line-height: $line-height--160;
+	text-decoration: underline;
+	letter-spacing: .2px;
+	font-style: normal;
+	margin: 0;
+}
+
+
+.hyperlink__lg a:hover {
+	color: $accent-secondary;
+	text-decoration: underline;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+.hyperlink__md a {
+	color: $type-secondary;
+	font-family: $quartenary-typeface;
+	font-weight: $type-style-bold;
+	font-size: 1.1rem;
+	line-height: $line-height--160;
+	text-decoration: none;
+	letter-spacing: .2px;
+	font-style: normal;
+	margin: 0;
+}
+
+.hyperlink__md a:hover {
+	color: $accent-secondary;
+	text-decoration: underline;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+// --- List Classes --- //
 
 ul li {
 	list-style-type: circle;
@@ -211,68 +301,10 @@ ol li {
 	padding-bottom: 1rem;
 }
 
-
-// -- CSS CLASSES FOR TYPOGRAPHY TEST -- //
-.availability-container {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 10px;
-	align-self: stretch;
+.f-size-16 {
+	font-size: 1.6rem;
 }
 
-.availability-parent-container {
-	background: $background-opacity--primary;
-	border-radius: 12px;
-	display: flex;
-	padding: 24px 24px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 32px;
-	align-self: stretch;
-}
-
-.availability-child-container {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.description--hero {
-	color: $type-quartenary;
-	font-size: $body--medium;
-}
-
-.description {
-	color: $type-secondary;
-	font-size: $body--small;
-	line-height: 160%;
-}
-
-.em-dash {
-	color: $type-tertiary;
-}
-
-.experience-title {
-	color: $type-primary;
-	font-size: $body--medium;
-	font-style: normal;
-	font-weight: $type-medium;
-}
-
-.experience-description {
-	color: $type-quartenary;
-	font-size: $body--small;
-	font-style: regular;
-	font-weight: $type-light;
-}
-
-.experience-date {
-	color: $type-tertiary;
-	font-size: $body--xs;
-	font-style: italic;
-	font-weight: $type-regular;}
 
 .copyright-text {
 	font-size: 0.7rem;
@@ -294,111 +326,6 @@ ol li {
 	display: inline;
 }
 
-.location-text {
-	color: $type-primary;
-	font-family: $primary-typeface;
-	font-size: $body--small;
-	font-weight: $type-medium;
-	text-decoration: none;
-	letter-spacing: 1px;
-	margin: 0;
-	height: auto;
-}
-
-.nav-links__favicon {
-	color: $accent-neutral;
-	font-family: $quartenary-typeface;
-	font-size: $body--large;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	text-decoration: none;
-	margin: 0;
-	height: auto;
-}
-
-.nav-links__favicon > a {
-	color: $accent-neutral;
-	font-family: $quartenary-typeface;
-	font-size: $body--large;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	text-decoration: none;
-	margin: 0;
-	height: auto;
-}
-
-.nav-links > a {
-	color: $accent-neutral;
-	font-family: $quartenary-typeface;
-	font-size: $body--small;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	text-decoration: none;
-	margin: 0;
-	height: auto;
-	display: inline-block;
-	padding: 10px 20px 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 44px;
-	background: rgba(255, 255, 255, 0.15);
-}
-
-.nav-links > a:hover {
-	color: $accent-neutral;
-	font-family: $quartenary-typeface;
-	font-size: $body--small;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	text-decoration: none;
-	margin: 0;
-	height: auto;
-	display: inline-block;
-	padding: 10px 20px 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 44px;
-	background: rgba(255, 255, 255, 0.25);
-	height: auto;
-	cursor: pointer;
-}
-
- .nav-links > a.active {
-	color: #161615;
-	font-family: $quartenary-typeface;
-	font-size: $body--small;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	margin: 0;
-	height: auto;
-	display: inline-block;
-	padding: 10px 20px 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 44px;
-	background: #FFF;
-}
-
- .nav-links > a.active:hover {
-	color: #161615;
-	font-family: $quartenary-typeface;
-	font-size: $body--small;
-	font-weight: $type-heavy;
-	font-style: $type-style-normal;
-	text-decoration: none;
-	margin: 0;
-	height: auto;
-	display: inline-block;
-	padding: 10px 20px 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 44px;
-	background: #ffffffcb;
-}
 
 .page-subheader {
 	font-weight: $type-regular;
@@ -505,29 +432,75 @@ ol li {
 	padding-bottom: .225rem !important;
 }
 
-.section-link__view-all a {
-	color: $type-secondary;
-	font-family: $quartenary-typeface;
-	font-weight: $type-style-bold;
-	font-size: $body--small;
-	line-height: $line-height--160;
-	text-decoration: underline;
-	letter-spacing: .2px;
-	font-style: normal;
-	margin: 0;
 
-}
-
-.section-link__view-all a:hover {
-	color: $accent-secondary;
-	text-decoration: underline;
-	transition: 0.3s ease;
-	cursor: pointer;
-}
 
 .project-header-main .tag-text {
 	color: $type-primary;
 }
+
+
+
+
+.availability-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	align-self: stretch;
+}
+
+.availability-parent-container {
+	background: $background-opacity--primary;
+	border-radius: 12px;
+	display: flex;
+	padding: 24px 24px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	align-self: stretch;
+}
+
+.availability-child-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.location-text {
+	color: $type-primary;
+	font-family: $primary-typeface;
+	font-size: 18px;
+	font-weight: $type-medium;
+	font-style: $type-style-italic;
+	text-decoration: none;
+	letter-spacing: .3px;
+	margin: 0;
+	height: auto;
+}
+
+
+.experience-title {
+	color: $type-primary;
+	font-size: $body--medium;
+	font-style: normal;
+	font-weight: $type-medium;
+}
+
+.experience-description {
+	color: $type-quartenary;
+	font-size: $body--small;
+	font-style: regular;
+	font-weight: $type-light;
+}
+
+.experience-date {
+	color: $type-tertiary;
+	font-size: $body--xs;
+	font-style: italic;
+	font-weight: $type-regular;
+}
+
 
 .work-title-body {
 	color: $type-tertiary;
@@ -535,7 +508,7 @@ ol li {
 
 
 .work-title-header .description {
-	color: $type-quartenary;
+	color: #757575;
 	font-family: $quartenary-typeface;
 	font-weight: $type-regular;
 	font-size: 1.2rem;
@@ -553,4 +526,27 @@ ol li {
 .timeline-title {
 	font-size: 1.4rem;
 	font-weight: 500;
+}
+
+.work-title-header {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.work-title-primary {
+	color: $type-primary;
+	font-family: $quartenary-typeface;
+	font-weight: 700;
+	flex: 1 0 0;
+}
+
+.work-title-start {
+	font-family: $quartenary-typeface;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 170%; /* 23.8px */
+	letter-spacing: 0.56px;
 }

@@ -1,0 +1,35 @@
+.pill {
+	display: flex;
+	padding: 12px 24px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	border: 1px solid #838383;
+}
+
+.pill-active {
+	fill: #6CB775;
+	width: 8px;
+	height: 8px;
+}
+
+.pill-text {
+	color: $type-primary;
+	font-family: $secondary-typeface;
+	font-size: $body--xs;
+	font-style: normal;
+	font-weight: $type-regular;
+	line-height: $line-height--180;
+	letter-spacing: 0.18px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+.pill-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	flex-wrap: wrap;
+}

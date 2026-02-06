@@ -9,7 +9,7 @@
     {% for item in site.data.timeline.pagecontent %}
       {% if item.year == 2025 %}
         <div class="timeline-year-header pv3">
-          <h4 class="f3 fw6">{{ item.year }}</h4>
+          <h4 class="case-study-card__date">{{ item.year }}</h4>
         </div>
         <div class="timeline">
           {% for entry in item.entries %}

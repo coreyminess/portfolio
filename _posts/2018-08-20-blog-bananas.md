@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Modernizing the Modern Man Post-Modern"
-dates: Jan' 2024
-description: "Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in. Lacinia libero habitant resis velit velit sollicitudin egestas. Vitae tincidunt metus resis velit egestas eu urna sed lectus malesuada."
+date: 2025-10-04
+description: "Lorem ipsum dolor sit amet consectetur. Mauris amet hac cum sociis massa. Neque ultricies dolor vestibulum libero. Nisi eget fermentum auctor leo in."
+image: /img/button-sample--overview__min.jpg
 tag-1: Cool
 tag-2: Beans
 tag-3: Hella

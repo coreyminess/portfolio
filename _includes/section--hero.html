@@ -1,22 +1,19 @@
-<section class="w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt4-l mt1 mt0-m mt0-l bg--primary mw-960" style="min-height:85vh; align-content:center;"> 
+<section class="custom-hero-bg w-70-l w-100-m w-100 ph3 ph4-m ph0-ns pb2-l pb1 center v-mid pt4-l mt1 mt0-m mt0-l bg--primary mw-960" style="min-height:85vh; align-content:center;"> 
   <div class="pb2-l"> 
     {% for item in site.data.page-copy.pagecontent %}
       {% if item.pagetitle == "homepage" %}
-        <div class="h-100 w-100-l w-100-m w-100 mt4 mt5-m mt2-ns center "> 
+        <div class="h-100 w-100-l w-100-m w-100 mt4 mt5-m mt2-ns center"> 
           <!-- <div class="intro-header pb3 pb3-ns">
               <img src="assets\avatar-cm.png" alt="corey avatar photo" class="intro-header__avatar">
               <h4 class="intro-subheader__hero revealopacity1">{{item.title-1}}</h4> 
           </div> -->
           <h1 class="pb4-l pb3-m pb2">{{item.title-2__alt}}</h1> 
-
-          <h4 class="pb2 pb3-l pt2 pt0-ns">{{item.title-3__alt}} {{item.title-4}}</h4> 
-            <!-- <h3 class="pb5 pt3">{{item.title-5}}</h3>  -->
-          <!-- <p class="pb2">{{item.body-1}}</p> -->
+          <h3 class=" pb2 pb3-l pt2 pt0-ns">{{item.title-3__alt}} {{item.title-4}}</h3> 
           <p class="pt1 pt2-m pt2-ns grey pb3 pb4-ns ">{{item.body-2}}</p>
       {% endif %}
     {% endfor %}
     
-    {% include component--pill-row.html %} 
+    {% include component--hero-tags.html %} 
 
     </div>
   </div>
@@ -26,11 +23,17 @@
 
 <section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
   
-  <div class="section-header pt2 pt2-ns pb2">
+  <div class="section-header pt2 pt2-ns pb2-l pb2-m pb4">
     <h2 class="section-header__title">Recent Work</h2>
-    <div class="section-link__view-all"><a class="revealopacity1" href="case-studies.html">View all</a></div>
+    <div class="hyperlink__md">
+      <a class="revealopacity1" href="case-studies.html">View all</a>
+    </div>
   </div>
 
   {% include case-study-card.html %}
 
+</section>
+
+<section>
+  {% include section--location.html %} 
 </section>

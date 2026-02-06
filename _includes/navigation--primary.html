@@ -35,11 +35,11 @@
       </a> 
     </div>
 
-    <ul class="pl4" style="margin-top:5em;"> 
+    <ul class="pl4" style="margin-top:8em;"> 
       {% for item in site.data.navigation.mypages %}
         {% if item.id %}
             <li style="list-style:none !important;">
-              <a class="dim pl4" href="{{item.url}}">{{item.title}}</a>
+              <a class="pl4" href="{{item.url}}">{{item.title}}</a>
             </li> 
         {% endif  %}
       {% endfor %}

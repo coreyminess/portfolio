@@ -1,3 +1,10 @@
+# Site settings
+title: Corey Mines • Product Design
+email: your@email.com
+description: >
+  With nearly 10 years of experience in UX/UI, product design, and front-end development.
+url: "https://coreymines.design"
+
 # Where things are
 source              : .
 destination         : ./_site

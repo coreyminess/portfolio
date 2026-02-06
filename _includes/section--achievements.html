@@ -1,0 +1,154 @@
+<div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb5-l pb3-nl center pt3-l bg--primary mw-960 border-bottom">
+  <div class="container">
+    <div class="section-header mb2-l mb0-m mb0-s pt4 pt2-ns pb4 pb3-ns">
+      <div class="flex w-100" style="gap: 24px;">
+        <h2 class="revealopacity1" style="width: auto; margin-top: 14px;">Achievements</h2>
+        <div class="dropdown" id="bulmaYearDropdown">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span id="dropdown-selected">2025</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item" data-year="2025">2025</a>
+              <a href="#" class="dropdown-item" data-year="2024">2024</a>
+              <a href="#" class="dropdown-item" data-year="2023">2023</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hyperlink__md flex-0-0-auto"><a class="white" href="case-studies.html">View resume 🡕</a></div>
+    </div>
+
+
+    <div id="yearContent" class="year-content">
+      <!-- Dynamic content will go here -->
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2025 %}
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="">
+                    <h4 class="fw5 pb1">{{ entry.title }}</h4>
+                    <p class="type-low type-body__lg pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2024: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2024 %}
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+    2023: `
+      <div class="timeline-container">
+        {% for item in site.data.timeline.pagecontent %}
+          {% if item.year == 2023 %}
+            <div class="timeline">
+              {% for entry in item.entries %}
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">{{ entry.title }}</h4>
+                    <p class="pb3">{{ entry.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    `,
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById("bulmaYearDropdown");
+  const trigger = dropdown.querySelector(".dropdown-trigger button");
+  const selectedSpan = document.getElementById("dropdown-selected");
+  const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+  const yearContent = document.getElementById("yearContent");
+  const dropdownIcon = trigger.querySelector("i"); // Get the icon
+
+  function loadYearContent(year) {
+    yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
+  }
+
+  // Open/close dropdown on trigger click
+  trigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("is-active");
+
+    // Toggle icon class
+    if (dropdown.classList.contains("is-active")) {
+      dropdownIcon.classList.remove("fa-angle-down");
+      dropdownIcon.classList.add("fa-angle-up");
+    } else {
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // Click outside to close
+  document.addEventListener("click", function () {
+    if (dropdown.classList.contains("is-active")) {
+      dropdown.classList.remove("is-active");
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // When a dropdown item is clicked
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const year = this.getAttribute("data-year");
+      selectedSpan.textContent = year;
+      dropdown.classList.remove("is-active");
+
+      // Reset icon when closing dropdown
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+
+      loadYearContent(year);
+    });
+  });
+
+  // Load default content
+  loadYearContent(selectedSpan.textContent);
+});
+</script>
+
+
+

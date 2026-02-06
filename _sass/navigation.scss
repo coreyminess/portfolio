@@ -1,0 +1,95 @@
+
+.nav-links__favicon {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: $body--large;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+.nav-links__favicon > a {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: $body--large;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: auto;
+}
+
+.nav-links > a {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: 1rem;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: 44px;
+	align-content: center;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-links > a:hover {
+	color: $accent-neutral;
+	font-family: $quartenary-typeface;
+	font-size: 1rem;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: 44px;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: rgba(255, 255, 255, 0.25);
+	cursor: pointer;
+}
+
+ .nav-links > a.active {
+	color: #161615;
+	font-family: $quartenary-typeface;
+	font-size: 1rem;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	margin: 0;
+	height: 44px;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: #FFF;
+}
+
+ .nav-links > a.active:hover {
+	color: #161615;
+	font-family: $quartenary-typeface;
+	font-size: 1rem;
+	font-weight: $type-heavy;
+	font-style: $type-style-normal;
+	text-decoration: none;
+	margin: 0;
+	height: 44px;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 44px;
+	background: #ffffffcb;
+}
