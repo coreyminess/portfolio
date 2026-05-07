@@ -1116,7 +1116,7 @@ ol li {
 }
 
 .grow:hover, .grow:focus {
-  -webkit-transform: scale(1.03) !important;
+  -webkit-transform: scale(1.04) !important;
   transform: scale(1.03) !important;
 }
 

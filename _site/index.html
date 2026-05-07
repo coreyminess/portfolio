@@ -155,10 +155,10 @@
     
       
         <div class="h-100 w-100-l w-100-m w-100 mt4 mt5-m mt2-ns center"> 
-          <!-- <div class="intro-header pb3 pb3-ns">
+          <div class="intro-header pb3 pb3-ns">
               <img src="assets\avatar-cm.png" alt="corey avatar photo" class="intro-header__avatar">
               <h4 class="intro-subheader__hero revealopacity1">Hola, I'm Corey</h4> 
-          </div> -->
+          </div>
           <h1 class="pb4-l pb3-m pb2"><span class="highlight">Staff Product Designer</span> and Systems Designer with over 12 years experience in UX & interface design, prototyping, and user research.</h1> 
           <h3 class=" pb2 pb3-l pt2 pt0-ns">Currently at <a href="https://www.cnn.com" target="_blank" rel="noopener" class="underline dim">CNN</a>, working to enhance and scale our <a href="https://www.designexecutivecouncil.com/insights/design-driven-culture-change-elevating-cnns-digital-experience" target="_blank" rel="noopener" class="underline dim">Design System</a>. Laser-focused on launching an end-to-end Figma to code pipeline, empowering designers to publish and maintain accessible design systems at scale.</h3> 
           <p class="pt1 pt2-m pt2-ns grey pb3 pb4-ns ">Prior to design systems, I led product design initiatives for a range of products in video, community, e-commerce and a variety of funded 0:1 products. I thrive in ambiguity, and love sinking my teeth into a rich problem space that puts me out of my comfort zone.</p>
@@ -226,13 +226,248 @@
   </div>
 </section>
 
+<!-- Liquid Template File: Recent Experience -->
+ 
+<section>
+  <div class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb5-l pb3-nl center pt3-l bg--primary mw-960 border-bottom">
+  <div class="container">
+    <div class="section-header mb2-l mb0-m mb0-s pt4 pt2-ns pb4 pb3-ns">
+      <div class="flex w-100" style="gap: 24px;">
+        <h2 class="revealopacity1" style="width: auto; margin-top: 14px;">Achievements</h2>
+        <div class="dropdown" id="bulmaYearDropdown">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span id="dropdown-selected">2025</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item" data-year="2025">2025</a>
+              <a href="#" class="dropdown-item" data-year="2024">2024</a>
+              <a href="#" class="dropdown-item" data-year="2023">2023</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hyperlink__md flex-0-0-auto"><a class="white" href="case-studies.html">View resume 🡕</a></div>
+    </div>
+
+
+    <div id="yearContent" class="year-content">
+      <!-- Dynamic content will go here -->
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const yearData = {
+    2025: `
+      <div class="timeline-container">
+        
+          
+            <div class="timeline">
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="">
+                    <h4 class="fw5 pb1">CNN experience redesign design system support</h4>
+                    <p class="type-low type-body__lg pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="">
+                    <h4 class="fw5 pb1">Created Figma → Code pipeline at CNN</h4>
+                    <p class="type-low type-body__lg pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="">
+                    <h4 class="fw5 pb1">Launched refactored design system 3.0 at CNN</h4>
+                    <p class="type-low type-body__lg pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="">
+                    <h4 class="fw5 pb1">Created Design System audit & reporting workflows</h4>
+                    <p class="type-low type-body__lg pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+            </div>
+          
+        
+          
+        
+          
+        
+      </div>
+    `,
+    2024: `
+      <div class="timeline-container">
+        
+          
+        
+          
+            <div class="timeline">
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Hola, I'm Corey</h4>
+                    <p class="pb3">I am a Staff Product Designer</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Prototyping</h4>
+                    <p class="pb3">Hii</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Title 3 sample</h4>
+                    <p class="pb3"></p>
+                  </div>
+                </div>
+              
+            </div>
+          
+        
+          
+        
+      </div>
+    `,
+    2023: `
+      <div class="timeline-container">
+        
+          
+        
+          
+        
+          
+            <div class="timeline">
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">CNN experience redesign design system support</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Created Figma → Code pipeline at CNN</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Launched refactored design system 3.0 at CNN</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+                <div class="pb2 timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <h4 class="fw5 pb1">Created Design System audit & reporting workflows</h4>
+                    <p class="pb3">Design Systems • Shipped February 9, 2025</p>
+                  </div>
+                </div>
+              
+            </div>
+          
+        
+      </div>
+    `,
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById("bulmaYearDropdown");
+  const trigger = dropdown.querySelector(".dropdown-trigger button");
+  const selectedSpan = document.getElementById("dropdown-selected");
+  const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+  const yearContent = document.getElementById("yearContent");
+  const dropdownIcon = trigger.querySelector("i"); // Get the icon
+
+  function loadYearContent(year) {
+    yearContent.innerHTML = yearData[year] || `<p>No timeline data available for ${year}.</p>`;
+  }
+
+  // Open/close dropdown on trigger click
+  trigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("is-active");
+
+    // Toggle icon class
+    if (dropdown.classList.contains("is-active")) {
+      dropdownIcon.classList.remove("fa-angle-down");
+      dropdownIcon.classList.add("fa-angle-up");
+    } else {
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // Click outside to close
+  document.addEventListener("click", function () {
+    if (dropdown.classList.contains("is-active")) {
+      dropdown.classList.remove("is-active");
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+    }
+  });
+
+  // When a dropdown item is clicked
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const year = this.getAttribute("data-year");
+      selectedSpan.textContent = year;
+      dropdown.classList.remove("is-active");
+
+      // Reset icon when closing dropdown
+      dropdownIcon.classList.remove("fa-angle-up");
+      dropdownIcon.classList.add("fa-angle-down");
+
+      loadYearContent(year);
+    });
+  });
+
+  // Load default content
+  loadYearContent(selectedSpan.textContent);
+});
+</script>
+
+
+
+
+</section>
 
 
 <section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
   
   <div class="section-header pt2 pt2-ns pb2-l pb2-m pb4">
     <h2 class="section-header__title">Recent Work</h2>
-    <div class="hyperlink__md">
+    <div class="hyperlink__md white">
       <a class="revealopacity1" href="case-studies.html">View all</a>
     </div>
   </div>

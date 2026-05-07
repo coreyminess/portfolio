@@ -3,10 +3,10 @@
     {% for item in site.data.page-copy.pagecontent %}
       {% if item.pagetitle == "homepage" %}
         <div class="h-100 w-100-l w-100-m w-100 mt4 mt5-m mt2-ns center"> 
-          <!-- <div class="intro-header pb3 pb3-ns">
+          <div class="intro-header pb3 pb3-ns">
               <img src="assets\avatar-cm.png" alt="corey avatar photo" class="intro-header__avatar">
               <h4 class="intro-subheader__hero revealopacity1">{{item.title-1}}</h4> 
-          </div> -->
+          </div>
           <h1 class="pb4-l pb3-m pb2">{{item.title-2__alt}}</h1> 
           <h3 class=" pb2 pb3-l pt2 pt0-ns">{{item.title-3__alt}} {{item.title-4}}</h3> 
           <p class="pt1 pt2-m pt2-ns grey pb3 pb4-ns ">{{item.body-2}}</p>
@@ -19,13 +19,18 @@
   </div>
 </section>
 
+<!-- Liquid Template File: Recent Experience -->
+ 
+<section>
+  {% include section--achievements.html %}
+</section>
 
 
 <section class="w-70-l w-100 ph3 ph4-m ph0-ns mt4 mt4-ns pb4 center  pt3-l bg--primary mw-960">
   
   <div class="section-header pt2 pt2-ns pb2-l pb2-m pb4">
     <h2 class="section-header__title">Recent Work</h2>
-    <div class="hyperlink__md">
+    <div class="hyperlink__md white">
       <a class="revealopacity1" href="case-studies.html">View all</a>
     </div>
   </div>
